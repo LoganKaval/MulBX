@@ -129,7 +129,7 @@ services.xserver.displayManager.setupCommands = ''
 	      nitrogen
 	      weather
         lxappearance
-        libsForDt5.qt5ct
+        libsForQt5.qt5ct
         xfce.xfce4-power-manager
   xorg.libX11
   xorg.libX11.dev
