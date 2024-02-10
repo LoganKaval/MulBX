@@ -12,10 +12,10 @@
               ];
 hardware.opengl.driSupport32Bit = true;
 hardware.pulseaudio.support32Bit = true;
-nix.settings = {
-    substituters = ["https://nix-gaming.cachix.org"];
-    trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
-  };
+# nix.settings = {
+    # substituters = ["https://nix-gaming.cachix.org"];
+    # trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
+#   };
 
   imports =
     [ # Include the results of the hardware scan.
@@ -96,29 +96,29 @@ services.xserver.displayManager.setupCommands = ''
 	wget
 	dmenu
         vim
-  neofetch
+        feshfetch
+        neofetch
 	chromium
 	htop
         brave
         btop
 	celluloid
-	cheese
+	gnome.cheese
 	dunst
-	flameshot
 	flatpak
-	calculator
+	galculator
 	gnome.gnome-clocks
-  fontconfig
-  freetype
+        fontconfig
+        freetype
 	libreoffice
 	git
-	thunar
+	xfce.thunar
 	gparted
 	gnome.gnome-maps
 	ninja
 	mc
         ranger
-        xmobar
+        haskellPackages.xmobar
 	picom
 	nomacs
 	pavucontrol
@@ -126,7 +126,7 @@ services.xserver.displayManager.setupCommands = ''
 	unzip
 	terminator
         xterm
-	variety
+	nitrogen
 	weather
   xorg.libX11
   xorg.libX11.dev
@@ -140,14 +140,7 @@ services.xserver.displayManager.setupCommands = ''
   ];
 
 
-  
-  ## Gaming
-#	programs.steam = {
-#	  enable = false;
-#	  remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
-#	  dedicatedServer.openFirewall = false; # Open ports in the firewall for Source Dedicated Server
-#	};
-	  
+
 
   # List services that you want to enable:
  # virtualisation.libvirtd.enable = true; 
@@ -193,7 +186,6 @@ fonts = {
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      goldman
       font-awesome
       source-han-sans
       source-han-serif
