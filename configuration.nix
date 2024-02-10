@@ -93,41 +93,44 @@ services.xserver.displayManager.setupCommands = ''
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-	wget
-	dmenu
+	      wget
+	      dmenu
         vim
         feshfetch
         neofetch
-	chromium
-	htop
+	      chromium
+	      htop
         brave
         btop
-	celluloid
-	gnome.cheese
-	dunst
-	flatpak
-	galculator
-	gnome.gnome-clocks
+	      celluloid
+	      gnome.cheese
+	      dunst
+	      flatpak
+	      galculator
+	      gnome.gnome-clocks
         fontconfig
         freetype
-	libreoffice
-	git
-	xfce.thunar
-	gparted
-	gnome.gnome-maps
-	ninja
-	mc
+	      libreoffice
+	      git
+	      xfce.thunar
+	      gparted
+	      gnome.gnome-maps
+	      ninja
+      	mc
         ranger
         haskellPackages.xmobar
-	picom
-	nomacs
-	pavucontrol
-	terminus-nerdfont
-	unzip
-	terminator
+	      picom
+	      nomacs
+	      pavucontrol
+	      terminus-nerdfont
+	      unzip
+	      terminator
         xterm
-	nitrogen
-	weather
+	      nitrogen
+	      weather
+        lxappearance
+        libsForDt5.qt5ct
+        xfce.xfce4-power-manager
   xorg.libX11
   xorg.libX11.dev
   xorg.libxcb
