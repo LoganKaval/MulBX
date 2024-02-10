@@ -128,7 +128,6 @@ services.xserver.displayManager.setupCommands = ''
         xterm
 	nitrogen
 	weather
-        trayer
         lxappearance
         libsForQt5.qt5ct
         xfce.xfce4-power-manager
