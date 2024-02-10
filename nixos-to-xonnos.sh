@@ -27,7 +27,7 @@ mkdir $dir/.xmonad
 # Moving Configuration Files
 
 
-cp .bashrc $dir/.bashrc
+cp bashrc $dir/.bashrc
 cp xmobar.config $dir/.config/xmobar/xmobar.config
 cp xmonad.hs $dir/.xmonad/xmonad.hs
 
