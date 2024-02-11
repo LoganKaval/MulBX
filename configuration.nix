@@ -78,7 +78,7 @@ services.xserver.displayManager.setupCommands = ''
    services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’..
-  home-manager.users.myuser = {
+  home-manager.users.XonNOS = {
     dconf = {
        enable = true;
        settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
@@ -86,7 +86,7 @@ services.xserver.displayManager.setupCommands = ''
   };
 
 
-  users.users.User = {
+  users.users.XonNOS = {
      passwd = mangosquirrel
      isNormalUser = true;
      extraGroups = [ "wheel" "kvm" "input" "disk" "libvirtd" "users" "usrs" ];  Enable ‘sudo’ for the user.
