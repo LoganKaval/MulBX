@@ -32,13 +32,6 @@ hardware.pulseaudio.support32Bit = true;
   boot.loader.grub.useOSProber = true;
   
 
-   #  boot.loader.grub = {
-   #  enable = true;
-   #  useOSProber = true;
-   #  device = "/dev/sda";
-   #  efiSupport = true;
-   #};
-
   networking.hostName = "XonNOS"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -55,6 +48,7 @@ hardware.pulseaudio.support32Bit = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.xmonad = {
     enable = true;
     enableContribAndExtras = true;
@@ -83,7 +77,15 @@ services.xserver.displayManager.setupCommands = ''
   # Enable touchpad support (enable default in most desktopManager)
    services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with ‘passwd’..
+  home-manager.users.myuser = {
+    dconf = {
+       enable = true;
+       settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    };
+  };
+
+
   users.users.User = {
      passwd = mangosquirrel
      isNormalUser = true;

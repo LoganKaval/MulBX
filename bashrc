@@ -94,10 +94,7 @@ alias la='ls -A'
 #alias l='ls -CF'
 alias ..='cd ..'
 alias tcl='tty-clock -cxbt'
-alias ua='sudo pacman -Syu && clear && neofetch && echo I Use Arch BTW...'
-alias neoarch='clear && neofetch && echo I Use Arch BTW...'
-alias sfbs='sftp -oPort=313 loganserver@192.168.1.141'
-alias ssbs='ssh -p 313 loganserver@192.168.1.141'
+
 
 
 # Alias definitions.
