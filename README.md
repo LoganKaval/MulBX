@@ -13,5 +13,5 @@ The Name Means XMonad on NixOS.
 
 # WARNING:
 This is For Debian and Debian Based Linux Distrobutions!
-This Script Will NOT Work Properly on Arch Linux, openSuse, NixOS, Gentoo, Fedora, etc.
+This Script Will NOT Work Properly on Arch Linux, OpenSUSE, NixOS, Gentoo, Fedora, etc.
 Some Debian GNU/Linux Distrobutions Might Also Experiance Problems.
