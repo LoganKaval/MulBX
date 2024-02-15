@@ -78,7 +78,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "dmenu_run")
     , ((modm,               xK_c     ), spawn "dmenu_run")
     -- Launch Brave Browser
-    , ((modm,               xK_v     ), spawn "brave")
+    , ((modm,               xK_v     ), spawn "brave-browser")
     -- Launch Chromium
     , ((modm .|. shiftMask, xK_v     ), spawn "chromium")
     -- launch gmrun
@@ -276,7 +276,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
 	spawnOnce "nitrogen --restore &"
-	spawnOnce "picom &"
+	spawnOnce "compton &"
         spawnOnce "ufw &"
         spawnOnce "xfce4-power-manager &"
 --        spawnOnce "volumeicon &"
