@@ -1,5 +1,5 @@
 # XonNOS
-This is a Formerly Based NixOS Linux Distrobution.
+This is a Formerly NixOS Based Linux Distrobution.
 This is a Script to Turn Debian GNU/Linux into XonNOS.
 When Running the Script You Have to be in a User Account that is NOT root!
 The Name Means XMonad on NixOS.
@@ -14,4 +14,4 @@ The Name Means XMonad on NixOS.
 # WARNING:
 This is For Debian and Debian Based Linux Distrobutions!
 This Script Will NOT Work Properly on Arch Linux, OpenSUSE, NixOS, Gentoo, Fedora, etc.
-Some Debian GNU/Linux Distrobutions Might Also Experiance Problems.
+A Few Debian GNU/Linux Distrobutions Might Also Experiance Problems.
