@@ -8,7 +8,7 @@ The Name Means XMonad on NixOS.
 
 
 
-![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-sceenshot2.png?raw=true)
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot2.png?raw=true)
 
 
 # WARNING:
