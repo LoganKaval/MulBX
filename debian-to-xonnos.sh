@@ -197,7 +197,43 @@ else
 fi
 
 
+# Extra Package Manager(s)
 
+
+echo "Do You Want to Install Extra Package Managers?(y/n)"
+read = pak
+
+if [ "$pak" = "y" ];
+then
+	echo "Do You Want to Install Nala?(y/n)"
+	read = nala
+
+	if [ "$nala" = "y" ];
+	then
+		apt update
+		apt install nala
+	else
+		echo "Nala Will Not be Installed!"
+	fi
+
+	sleep 3
+
+	echo "Do You Want to Install the Nix Package Manager?(y/n)"
+	read = nix
+
+	if [ "$nix" = "y" ];
+	then
+		apt update
+		sh <(curl -L https://nixos.org/nix/install) --daemon
+
+	else
+		echo "Nix Will Not be Installed!"
+	fi
+
+else
+	echo "No Extra Package Managers Will be Installed"
+
+fi
 
 # Finishing Up
 
