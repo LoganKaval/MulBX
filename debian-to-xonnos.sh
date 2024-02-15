@@ -22,6 +22,7 @@ read = dir
 
 apt update
 apt upgrade
+apt install tty-clock
 apt install chromium
 apt install libreoffice
 apt install cheese
