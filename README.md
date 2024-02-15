@@ -6,6 +6,11 @@ The Name Means XMonad on NixOS.
 
 ![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot.png?raw=true)
 
+
+
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot2.png?raw=true)
+
+
 # WARNING:
 This is For Debian and Debian Based Linux Distrobutions!
 This Script Will NOT Work Properly on Arch Linux, openSuse, NixOS, Gentoo, Fedora, etc.
