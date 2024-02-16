@@ -5,7 +5,7 @@ echo "This Will Turn Debian GNU/Linux to XonNOS GNU/Linux!"
 echo "If Your Not on Debian or a Debian Based Distro Please Do Not This"
 echo "This Might Lead to Data if Done So!!!"
 sleep 5
-echo "Also Make Sure You Are in a Users Home Directory"
+echo "Also Make Sure You Are in a User's ~/XonNOS Directory"
 echo "You have 10 Seconds After This Message to Exit!"
 sleep 15
 
@@ -23,7 +23,8 @@ sleep 10
 sudo apt update
 sudo apt upgrade
 sudo apt install tty-clock
-sudo apt install chromium
+sudo apt install chromium-browser
+sudo apt install thunar
 sudo apt install libreoffice
 sudo apt install cheese
 sudo apt install git
@@ -45,7 +46,6 @@ sudo apt install gnome-clocks
 sudo apt install xfce4-power-manager
 sudo apt install nano
 sudo apt install mc
-sudo apt install asciiquarium
 sudo apt install curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
