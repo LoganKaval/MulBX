@@ -14,7 +14,7 @@ sleep 15
 
 echo "What is The User Account That You Want the Base Files to Go In?"
 echo "The Root Account WILL NOT Work!!!"
-read = dir
+read dir
 
 sleep 10
 # Installing Software
@@ -95,7 +95,7 @@ echo "Cinnamon"
 echo "MATE"
 echo "Budgie"
 sleep 2
-read = desk
+read  desk
 
 sleep 10
 
@@ -103,7 +103,7 @@ sleep 10
 if [ "$desk" = "y" ];
 then
 	echo "Do You Want KDE?(y/n)"
-	read = kde
+	read  kde
 	sleep 7
 
 	if [ "$kde" = "y"];
@@ -119,7 +119,7 @@ then
 	sleep 5
 
 	echo "Do You Want to Install GNOME?(y/n)"
-	read = gnome
+	read  gnome
         sleep 7
 
 	if [ "$gnome" = "y" ];
@@ -134,7 +134,7 @@ then
 	sleep 5
 
 	echo "Do You Want to Install Xfce?(y/n)"
-	read = xfce
+	read  xfce
 	sleep 7
 
 	if [ "$xfce" = "y" ];
@@ -150,7 +150,7 @@ then
 	sleep 5
 
 	echo "Do You Want to Install LXQT?(y/n)"
-	read = lxqt
+	read  lxqt
 	sleep 7
 
 	if [ "$lxqt" = "y" ];
@@ -166,7 +166,7 @@ then
 	sleep 5
 
 	echo "Do You Want to Install Cinnamon?(y/n)"
-	read = cin
+	read  cin
 	sleep 7
 
 	if [ "$cin" = "y" ];
@@ -182,7 +182,7 @@ then
 	sleep 5
 
 	echo "Do You Want to Install MATE?(y/n)"
-	read = mate
+	read  mate
 	sleep 7
 
 	if [ "$MATE" = "y" ];
@@ -196,7 +196,7 @@ then
 	
 	sleep 5
 	echo "Do You Want to Install Budgie?(y/n)"
-        read = bud
+        read  bud
 	sleep 7
 
 	if [ "$bud" = "y" ];
@@ -217,13 +217,13 @@ fi
 
 
 echo "Do You Want to Install Extra Package Managers?(y/n)"
-read = pak
+read  pak
 sleep 7
 
 if [ "$pak" = "y" ];
 then
 	echo "Do You Want to Install Nala?(y/n)"
-	read = nala
+	read  nala
 	sleep 7
 
 	if [ "$nala" = "y" ];
@@ -237,7 +237,7 @@ then
 	sleep 3
 
 	echo "Do You Want to Install the Nix Package Manager?(y/n)"
-	read = nix
+	read  nix
 	sleep 7
 
 	if [ "$nix" = "y" ];
@@ -261,3 +261,4 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
+
