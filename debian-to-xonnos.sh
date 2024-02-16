@@ -73,6 +73,8 @@ sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad.xmonad.hs
 sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
 sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo xmonad --recompile && xmonad --restart
+xmonad --recompile && xmonad --restart
 
 
 # Allowing Scripts to Have Execute Privileges
