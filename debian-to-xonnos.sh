@@ -52,7 +52,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo apt update
 sudo apt install brave-browser -y
 sudo apt install kde-spectacle -y
-
+sudo apt install libghc-xmonad-contrib-dev
 
 # Making Directories
 
@@ -256,6 +256,36 @@ else
 
 fi
 
+
+# Making Directories Again
+
+mkdir /home/$dir/.config
+mkdir /home/$dir/.config/xmobar
+mkdir /home/$dir/.xmonad
+mkdir /home/$dir/.xmonad/scripts
+sudo mkdir /etc/XonNOS
+sudo mkdir /etc/XonNOS/xmobar
+sudo mkdir /etc/XonNOS/scripts
+
+
+# Moving Files Again
+
+
+cp bashrc /home/$dir/.bashrc
+sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+cp xmonad.hs /home/$dir/.xmonad.xmonad.hs
+sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
+sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo xmonad --recompile && xmonad --restart
+xmonad --recompile && xmonad --restart
+
+
+# Allowing Scripts to Have Execute Privileges Again
+
+
+chmod +x /etc/XonNOS/scripts/shutdown.sh
+chmod +x /etc/XonNOS/scripts/reboot.sh
+
 # Finishing Up
 
 echo "All Done!!!"
@@ -263,3 +293,4 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
+
