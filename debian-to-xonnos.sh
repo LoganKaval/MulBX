@@ -69,10 +69,10 @@ sudo mkdir /etc/XonNOS/scripts
 
 
 cp bashrc /home/$dir/.bashrc
-cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad.xmonad.hs
-cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
+sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 
 
 # Allowing Scripts to Have Execute Privileges
@@ -261,4 +261,3 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
-
