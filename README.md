@@ -19,6 +19,7 @@ After Installation the XonNOS Directory Can be Deleted From the User's Home Dire
 
 XonNOS Does Work On Linux Mint!
 I Also Assume it Will Work on Ubuntu; the Linux Distro Linux Mint is Based Off of.
+The XMobar Configuration File is in the Directory: /etc/XonNOS/xmobar/xmobar.config; the Scripts are in the Directory: /etc/XonNOS/scripts.
 
 ![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot3.png?raw=true)
 
