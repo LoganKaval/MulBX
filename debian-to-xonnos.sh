@@ -106,7 +106,7 @@ then
 	read  kde
 	sleep 7
 
-	if [ "$kde" = "y"];
+	if [ "$kde" = "y" ];
 	then
 		sudo apt update
 		sudo apt install kde-plasma-desktop
