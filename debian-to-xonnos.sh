@@ -8,7 +8,6 @@ sleep 5
 echo "Also Make Sure You Are in a Users Home Directory"
 echo "You have 10 Seconds After This Message to Exit!"
 sleep 15
-sudo su
 
 
 # Collecting Directories
@@ -20,38 +19,38 @@ read = dir
 # Installing Software
 
 
-apt update
-apt upgrade
-apt install tty-clock
-apt install chromium
-apt install libreoffice
-apt install cheese
-apt install git
-apt install wget
-apt install xmonad
-apt install xmobar
-apt install xterm
-apt install terminator
-apt install featherpad
-apt install nitrogen
-apt install compton
-apt install vim
-apt install neofetch
-apt install ranger
-apt install btop
-apt install dmenu
-apt install qt5ct
-apt install gnome-clocks
-apt install xfce4-power-manager
-apt install nano
-apt install mc
-apt install asciiquarium
-apt install curl
+sudo apt update
+sudo apt upgrade
+sudo apt install tty-clock
+sudo apt install chromium
+sudo apt install libreoffice
+sudo apt install cheese
+sudo apt install git
+sudo apt install wget
+sudo apt install xmonad
+sudo apt install xmobar
+sudo apt install xterm
+sudo apt install terminator
+sudo apt install featherpad
+sudo apt install nitrogen
+sudo apt install compton
+sudo apt install vim
+sudo apt install neofetch
+sudo apt install ranger
+sudo apt install btop
+sudo apt install dmenu
+sudo apt install qt5ct
+sudo apt install gnome-clocks
+sudo apt install xfce4-power-manager
+sudo apt install nano
+sudo apt install mc
+sudo apt install asciiquarium
+sudo apt install curl
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-apt update
-apt install brave-browser
-apt install kde-spectacle
+sudo apt update
+sudo apt install brave-browser
+sudo apt install kde-spectacle
 
 
 # Making Directories
@@ -100,8 +99,8 @@ then
 
 	if [ "$kde" = "y"];
 	then
-		apt update
-		apt install kde-plasma-desktop
+		sudo apt update
+		sudo apt install kde-plasma-desktop
 
 	else
 		echo "KDE Will Not Be Installed!"
@@ -115,8 +114,8 @@ then
 
 	if [ "$gnome" = "y" ];
 	then
-		apt update
-		apt install task-gnome-desktop
+		sudo apt update
+		sudo apt install task-gnome-desktop
 
 	else
 		echo "GNOME Will Not be Installed!"
@@ -129,8 +128,8 @@ then
 
 	if [ "$xfce" = "y" ];
 	then
-		apt update
-		apt install xfce4 xfce4-goodies
+		sudo apt update
+		sudo apt install xfce4 xfce4-goodies
 
 	else
 		echo "Xfce Will Not be Installed!"
@@ -144,8 +143,8 @@ then
 
 	if [ "$lxqt" = "y" ];
 	then 
-		apt update
-		apt install lxqt-core lxqt task-lxqt-desktop
+		sudo apt update
+		sudo apt install lxqt-core lxqt task-lxqt-desktop
 
 	else
 		echo "LXQT Will Not be Installed!"
@@ -159,8 +158,8 @@ then
 
 	if [ "$cin" = "y" ];
 	then
-		apt update
-		apt install task-cinnamon-desktop
+		sudo apt update
+		sudo apt install task-cinnamon-desktop
 
 	else
 		echo "Cinnamon Will Not be Installed!"
@@ -174,8 +173,8 @@ then
 
 	if [ "$MATE" = "y" ];
 	then
-		apt update
-		apt install mate-desktop-environment mate-desktop-environment-extras
+		sudo apt update
+		sudo apt install mate-desktop-environment mate-desktop-environment-extras
 	else
 		echo "MATE Will Not be Installed!"
 
@@ -187,8 +186,8 @@ then
 
 	if [ "$bud" = "y" ];
 	then
-		apt update
-		apt install budgie-desktop
+		sudo apt update
+		sudo apt install budgie-desktop
 	else
 		echo "Budgie Will Not be Installed!"
 	fi
@@ -212,8 +211,8 @@ then
 
 	if [ "$nala" = "y" ];
 	then
-		apt update
-		apt install nala
+		sudo apt update
+		sudo apt install nala
 	else
 		echo "Nala Will Not be Installed!"
 	fi
@@ -225,7 +224,7 @@ then
 
 	if [ "$nix" = "y" ];
 	then
-		apt update
+		sudo apt update
 		sh <(curl -L https://nixos.org/nix/install) --daemon
 
 	else
@@ -242,4 +241,5 @@ fi
 echo "All Done!!!"
 echo "I Will Now Reboot!"
 sleep 10
+sudo reboot
 reboot
