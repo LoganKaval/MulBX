@@ -17,6 +17,12 @@ After Installation the XonNOS Directory Can be Deleted From the User's Home Dire
 ![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot2.png?raw=true)
 
 
+XonNOS Does Work On Linux Mint!
+I Also Assume it Will Work on Ubuntu; the Linux Distro Linux Mint is Based Off of.
+
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot3.png?raw=true)
+
+
 # WARNING:
 This is For Debian and Debian Based Linux Distrobutions!
 This Script Will NOT Work Properly on Arch Linux, OpenSUSE, NixOS, Gentoo, Fedora, etc.
