@@ -16,6 +16,7 @@ echo "What is The User Account That You Want the Base Files to Go In?"
 echo "The Root Account WILL NOT Work!!!"
 read = dir
 
+sleep 10
 # Installing Software
 
 
@@ -46,7 +47,7 @@ sudo apt install nano
 sudo apt install mc
 sudo apt install asciiquarium
 sudo apt install curl
-curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser
@@ -59,22 +60,26 @@ mkdir /home/$dir/.config
 mkdir /home/$dir/.config/xmobar
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
+sudo mkdir /etc/XonNOS
+sudo mkdir /etc/XonNOS/xmobar
+sudo mkdir /etc/XonNOS/scripts
+
 
 # Moving Files
 
 
 cp bashrc /home/$dir/.bashrc
-cp xmobar.config /home/$dir/.config/xmobar/xmobar.config
+cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad.xmonad.hs
-cp shutdown.sh /home/$dir/.xmonad/scripts/shutdown.sh
-cp reboot.sh /home/$dir/.xmonad/scripts/reboot.sh
+cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
+cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 
 
 # Allowing Scripts to Have Execute Privileges
 
 
-chmod +x /home/$dir/.xmonad/scripts/shutdown.sh
-chmod +x /home/$dir/.xmonad/scripts/reboot.sh
+chmod +x /etc/XonNOS/scripts/shutdown.sh
+chmod +x /etc/XonNOS/scripts/reboot.sh
 
 # Extra Desktop Environments
 
@@ -92,10 +97,14 @@ echo "Budgie"
 sleep 2
 read = desk
 
+sleep 10
+
+
 if [ "$desk" = "y" ];
 then
 	echo "Do You Want KDE?(y/n)"
 	read = kde
+	sleep 7
 
 	if [ "$kde" = "y"];
 	then
@@ -111,6 +120,7 @@ then
 
 	echo "Do You Want to Install GNOME?(y/n)"
 	read = gnome
+        sleep 7
 
 	if [ "$gnome" = "y" ];
 	then
@@ -125,6 +135,7 @@ then
 
 	echo "Do You Want to Install Xfce?(y/n)"
 	read = xfce
+	sleep 7
 
 	if [ "$xfce" = "y" ];
 	then
@@ -140,6 +151,7 @@ then
 
 	echo "Do You Want to Install LXQT?(y/n)"
 	read = lxqt
+	sleep 7
 
 	if [ "$lxqt" = "y" ];
 	then 
@@ -155,6 +167,7 @@ then
 
 	echo "Do You Want to Install Cinnamon?(y/n)"
 	read = cin
+	sleep 7
 
 	if [ "$cin" = "y" ];
 	then
@@ -170,6 +183,7 @@ then
 
 	echo "Do You Want to Install MATE?(y/n)"
 	read = mate
+	sleep 7
 
 	if [ "$MATE" = "y" ];
 	then
@@ -183,6 +197,7 @@ then
 	sleep 5
 	echo "Do You Want to Install Budgie?(y/n)"
         read = bud
+	sleep 7
 
 	if [ "$bud" = "y" ];
 	then
@@ -203,11 +218,13 @@ fi
 
 echo "Do You Want to Install Extra Package Managers?(y/n)"
 read = pak
+sleep 7
 
 if [ "$pak" = "y" ];
 then
 	echo "Do You Want to Install Nala?(y/n)"
 	read = nala
+	sleep 7
 
 	if [ "$nala" = "y" ];
 	then
@@ -221,6 +238,7 @@ then
 
 	echo "Do You Want to Install the Nix Package Manager?(y/n)"
 	read = nix
+	sleep 7
 
 	if [ "$nix" = "y" ];
 	then
