@@ -278,7 +278,8 @@ sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
 sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-
+sudo cp neofetch /usr/bin/neofetch
+sudo cp os-release /etc/os-release
 
 # Allowing Scripts to Have Execute Privileges Again
 
