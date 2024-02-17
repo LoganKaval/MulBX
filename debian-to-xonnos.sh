@@ -70,7 +70,7 @@ sudo mkdir /etc/XonNOS/scripts
 
 cp bashrc /home/$dir/.bashrc
 sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
-cp xmonad.hs /home/$dir/.xmonad.xmonad.hs
+cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
 sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
