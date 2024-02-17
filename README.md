@@ -9,7 +9,7 @@ The Package Manager Nala CAN be Installed in the Installer!!!
 The Nix Package Manager CAN be Installed in the Installer too.
 Both Managers Are NOT Installed in the Madatory Section and Are Asked After the Desktop Envirment Options.
 After Installation the XonNOS Directory Can be Deleted From the User's Home Directory.
-All of the Images are on https://www.github.com/LoganKaval/XonNOS-Pictures.
+All of the Images are on https://www.github.com/LoganKaval/XonNOS-Lib.
 
 ![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot6.png?raw=true)
 
