@@ -63,7 +63,7 @@ mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
-
+sudo mkdir /usr/share/backgrounds/XonNOS
 
 # Moving Files
 
@@ -77,7 +77,7 @@ sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
-
+sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
 
 # Allowing Scripts to Have Execute Privileges
 
@@ -268,7 +268,7 @@ mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
-
+sudo mkdir /usr/share/backgrounds/XonNOS
 
 # Moving Files Again
 
@@ -282,6 +282,7 @@ sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
+sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
 
 # Allowing Scripts to Have Execute Privileges Again
 
