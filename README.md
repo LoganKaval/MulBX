@@ -11,7 +11,7 @@ Both Managers Are NOT Installed in the Madatory Section and Are Asked After the 
 After Installation the XonNOS Directory Can be Deleted From the User's Home Directory.
 All of the Images are on https://www.github.com/LoganKaval/XonNOS-Lib.
 
-![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot6.png?raw=true)
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-logo.png?raw=true)
 
 
 
@@ -23,7 +23,7 @@ It Also Works on Ubuntu; the Linux Distro Linux Mint is Based Off of.
 MX Linux Also Works is Very Simular to Linux Mint and Ubuntu.
 The XMobar Configuration File is in the Directory: /etc/XonNOS/xmobar/xmobar.config; the Scripts are in the Directory: /etc/XonNOS/scripts.
 
-![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot3.png?raw=true)
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot6.png?raw=true)
 
 ![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot4.png?raw=true)
 
