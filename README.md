@@ -11,7 +11,7 @@ Both Managers Are NOT Installed in the Madatory Section and Are Asked After the 
 After Installation the XonNOS Directory Can be Deleted From the User's Home Directory.
 All of the Images are on https://www.github.com/LoganKaval/XonNOS-Pictures.
 
-![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot.png?raw=true)
+![alt text](https://github.com/LoganKaval/XonNOS-Pictures/blob/main/xonnos-screenshot6.png?raw=true)
 
 
 
