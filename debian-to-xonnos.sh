@@ -57,7 +57,6 @@ sudo apt install libghc-xmonad-contrib-dev
 # Making Directories
 
 mkdir /home/$dir/.config
-mkdir /home/$dir/.config/xmobar
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/XonNOS
@@ -262,7 +261,6 @@ fi
 # Making Directories Again
 
 mkdir /home/$dir/.config
-mkdir /home/$dir/.config/xmobar
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/XonNOS
