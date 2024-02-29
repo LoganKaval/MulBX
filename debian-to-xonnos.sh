@@ -54,6 +54,10 @@ sudo apt install brave-browser -y
 sudo apt install kde-spectacle -y
 sudo apt install libghc-xmonad-contrib-dev
 
+# To Install Packages in the Package List
+chmod +x packages.sh
+bash packages.sh
+
 # Making Directories
 
 mkdir /home/$dir/.config
