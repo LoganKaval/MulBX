@@ -81,8 +81,8 @@ sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
 # Allowing Scripts to Have Execute Privileges
 
 
-chmod +x /etc/XonNOS/scripts/shutdown.sh
-chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
+sudo chmod +x /etc/XonNOS/scripts/reboot.sh
 
 # Extra Desktop Environments
 
@@ -285,8 +285,8 @@ sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
 # Allowing Scripts to Have Execute Privileges Again
 
 
-chmod +x /etc/XonNOS/scripts/shutdown.sh
-chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
+sudo chmod +x /etc/XonNOS/scripts/reboot.sh
 
 # Finishing Up
 
