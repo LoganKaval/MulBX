@@ -48,4 +48,4 @@ if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
         sudo cp xmobar.config /etc/XonNOS/xmobar.config
-        
+        cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
