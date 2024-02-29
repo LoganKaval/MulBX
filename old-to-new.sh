@@ -49,3 +49,23 @@ then
         echo "Files Will Be Copied"
         sudo cp xmobar.config /etc/XonNOS/xmobar.config
         cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
+        sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
+        sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+
+        sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
+        sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+        sudo xmonad --recompile && xmonad --restart
+        xmonad --recompile && xmonad --restart
+else
+        echo "These Files Will Not Be Upgraded to the Newest Version!"
+fi
+# Running Package Script
+chmod +x packages.sh
+bash packages.sh
+
+#
+echo "Almost Done!"
+
+sudo cp os-release /etc/os-release
+sudo cp neofetch /usr/bin/neofetch
+
