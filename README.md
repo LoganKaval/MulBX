@@ -31,5 +31,9 @@ The XMobar Configuration File is in the Directory: /etc/XonNOS/xmobar/xmobar.con
 
 # WARNING:
 This is For Debian and Debian Based Linux Distrobutions!
-This Script Will NOT Work Properly on Arch Linux, OpenSUSE, NixOS, Gentoo, Fedora, etc.
-A Few Debian GNU/Linux Distrobutions Might Also Experiance Problems.
+This Script Will NOT Work Properly on OpenSUSE, NixOS, Gentoo, Fedora, etc.
+A Few Oddly Formated Debian GNU/Linux Distrobutions Might Also Experiance Problems. 
+There is Experimental Support for Arch Linux!
+Run the "arch-to-xonnos.sh" script in Arch Linux or a Arch Based Distro.
+This Script Might Also Experience Problems if You Run This on a Oddly Formated Arch Linux Based Distro, But Most Ditros Will Work.
+
