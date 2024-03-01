@@ -1,0 +1,9 @@
+PRETTY_NAME="XonNOS GNU/Linux [Arch Linux Base] 3.7.1 (Mango)"
+NAME="XonNOS GNU/Linux [Arch Linux Base]"
+VERSION_ID="3.7.1"
+VERSION="3.7.1 (Mango)"
+VERSION_CODENAME=Mango
+ID=xonnos
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
