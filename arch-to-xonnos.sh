@@ -54,3 +54,34 @@ sudo pacman -S libghc-xmonad-contrib-dev
 # To Install Packages in the Package List
 chmod +x arch-packages.sh
 bash arch-packages.sh
+
+
+# Making Directories
+
+mkdir /home/$dir/.config
+mkdir /home/$dir/.xmonad
+mkdir /home/$dir/.xmonad/scripts
+sudo mkdir /etc/XonNOS
+sudo mkdir /etc/XonNOS/xmobar
+sudo mkdir /etc/XonNOS/scripts
+sudo mkdir /usr/share/backgrounds/XonNOS
+
+# Moving Files
+
+
+cp bashrc /home/$dir/.bashrc
+sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
+sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
+sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo xmonad --recompile && xmonad --restart
+xmonad --recompile && xmonad --restart
+sudo cp neofetch /usr/bin/neofetch
+sudo cp os-release /etc/os-release
+sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+
+# Allowing Scripts to Have Execute Privileges
+
+
+sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
+sudo chmod +x /etc/XonNOS/scripts/reboot.sh
