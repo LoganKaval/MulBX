@@ -50,3 +50,7 @@ sudo apt update
 sudo pacman -S brave-browser -y
 sudo pacman -S kde-spectacle -y
 sudo pacman -S libghc-xmonad-contrib-dev
+
+# To Install Packages in the Package List
+chmod +x arch-packages.sh
+bash arch-packages.sh
