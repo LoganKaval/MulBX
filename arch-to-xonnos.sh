@@ -12,6 +12,7 @@ echo "What is The User Account That You Want the Base Files to Go In?"
 echo "The Root Account WILL NOT Work!!!"
 read dir
 
+
 sleep 10
 
 # Installing Software
