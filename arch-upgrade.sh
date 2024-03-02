@@ -68,5 +68,5 @@ bash packages.sh
 #
 echo "Almost Done!"
 
-sudo cp os-release /etc/os-release
+sudo cp arch-os-release /etc/os-release
 sudo cp neofetch /usr/bin/neofetch
