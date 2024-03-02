@@ -15,6 +15,7 @@ import qualified Data.Map        as M
 
 import XMonad.Layout.Spacing
 
+
 -- Layout Imports
 
 import XMonad.Layout.Grid
@@ -111,10 +112,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_m     ), windows W.focusMaster  )
 
     -- Shutdown
-    , ((modm .|. shiftMask, xK_y     ), spawn "/etc/XonNOS/scripts/shutdown.sh"   )
+    , ((modm .|. shiftMask, xK_y     ), spawn "bash /home/logan/.xmonad/scripts/shutdown.sh"   )
 
     -- Reboot
-    , ((modm,               xK_y     ), spawn "/etc/XonNOS/scripts/reboot.sh"     )
+    , ((modm,               xK_y     ), spawn "bash /home/logan/.xmonad/scripts/reboot.sh"     )
 
     -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
