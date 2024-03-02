@@ -1,7 +1,7 @@
-PRETTY_NAME="XonNOS GNU/Linux [Debian GNU/Linux Base] 3.7.1 (Mango)"
+PRETTY_NAME="XonNOS GNU/Linux [Debian GNU/Linux Base] 3.7.2 (Mango)"
 NAME="XonNOS GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.7.1"
-VERSION="3.7.1 (Mango)"
+VERSION_ID="3.7.2"
+VERSION="3.7.2 (Mango)"
 VERSION_CODENAME=Mango
 ID=xonnos
 HOME_URL="https://www.debian.org/"
