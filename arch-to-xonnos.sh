@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Warnings and Beginning
@@ -66,13 +67,14 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files
 
 
 cp bashrc /home/$dir/.bashrc
 sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
-cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
 sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
@@ -80,6 +82,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges
 
@@ -250,13 +254,14 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files Again
 
 
 cp bashrc /home/$dir/.bashrc
 sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
-cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
 sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
@@ -264,6 +269,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges Again
 
