@@ -67,6 +67,7 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files
 
@@ -81,6 +82,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges
 
@@ -271,6 +274,7 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files Again
 
@@ -285,6 +289,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges Again
 
@@ -299,4 +305,5 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
+
 
