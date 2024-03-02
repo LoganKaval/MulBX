@@ -29,6 +29,7 @@ sudo pacman -S cheese -y
 sudo pacman -S git -y
 sudo pacman -S wget -y
 sudo pacman -S xmonad -y
+sudo pacman -S xmonad-contrib -y
 sudo pacman -S xmobar -y
 sudo pacman -S xterm -y
 sudo pacman -S terminator -y
