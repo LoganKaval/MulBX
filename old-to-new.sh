@@ -6,12 +6,12 @@ echo "Leave Now if Needed!"
 sleep 5
 
 echo "What Account Are You In? Root Will Not Work!"
-read = usr
+read usr
 
 # Coping Files
 
 echo "Do You Want to Copy the New Bashrc File?(y/n)"
-read = bashrc
+read bashrc
 
 sleep 5
 
@@ -25,7 +25,7 @@ else
 fi 
 
 echo "Do You Want to Copy the New Backgrounds?(y/n)"
-read = bak
+read bak
 
 sleep 5
 
@@ -40,7 +40,7 @@ else
 fi
 
 echo "Do You Want to Copy XMonad.hs and XMobar.config?(y/n)"
-read = xcon
+read xcon
 
 sleep 5
 
