@@ -48,11 +48,11 @@ if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
         sudo cp xmobar.config /etc/XonNOS/xmobar.config
-        cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
+        cp arch-xmonad.hs /home/$usr/.xmonad/xmonad.hs
         sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
         sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
-        sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
-        sudo cp bashrc /etc/skel/.bashrc
+	sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+	sudo cp bashrc /etc/skel/.bashrc
 
         sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
         sudo chmod +x /etc/XonNOS/scripts/reboot.sh
@@ -68,6 +68,5 @@ bash packages.sh
 #
 echo "Almost Done!"
 
-sudo cp os-release /etc/os-release
+sudo cp arch-os-release /etc/os-release
 sudo cp neofetch /usr/bin/neofetch
-

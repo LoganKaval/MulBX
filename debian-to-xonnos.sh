@@ -17,42 +17,7 @@ echo "The Root Account WILL NOT Work!!!"
 read dir
 
 sleep 10
-# Installing Software
 
-
-sudo apt update
-sudo apt upgrade
-sudo apt install tty-clock -y
-sudo apt install chromium-browser -y
-sudo apt install thunar -y
-sudo apt install libreoffice -y
-sudo apt install cheese -y
-sudo apt install git -y
-sudo apt install wget -y
-sudo apt install xmonad -y
-sudo apt install xmobar -y
-sudo apt install xterm -y
-sudo apt install terminator -y
-sudo apt install featherpad -y
-sudo apt install nitrogen -y
-sudo apt install compton -y
-sudo apt install vim -y
-sudo apt install neofetch -y
-sudo apt install ranger -y
-sudo apt install btop -y
-sudo apt install dmenu -y
-sudo apt install qt5ct -y
-sudo apt install gnome-clocks -y
-sudo apt install xfce4-power-manager -y
-sudo apt install nano -y
-sudo apt install mc -y
-sudo apt install curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
-sudo apt install kde-spectacle -y
-sudo apt install libghc-xmonad-contrib-dev
 
 # To Install Packages in the Package List
 chmod +x packages.sh
@@ -67,6 +32,7 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files
 
@@ -81,6 +47,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges
 
@@ -271,6 +239,7 @@ sudo mkdir /etc/XonNOS
 sudo mkdir /etc/XonNOS/xmobar
 sudo mkdir /etc/XonNOS/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/skel/.xmonad
 
 # Moving Files Again
 
@@ -285,6 +254,8 @@ xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp bashrc /etc/skel/.bashrc
+sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges Again
 
@@ -299,4 +270,5 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
+
 

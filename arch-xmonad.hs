@@ -277,7 +277,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
 	spawnOnce "nitrogen --restore &"
-	spawnOnce "compton &"
+	spawnOnce "picom &"
         spawnOnce "ufw &"
         spawnOnce "xfce4-power-manager &"
 --        spawnOnce "volumeicon &"
