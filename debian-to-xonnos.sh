@@ -70,6 +70,16 @@ else
 fi
 
 
+if [ "$cpak" = "y" ];
+then
+	chmod +x debian-custom-pak.sh
+	bash debian-custom-pak.sh
+
+else
+	echo "Custom Packages Will Not be Installed!"
+
+fi
+
 # Extra Desktop Environments
 
 

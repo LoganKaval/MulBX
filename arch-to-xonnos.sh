@@ -51,10 +51,10 @@ sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 
 # Extra Packages
-echo "Would You Like to Install Office and Media Packages(y/n)"
+echo "Would You Like to Install Office and Media Packages?(y/n)"
 read extpak
 
-if [ "extpak" = "y" ];
+if [ "$extpak" = "y" ];
 then
 	echo "More Packages Will be Installed!
 	chmod +x arch-extra-packages.sh
@@ -63,7 +63,20 @@ else
 	echo "No Extra Pacakges Will be Installed!"
 fi
 
+# Adding My Own Packages
 
+echo "Would You Like to Install Custom Packages?(y/n)"
+read cpak
+
+if [ "$cpak" = "y" ];
+then
+	chmod +x arch-custom-pak.sh
+	bash arch-custom-pak.sh
+
+else
+	echo "Custom Packages Will Not be Installed!"
+
+fi
 
 # Allowing Scripts to Have Execute Privileges
 
