@@ -49,6 +49,22 @@ sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
+
+# Extra Packages
+echo "Would You Like to Install Office and Media Packages(y/n)"
+read extpak
+
+if [ "extpak" = "y" ];
+then
+	echo "More Packages Will be Installed!
+	chmod +x arch-extra-packages.sh
+	bash arch-extra-packages.sh
+else
+	echo "No Extra Pacakges Will be Installed!"
+fi
+
+
+
 # Allowing Scripts to Have Execute Privileges
 
 
