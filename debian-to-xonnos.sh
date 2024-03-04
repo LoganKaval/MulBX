@@ -56,6 +56,30 @@ sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
 sudo chmod +x /etc/XonNOS/scripts/reboot.sh
 
+# Extra Packages
+echo "Would You Like to Install Office and Media Packages(y/n)"
+read extpak
+
+if [ "extpak" = "y" ];
+then
+	echo "More Packages Will be Installed!
+	chmod +x debian-extra-packages.sh
+	bash debian-extra-packages.sh
+else
+	echo "No Extra Pacakges Will be Installed!"
+fi
+
+
+if [ "$cpak" = "y" ];
+then
+	chmod +x debian-custom-pak.sh
+	bash debian-custom-pak.sh
+
+else
+	echo "Custom Packages Will Not be Installed!"
+
+fi
+
 # Extra Desktop Environments
 
 
