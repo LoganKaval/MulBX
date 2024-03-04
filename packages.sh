@@ -35,3 +35,6 @@ sudo apt update
 sudo apt install brave-browser -y
 sudo apt install kde-spectacle -y
 sudo apt install libghc-xmonad-contrib-dev -y
+
+echo "[     1.41H_4.14u                ] Finished: 'debian-packages.sh'  script--"
+echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'debian-to-xonnos.sh' script--"
