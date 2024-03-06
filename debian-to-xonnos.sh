@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Warnings and Beginning
-echo "This Will Turn Debian GNU/Linux to XonNOS GNU/Linux!"
+echo "This Will Turn Debian GNU/Linux to MulBX GNU/Linux!"
 echo "If Your Not on Debian or a Debian Based Distro Please Do Not This"
 echo "This Might Lead to Data if Done So!!!"
 sleep 5
-echo "Also Make Sure You Are in a User's ~/XonNOS Directory"
+echo "Also Make Sure You Are in a User's ~/MulBX Directory"
 echo "You have 10 Seconds After This Message to Exit!"
 sleep 15
 
@@ -28,33 +28,33 @@ bash packages.sh
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
-sudo mkdir /etc/XonNOS
-sudo mkdir /etc/XonNOS/xmobar
-sudo mkdir /etc/XonNOS/scripts
-sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/MulBX
+sudo mkdir /etc/MulBX/xmobar
+sudo mkdir /etc/MulBX/scripts
+sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 
 # Moving Files
 
 
 cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
+sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges
 
 
-sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
-sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/MulBX/scripts/shutdown.sh
+sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages(y/n)"
@@ -270,33 +270,33 @@ fi
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
-sudo mkdir /etc/XonNOS
-sudo mkdir /etc/XonNOS/xmobar
-sudo mkdir /etc/XonNOS/scripts
-sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /etc/MulBX
+sudo mkdir /etc/MulBX/xmobar
+sudo mkdir /etc/MulBX/scripts
+sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 
 # Moving Files Again
 
 
 cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
+sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges Again
 
 
-sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
-sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/MulBX/scripts/shutdown.sh
+sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 # Finishing Up
 
