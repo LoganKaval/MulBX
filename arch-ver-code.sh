@@ -5,10 +5,10 @@ read vcode
 
 if [ "$vcode" = "v141.Mango" ];
 then
-     chmod +x debain-mango-ver.sh
-     bash debian-mango-ver.sh
-     echo "[     1.41H_4.14u                ] Finished: 'debian-ver-code.sh'  script--"
-     echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'debian-to-mulbx.sh' script--"
+     chmod +x arch-mango-ver.sh
+     bash arch-mango-ver.sh
+     echo "[     1.41H_4.14u                ] Finished: 'arch-ver-code.sh'  script--"
+     echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
      exit
 
 else
