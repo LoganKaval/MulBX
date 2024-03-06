@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Warinings 
-echo "This Will Update You to the New XonNOS Release!"
+echo "This Will Update You to the New MulBX Release!"
 echo "Leave Now if Needed!"
 sleep 5
 
@@ -32,7 +32,7 @@ sleep 5
 if [ "$bak" = "y" ];
 then 
         echo "Backgrounds Will be Copied!"
-        sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+        sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 
 else
         echo "Files Will Not Be Copied!"
@@ -47,15 +47,15 @@ sleep 5
 if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
-        sudo cp xmobar.config /etc/XonNOS/xmobar.config
+        sudo cp xmobar.config /etc/MulBX/xmobar.config
         cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
-        sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-        sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+        sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
+        sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
         sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp bashrc /etc/skel/.bashrc
 
-        sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
-        sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+        sudo chmod +x /etc/MulBX/scripts/shutdown.sh
+        sudo chmod +x /etc/MulBX/scripts/reboot.sh
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
 else

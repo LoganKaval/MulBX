@@ -1,9 +1,9 @@
-PRETTY_NAME="XonNOS GNU/Linux [Debian GNU/Linux Base] 3.7.3 (Mango)"
-NAME="XonNOS GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.7.3"
-VERSION="3.7.3 (Mango)"
+PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.7.4 (Mango)"
+NAME="MulBX GNU/Linux [Debian GNU/Linux Base]"
+VERSION_ID="3.7.4"
+VERSION="3.7.4 (Mango)"
 VERSION_CODENAME=Mango
-ID=xonnos
+ID=mulbx
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"

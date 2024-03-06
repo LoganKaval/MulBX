@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Warnings and Beginning
-echo "This Will Turn Arch Linux Into XonNOS!"
+echo "This Will Turn Arch Linux Into MulBX!"
 echo "Exit the Script If your not on Arch or if Your Not in a User Directory!"
 echo "You Have Five Seconds to do so"
 sleep 7
@@ -27,9 +27,9 @@ bash arch-packages.sh
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
-sudo mkdir /etc/XonNOS
-sudo mkdir /etc/XonNOS/xmobar
-sudo mkdir /etc/XonNOS/scripts
+sudo mkdir /etc/MulBX
+sudo mkdir /etc/MulBX/xmobar
+sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
 sudo mkdir /etc/skel/.xmonad
 
@@ -37,15 +37,15 @@ sudo mkdir /etc/skel/.xmonad
 
 
 cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
+sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp arch-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
@@ -255,9 +255,9 @@ fi
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
-sudo mkdir /etc/XonNOS
-sudo mkdir /etc/XonNOS/xmobar
-sudo mkdir /etc/XonNOS/scripts
+sudo mkdir /etc/MulBX
+sudo mkdir /etc/MulBX/xmobar
+sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/XonNOS
 sudo mkdir /etc/skel/.xmonad
 
@@ -265,23 +265,23 @@ sudo mkdir /etc/skel/.xmonad
 
 
 cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/XonNOS/xmobar/xmobar.config
+sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/XonNOS/scripts/shutdown.sh
-sudo cp reboot.sh /etc/XonNOS/scripts/reboot.sh
+sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
+sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
 sudo cp arch-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 
 # Allowing Scripts to Have Execute Privileges Again
 
 
-sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
-sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/MulBX/scripts/shutdown.sh
+sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 # Finishing Up
 
