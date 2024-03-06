@@ -257,7 +257,7 @@ fi
 echo "Do You Have a Version Code?(y/n)"
 read codeans
 
-if [ "codeans" = "y" ]; 
+if [ "$codeans" = "y" ]; 
 then
 	chmod +x debian-ver-code.sh
  	bash debian-ver-code.sh

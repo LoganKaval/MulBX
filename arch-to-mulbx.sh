@@ -242,7 +242,7 @@ fi
 echo "Do You Have a Version Code?(y/n)"
 read codeans
 
-if [ "codeans" = "y" ]; 
+if [ "$codeans" = "y" ]; 
 then
 	chmod +x arch-ver-code.sh
  	bash arch-ver-code.sh
