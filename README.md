@@ -1,4 +1,4 @@
-# XonNOS
+# MulBX
 This is a Formerly NixOS Based Linux Distrobution.
 This is a Script to Turn Debian GNU/Linux into MulBX.
 When Running the Script You Have to be in a User Account that is NOT root!
