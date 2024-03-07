@@ -63,7 +63,7 @@ read extpak
 
 if [ "extpak" = "y" ];
 then
-	echo "More Packages Will be Installed!
+	echo "More Packages Will be Installed!"
 	chmod +x debian-extra-packages.sh
 	bash debian-extra-packages.sh
 else
