@@ -112,10 +112,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_m     ), windows W.focusMaster  )
 
     -- Shutdown
-    , ((modm .|. shiftMask, xK_y     ), spawn "bash /home/logan/.xmonad/scripts/shutdown.sh"   )
+    , ((modm .|. shiftMask, xK_y     ), spawn "bash /etc/MulBX/scripts/shutdown.sh"   )
 
     -- Reboot
-    , ((modm,               xK_y     ), spawn "bash /home/logan/.xmonad/scripts/reboot.sh"     )
+    , ((modm,               xK_y     ), spawn "bash /etc/MulBX/scripts/reboot.sh"     )
 
     -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
@@ -287,7 +287,7 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar /etc/XonNOS/xmobar/xmobar.config"
+  xmproc <- spawnPipe "xmobar /etc/MulBX/xmobar/xmobar.config"
   xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
