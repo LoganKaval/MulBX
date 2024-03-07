@@ -56,7 +56,7 @@ read extpak
 
 if [ "$extpak" = "y" ];
 then
-	echo "More Packages Will be Installed!
+	echo "More Packages Will be Installed!"
 	chmod +x arch-extra-packages.sh
 	bash arch-extra-packages.sh
 else
