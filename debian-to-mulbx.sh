@@ -49,6 +49,7 @@ sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp install-type /etc/MulBX/install-type
 
 # Allowing Scripts to Have Execute Privileges
 
@@ -291,6 +292,7 @@ sudo cp os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp install-type /etc/MulBX/install-type
 
 # Allowing Scripts to Have Execute Privileges Again
 
