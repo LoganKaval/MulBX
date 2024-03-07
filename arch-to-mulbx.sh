@@ -48,7 +48,7 @@ sudo cp arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-
+sudo cp install-type /etc/MulBX/install-type
 
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages?(y/n)"
@@ -276,6 +276,7 @@ sudo cp arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
 sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp install-type /etc/MulBX/install-type
 
 # Allowing Scripts to Have Execute Privileges Again
 
