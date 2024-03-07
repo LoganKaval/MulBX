@@ -255,16 +255,6 @@ else
 fi
 
 
-echo "Do You Have a Version Code?(y/n)"
-read codeans
-
-if [ "$codeans" = "y" ]; 
-then
-	chmod +x debian-ver-code.sh
- 	bash debian-ver-code.sh
-else
-	echo "Ok! Continuing Install!"
-fi
 
 # Making Directories Again
 
@@ -299,6 +289,21 @@ sudo cp install-type /etc/MulBX/install-type
 
 sudo chmod +x /etc/MulBX/scripts/shutdown.sh
 sudo chmod +x /etc/MulBX/scripts/reboot.sh
+
+# Version Code
+
+
+echo "Do You Have a Version Code?(y/n)"
+read codeans
+
+if [ "$codeans" = "y" ]; 
+then
+	chmod +x debian-ver-code.sh
+ 	bash debian-ver-code.sh
+else
+	echo "Ok! Continuing Install!"
+fi
+
 
 # Finishing Up
 

@@ -36,5 +36,6 @@ sudo pacman -S libreoffice
 sudo pacman -S gimp
 sudo pacman -S kdenlive
 sudo cp xonnos-install-type /etc/MulBX/install-type
+sudo cp xonnos-os-release /etc/os-release
 echo "[     1.41H_4.14u                ] Finished: 'arch-xonnos-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
