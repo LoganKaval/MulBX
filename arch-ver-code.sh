@@ -16,7 +16,7 @@ else
 fi
 
 
-if [ "$vcode" = "XonNOS" ];
+if [ "$vcode" = "shhh_XonNOS" ];
 then
      chmod +x arch-xonnos-ver.sh
      bash arch-xonnos-ver.sh
