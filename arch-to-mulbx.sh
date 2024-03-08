@@ -289,6 +289,7 @@ fi
 
 # Finishing Up
 
+xmonad --recompile
 echo "All Done!!!"
 echo "I Will Now Reboot!"
 sleep 10
