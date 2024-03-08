@@ -19,7 +19,7 @@ If You Added to the Code Please Add Your Name in The "credits.txt" File, Unless 
 MulBX Does Work On Linux Mint!
 It Also Works on Ubuntu; the Linux Distro Linux Mint is Based Off of.
 MX Linux Also Works is Very Simular to Linux Mint and Ubuntu.
-The XMobar Configuration File is in the Directory: /etc/MulBX/xmobar/xmobar.config; the Scripts are in the Directory: /etc/XonNOS/scripts.
+The XMobar Configuration File is in the Directory: /etc/MulBX/xmobar/xmobar.config; the Scripts are in the Directory: /etc/MulBX/scripts.
 
 
 
