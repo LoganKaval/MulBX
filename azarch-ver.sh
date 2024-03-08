@@ -24,11 +24,7 @@ sudo ufw enable
 sudo ufw deny 22
 sudo ufw allow 80
 sudo ufw allow 443
-sudo pacman -S freecad
-sudo pacman -S prusa-slicer
-sudo pacman -S libreoffice
-sudo pacman -S gimp
-sudo pacman -S kdenlive
-sudo cp mango-install-type /etc/MulBX/install-type
+sudo cp azarch-install-type /etc/MulBX/install-type
+sudo cp azarch-os-release /etc/os-release
 echo "[     1.41H_4.14u                ] Finished: 'arch-mango-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
