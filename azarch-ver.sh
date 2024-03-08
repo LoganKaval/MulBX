@@ -24,6 +24,8 @@ sudo ufw enable
 sudo ufw deny 22
 sudo ufw allow 80
 sudo ufw allow 443
+cp azarch-xmonad.hs ~/.xmonad/xmonad.hs
+sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp azarch-install-type /etc/MulBX/install-type
 sudo cp azarch-os-release /etc/os-release
 echo "[     1.41H_4.14u                ] Finished: 'azarch-ver.sh'  script--"
