@@ -63,7 +63,7 @@ read extpak
 
 if [ "extpak" = "y" ];
 then
-	echo "More Packages Will be Installed!
+	echo "More Packages Will be Installed!"
 	chmod +x debian-extra-packages.sh
 	bash debian-extra-packages.sh
 else
@@ -255,16 +255,6 @@ else
 fi
 
 
-echo "Do You Have a Version Code?(y/n)"
-read codeans
-
-if [ "$codeans" = "y" ]; 
-then
-	chmod +x debian-ver-code.sh
- 	bash debian-ver-code.sh
-else
-	echo "Ok! Continuing Install!"
-fi
 
 # Making Directories Again
 
@@ -300,8 +290,24 @@ sudo cp install-type /etc/MulBX/install-type
 sudo chmod +x /etc/MulBX/scripts/shutdown.sh
 sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
+# Version Code
+
+
+echo "Do You Have a Version Code?(y/n)"
+read codeans
+
+if [ "$codeans" = "y" ]; 
+then
+	chmod +x debian-ver-code.sh
+ 	bash debian-ver-code.sh
+else
+	echo "Ok! Continuing Install!"
+fi
+
+
 # Finishing Up
 
+xmonad --recompile
 echo "All Done!!!"
 echo "I Will Now Reboot!"
 sleep 10
