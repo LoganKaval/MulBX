@@ -30,7 +30,7 @@ mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /etc/MulBX/scripts
-sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 
 # Moving Files
@@ -81,8 +81,8 @@ fi
 # Allowing Scripts to Have Execute Privileges
 
 
-sudo chmod +x /etc/XonNOS/scripts/shutdown.sh
-sudo chmod +x /etc/XonNOS/scripts/reboot.sh
+sudo chmod +x /etc/MulBX/scripts/shutdown.sh
+sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 echo "Do You Want to Install A Backup Desktop Environment?(y/n)"
 sleep 3
@@ -248,7 +248,7 @@ mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /etc/MulBX/scripts
-sudo mkdir /usr/share/backgrounds/XonNOS
+sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 
 # Moving Files Again

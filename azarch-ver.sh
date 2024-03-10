@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "What User Are You Logged Into?"
+echo "Reminder Root Will NOT Work!!!"
+read usrdir
+
+sleep 7
+
+
 rounds = 1
 until [ "$rounds" = 5 ]
 do
@@ -24,9 +31,11 @@ sudo ufw enable
 sudo ufw deny 22
 sudo ufw allow 80
 sudo ufw allow 443
-cp azarch-xmonad.hs ~/.xmonad/xmonad.hs
+cp azarch-xmonad.hs /home/$usrdir.xmonad/xmonad.hs
 sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp azarch-install-type /etc/MulBX/install-type
 sudo cp azarch-os-release /etc/os-release
+nitrogen --set-auto /usr/share/backgrounds/MulBX/minimal_mountians.png
+
 echo "[     1.41H_4.14u                ] Finished: 'azarch-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
