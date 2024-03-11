@@ -11,9 +11,15 @@ do
 done
 
 echo "Done!"
-sudo apt update
-sudo apt upgrade
-sudo apt install ufw
+
+echo "Installing the Secret Distro of MulBX..."
+echo "Installing XonNOS..."
+
+
+
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install ufw -y
 sudo ufw status
 sudo ufw enable
 sudo ufw deny 22
@@ -24,6 +30,7 @@ sudo apt install prusa-slicer
 sudo apt install libreoffice
 sudo apt install gimp
 sudo apt install kdenlive
-sudo cp mango-install-type /etc/MulBX/install-type
-echo "[     1.41H_4.14u                ] Finished: 'arch-mango-ver.sh'  script--"
-echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
+sudo cp xonnos-install-type /etc/MulBX/install-type
+sudo cp xonnos-os-release /etc/os-release
+echo "[     1.41H_4.14u                ] Finished: 'debian-xonnos-ver.sh'  script--"
+echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'debian-to-mulbx.sh' script--"
