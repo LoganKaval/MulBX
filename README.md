@@ -21,6 +21,28 @@ It Also Works on Ubuntu; the Linux Distro Linux Mint is Based Off of.
 MX Linux Also Works is Very Simular to Linux Mint and Ubuntu.
 The XMobar Configuration File is in the Directory: /etc/MulBX/xmobar/xmobar.config; the Scripts are in the Directory: /etc/MulBX/scripts.
 
+# Installing on Debian GNU/Linux
+To Install MulBX You Must Run the Correct Script!
+If Your on a Debian Machine You Must Run the "debian-to-mulbx.sh" File.
+To First Get the File Use Git to Grab the Files and Put it In your Home Folder. 
+This Will Not Work in Root!
+Once You Have the Files CD Into the Directory.
+The Correct Directory Should Be ~/MulBX.
+Once in the Directory You Must Run the "debian-to-mulbx.sh" File.
+Then Go Through the Installer.
+The Installer Has Delays that are Kinda Short if Your Not Watching for Them!!!
+
+
+# Installing on Arch Linux
+To Install MulBX You Must Run the Correct Script!
+If Your on a Debian Machine You Must Run the "arch-to-mulbx.sh" File.
+To First Get the File Use Git to Grab the Files and Put it In your Home Folder. 
+This Will Not Work in Root!
+Once You Have the Files CD Into the Directory.
+The Correct Directory Should Be ~/MulBX.
+Once in the Directory You Must Run the "arch-to-mulbx.sh" File.
+Then Go Through the Installer.
+The Installer Has Delays that are Kinda Short if Your Not Watching for Them!!!
 
 
 # WARNING:
@@ -30,4 +52,8 @@ A Few Oddly Formated Debian GNU/Linux Distrobutions Might Also Experiance Proble
 There is Experimental Support for Arch Linux!
 Run the "arch-to-mulbx.sh" script in Arch Linux or a Arch Based Distro.
 This Script Might Also Experience Problems if You Run This on a Oddly Formated Arch Linux Based Distro, But Most Ditros Will Work.
+
+This File is Also NOT Portable!!!
+The Directory Must Contain All Needed File to Work Properly.
+If You Are Going to Move the File to a USB You Must Move the ENTIRE MulBX Directory (The ".git" Directory is not Needed!)
 
