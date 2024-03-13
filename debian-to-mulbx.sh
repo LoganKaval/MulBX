@@ -33,6 +33,7 @@ sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
+sudo mkdir /usr/share/backgrounds
 
 # Moving Files
 
@@ -266,6 +267,7 @@ sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
+sudo mkdir /usr/share/backgrounds
 
 # Moving Files Again
 
