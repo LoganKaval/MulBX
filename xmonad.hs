@@ -114,7 +114,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Lock screen
     , ((modm,               xK_y     ), spawn "slock")
     
-    Swap the focused window and the master window
+    -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
     , ((modm,               xK_a     ), windows W.swapMaster)
     -- Swap the focused window with the next window
