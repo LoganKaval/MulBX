@@ -17,6 +17,7 @@ sudo apt install xterm -y
 sudo apt install terminator -y
 sudo apt install featherpad -y
 sudo apt install nitrogen -y
+sudo apt install slock -y
 sudo apt install compton -y
 sudo apt install vim -y
 sudo apt install neofetch -y
