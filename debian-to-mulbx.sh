@@ -27,7 +27,6 @@ bash packages.sh
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
@@ -253,7 +252,6 @@ fi
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
