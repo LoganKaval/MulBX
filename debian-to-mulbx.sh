@@ -30,7 +30,6 @@ mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
@@ -41,8 +40,6 @@ sudo mkdir /usr/share/backgrounds
 cp bashrc /home/$dir/.bashrc
 sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
-sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
@@ -52,11 +49,6 @@ sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp install-type /etc/MulBX/install-type
 
-# Allowing Scripts to Have Execute Privileges
-
-
-sudo chmod +x /etc/MulBX/scripts/shutdown.sh
-sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages(y/n)"
@@ -264,7 +256,6 @@ mkdir /home/$dir/.xmonad
 mkdir /home/$dir/.xmonad/scripts
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /etc/MulBX/scripts
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
@@ -275,8 +266,6 @@ sudo mkdir /usr/share/backgrounds
 cp bashrc /home/$dir/.bashrc
 sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
-sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp neofetch /usr/bin/neofetch
@@ -286,11 +275,7 @@ sudo cp bashrc /etc/skel/.bashrc
 sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp install-type /etc/MulBX/install-type
 
-# Allowing Scripts to Have Execute Privileges Again
 
-
-sudo chmod +x /etc/MulBX/scripts/shutdown.sh
-sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 # Version Code
 
