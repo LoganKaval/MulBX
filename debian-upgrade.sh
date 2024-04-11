@@ -49,13 +49,8 @@ then
         echo "Files Will Be Copied"
         sudo cp xmobar.config /etc/MulBX/xmobar.config
         cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
-        sudo cp shutdown.sh /etc/MulBX/scripts/shutdown.sh
-        sudo cp reboot.sh /etc/MulBX/scripts/reboot.sh
         sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp bashrc /etc/skel/.bashrc
-
-        sudo chmod +x /etc/MulBX/scripts/shutdown.sh
-        sudo chmod +x /etc/MulBX/scripts/reboot.sh
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
 else

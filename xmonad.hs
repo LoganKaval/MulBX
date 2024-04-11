@@ -111,12 +111,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Move focus to the master window
     , ((modm,               xK_m     ), windows W.focusMaster  )
 
-    -- Shutdown
-    , ((modm .|. shiftMask, xK_y     ), spawn "bash /etc/MulBX/scripts/shutdown.sh"   )
-
-    -- Reboot
-    , ((modm,               xK_y     ), spawn "bash /etc/MulBX/scripts/reboot.sh"     )
-
+    -- Lock screen
+    , ((modm,               xK_y     ), spawn "slock")
+    
     -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
     , ((modm,               xK_a     ), windows W.swapMaster)
