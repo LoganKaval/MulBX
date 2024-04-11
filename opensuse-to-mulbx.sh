@@ -158,6 +158,7 @@ sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp install-type /etc/MulBX/install-type
 
 
+
 # Finishing Up
 
 xmonad --recompile
