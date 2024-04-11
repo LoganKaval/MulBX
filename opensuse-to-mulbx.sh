@@ -159,21 +159,6 @@ sudo cp install-type /etc/MulBX/install-type
 
 
 
-# Version Code
-
-
-echo "Do You Have a Version Code?(y/n)"
-read codeans
-
-if [ "$codeans" = "y" ]; 
-then
-	chmod +x opensuse-ver-code.sh
- 	bash opensuse-ver-code.sh
-else
-	echo "Ok! Continuing Install!"
-fi
-
-
 # Finishing Up
 
 xmonad --recompile
