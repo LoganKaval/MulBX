@@ -127,21 +127,6 @@ then
 
 	fi
 
-	sleep 5
-	echo "Do You Want to Install Budgie?(y/n)"
-        read  bud
-	sleep 7
-
-	if [ "$bud" = "y" ];
-	then
-		sudo apt update
-		sudo apt install budgie-desktop -y
-	else
-		echo "Budgie Will Not be Installed!"
-	fi
-
-else
-	echo "No Extra Desktop Environments Will be Installed!"
 
 fi
 
