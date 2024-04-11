@@ -44,7 +44,7 @@ Once in the Directory You Must Run the "arch-to-mulbx.sh" File.
 Then Go Through the Installer.
 The Installer Has Delays that are Kinda Short if Your Not Watching for Them!!!
 
-# Installing on OpenSUSE (Experimantal)
+# Installing on OpenSUSE (Experimental)
 
 To Install MulBX You Must Run the Correct Script!
 If Your on a OpenSUSE Machine You Must Run the "opensuse-to-mulbx.sh" File.
