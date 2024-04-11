@@ -59,8 +59,6 @@ echo "KDE"
 echo "GNOME"
 echo "Xfce"
 echo "LXQT"
-echo "Cinnamon"
-echo "MATE"
 echo "Budgie"
 sleep 2
 read  desk
@@ -107,7 +105,7 @@ then
 	if [ "$xfce" = "y" ];
 	then
 		sudo zypper refresh
-		sudo zypper install -t pattern gnome_basic gnome gnome_x11
+		sudo zypper install xfce4
 	else
 		echo "Xfce Will Not be Installed!"
 
@@ -122,44 +120,13 @@ then
 	if [ "$lxqt" = "y" ];
 	then 
 		sudo zypper refresh
-		sudo zypper install
+		sudo zypper install lxqt
 
 	else
 		echo "LXQT Will Not be Installed!"
 
 	fi
 
-	sleep 5
-
-	echo "Do You Want to Install Cinnamon?(y/n)"
-	read  cin
-	sleep 7
-
-	if [ "$cin" = "y" ];
-	then
-		sudo apt update
-		sudo apt install task-cinnamon-desktop -y
-
-	else
-		echo "Cinnamon Will Not be Installed!"
-	
-	fi
-
-	sleep 5
-
-	echo "Do You Want to Install MATE?(y/n)"
-	read  mate
-	sleep 7
-
-	if [ "$MATE" = "y" ];
-	then
-		sudo apt update
-		sudo apt install mate-desktop-environment mate-desktop-environment-extras -y
-	else
-		echo "MATE Will Not be Installed!"
-
-	fi
-	
 	sleep 5
 	echo "Do You Want to Install Budgie?(y/n)"
         read  bud
