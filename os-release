@@ -1,7 +1,7 @@
-PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.7.6 (Mango)"
+PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.7.7 (Mango)"
 NAME="MulBX GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.7.5"
-VERSION="3.7.5 (Mango)"
+VERSION_ID="3.7.7"
+VERSION="3.7.7 (Mango)"
 VERSION_CODENAME=Mango
 ID=mulbx
 HOME_URL="https://www.debian.org/"
