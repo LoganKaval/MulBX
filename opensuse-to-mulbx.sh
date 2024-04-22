@@ -181,6 +181,23 @@ fi
 #	echo "Ok! Continuing Install!"
 #fi
 
+# Version Code
+
+
+echo "Do You Have a Version Code?(y/n)"
+read codeans
+
+sleep 5
+
+echo "[     2.5E_5r_9r_2.1o_37r   ] Error: Version Codes Not Yet Supported For OpenSUSE"	
+# if [ "$codeans" = "y" ]; 
+# then
+# 	chmod +x opensuse-ver-code.sh
+#  	bash opensuse-ver-code.sh
+# else
+# 	echo "Ok! Continuing Install!"
+# fi
+
 
 # Finishing Up
 
