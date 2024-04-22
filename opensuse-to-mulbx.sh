@@ -157,6 +157,29 @@ sudo cp bashrc /etc/skel/.bashrc
 sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp install-type /etc/MulBX/install-type
 
+# Version Code
+
+
+echo "Do You Have a Version Code?(y/n)"
+read codeans
+
+if [ "$codeans" = "n" ];
+then
+   echo "Ok! Continuing Install!"
+
+else 
+   echo "[        1.2E_5r_15r_19o_37r     ] Error Occured: 'Version Code' Not Supported By 'opensuse-to-mulbx.sh'
+
+fi
+
+
+#if [ "$codeans" = "y" ]; 
+#then
+# 	chmod +x opensuse-ver-code.sh
+#  	bash opensuse-ver-code.sh
+#else
+#	echo "Ok! Continuing Install!"
+#fi
 
 
 # Finishing Up
