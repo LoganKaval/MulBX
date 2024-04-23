@@ -4,7 +4,7 @@ read acod
 
 sleep 5
 
-if [ "$acod" = "Efes'in Efe'si"];
+if [ "$acod" = "Efes'in Efe'si" ];
 then 
    chmod +x arch-efe-tree.sh
    bash arch-efe-tree.sh
