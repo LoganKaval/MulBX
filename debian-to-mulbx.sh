@@ -4,10 +4,10 @@
 echo "This Will Turn Debian GNU/Linux to MulBX GNU/Linux!"
 echo "If Your Not on Debian or a Debian Based Distro Please Do Not This"
 echo "This Might Lead to Data if Done So!!!"
-sleep 5
+sleep 3
 echo "Also Make Sure You Are in a User's ~/MulBX Directory"
 echo "You have 10 Seconds After This Message to Exit!"
-sleep 15
+sleep 7
 
 
 # Collecting Directories
@@ -52,6 +52,7 @@ sudo cp install-type /etc/MulBX/install-type
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages(y/n)"
 read extpak
+sleep 7
 
 if [ "extpak" = "y" ];
 then
@@ -62,6 +63,7 @@ else
 	echo "No Extra Pacakges Will be Installed!"
 fi
 
+sleep 5
 
 if [ "$cpak" = "y" ];
 then
@@ -280,6 +282,8 @@ sudo cp install-type /etc/MulBX/install-type
 
 echo "Do You Have a Version Code?(y/n)"
 read codeans
+
+sleep 5
 
 if [ "$codeans" = "y" ]; 
 then
