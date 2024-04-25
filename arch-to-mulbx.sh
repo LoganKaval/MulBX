@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 # Hello
 
 echo "
@@ -29,8 +26,6 @@ do
 	sleep 0.3s
 	(( rounds ++ ))
 done
-
-
 
 
 # Warnings and Beginning
