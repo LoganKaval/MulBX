@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-
-
-
 # Hello
 
 echo "
@@ -30,10 +27,6 @@ do
 	sleep 0.3s
 	(( rounds ++ ))
 done
-
-
-
-
 
 # Warnings and Beginning
 echo "This Will Turn Debian GNU/Linux to MulBX GNU/Linux!"
