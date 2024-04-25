@@ -1,5 +1,40 @@
 #!/bin/bash
 
+
+
+
+# Hello
+
+echo "
+       ____________________       ________________         ________          ________
+       |                   |     |    ________    |        \       \        /       /
+       |    ___     ___    |     |   |________|   |         \       \      /       /
+       |   |   |   |   |   |     |               /           \       \    /       / 
+       |   |   |   |   |   |     |   __________  \            \       \__/       /
+	   |   |   |   |   |   |     |  |          |  |            \                / 
+	   |   |   |   |   |   |     |  |__________|  |            /      ____      \ 
+	   |___|   |___|   |___|     |________________/           /      /    \      \ 
+	                                                         /      /      \      \ 
+                                                            /      /        \______\ 
+   ________________________________________________________/      /______________________        
+   \                                                                                    /
+   /____________________________________________________________________________________\ 
+"
+
+rounds = 1
+until [ "$rounds" = 5 ]
+do
+	echo "Prepairing MulBX Installer..."
+	echo "Just One Moment Please!"
+	sleep 0.3s
+	(( rounds ++ ))
+done
+
+
+
+
+
+
 # Warnings and Beginning
 echo "This Will Turn Debian GNU/Linux to MulBX GNU/Linux!"
 echo "If Your Not on Debian or a Debian Based Distro Please Do Not This"
