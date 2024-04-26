@@ -17,7 +17,7 @@ echo "
    /____________________________________________________________________________________\ 
 "
 
-rounds = 1
+rounds 1
 until [ "$rounds" = 5 ]
 do
 	echo "Prepairing MulBX Installer..."
