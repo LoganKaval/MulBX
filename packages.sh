@@ -20,7 +20,7 @@ sudo apt install nitrogen -y
 sudo apt install slock -y
 sudo apt install compton -y
 sudo apt install vim -y
-sudo apt install neofetch -y
+sudo apt install screenfetch -y
 sudo apt install ranger -y
 sudo apt install btop -y
 sudo apt install dmenu -y

@@ -94,7 +94,7 @@ alias la='ls -A'
 #alias l='ls -CF'
 alias ..='cd ..'
 alias tcl='tty-clock -cxbt'
-alias clearfetch='clear && neofetch'
+alias clearfetch='clear && screenfetch'
 
 
 # Alias definitions.
