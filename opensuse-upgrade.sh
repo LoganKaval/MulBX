@@ -82,8 +82,8 @@ sleep 5
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x debian-ver-code.sh
- 	bash debian-ver-code.sh
+	chmod +x opensuse-ver-code.sh
+ 	bash opensuse-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi
