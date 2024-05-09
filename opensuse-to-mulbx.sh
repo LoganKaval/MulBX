@@ -190,41 +190,15 @@ sudo cp install-type /etc/MulBX/install-type
 echo "Do You Have a Version Code?(y/n)"
 read codeans
 
-if [ "$codeans" = "n" ];
+if [ "$codeans" = "y" ];
 then
-   echo "Ok! Continuing Install!"
+   chmod +x opensuse-ver-code.sh
+   bash opensuse-ver-code.sh
 
 else 
-   echo "[        1.2E_5r_15r_19o_37r     ] Error Occured: 'Version Code' Not Supported By 'opensuse-to-mulbx.sh'
-
+   echo "No Version Code Used"
+   echo "Continuing Install"
 fi
-
-
-#if [ "$codeans" = "y" ]; 
-#then
-# 	chmod +x opensuse-ver-code.sh
-#  	bash opensuse-ver-code.sh
-#else
-#	echo "Ok! Continuing Install!"
-#fi
-
-# Version Code
-
-
-echo "Do You Have a Version Code?(y/n)"
-read codeans
-
-sleep 5
-
-echo "[     2.5E_5r_9r_2.1o_37r   ] Error: Version Codes Not Yet Supported For OpenSUSE"	
-# if [ "$codeans" = "y" ]; 
-# then
-# 	chmod +x opensuse-ver-code.sh
-#  	bash opensuse-ver-code.sh
-# else
-# 	echo "Ok! Continuing Install!"
-# fi
-
 
 # Finishing Up
 

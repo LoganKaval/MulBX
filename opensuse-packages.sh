@@ -16,7 +16,7 @@ sudo zypper install featherpad -y
 sudo zypper install nitrogen -y
 sudo zypper install picom -y
 sudo zypper install vim -y
-sudo zypper install neofetch -y
+sudo zypper install screenfetch -y
 sudo zypper install ranger -y
 sudo zypper install htop -y
 sudo zypper install dmenu -y
