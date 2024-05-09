@@ -66,3 +66,17 @@ echo "Almost Done!"
 sudo cp arch-os-release /etc/os-release
 sudo cp neofetch /usr/bin/neofetch
 
+# Version Code
+
+echo "Do You Have a Version Code?(y/n)"
+read codeans
+
+if [ "$codeans" = "y" ]; 
+then
+	chmod +x arch-ver-code.sh
+ 	bash arch-ver-code.sh
+else
+	echo "Ok! Continuing Install!"
+fi
+
+echo "Finished!!!"

@@ -18,7 +18,7 @@ sudo pacman -S featherpad -y
 sudo pacman -S nitrogen -y
 sudo pacman -S picom -y
 sudo pacman -S vim -y
-sudo pacman -S neofetch -y
+sudo pacman -S screenfetch -y
 sudo pacman -S ranger -y
 sudo pacman -S btop -y
 sudo pacman -S slock -y
