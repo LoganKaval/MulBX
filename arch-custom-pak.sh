@@ -9,6 +9,7 @@ sleep 7
 sudo pacman -Syu
 sudo pacman -Syy
 
+
 echo "What Package Do You Want To Install?"
 read paknm
 
