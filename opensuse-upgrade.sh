@@ -51,7 +51,6 @@ then
         cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
-        sudo cp neofetch /usr/bin/neofetch
         sudo cp opensuse-os-release /etc/os-release
         sudo cp -r backgrounds /usr/share/backgrounds/MulBX
         sudo cp bashrc /etc/skel/.bashrc
@@ -70,7 +69,7 @@ bash opensuse-packages.sh
 echo "Almost Done!"
 
 sudo cp os-release /etc/os-release
-sudo cp neofetch /usr/bin/neofetch
+
 
 # Version Code
 

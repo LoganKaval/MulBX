@@ -68,7 +68,6 @@ sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp neofetch /usr/bin/neofetch
 sudo cp opensuse-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
@@ -177,7 +176,6 @@ sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp neofetch /usr/bin/neofetch
 sudo cp opensuse-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp bashrc /etc/skel/.bashrc
@@ -199,6 +197,11 @@ else
    echo "No Version Code Used"
    echo "Continuing Install"
 fi
+
+# UFW Setup
+
+chmod +x opensuse-ufw-setup.sh
+bash opensuse-ufw-setup.sh
 
 # Finishing Up
 

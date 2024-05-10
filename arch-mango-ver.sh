@@ -21,7 +21,7 @@ sudo systemctl disable lightdm
 sudo pacman -S ufw
 sudo ufw status
 sudo ufw enable
-sudo ufw deny 22
+sudo ufw limit 22
 sudo ufw allow 80
 sudo ufw allow 443
 sudo pacman -S freecad

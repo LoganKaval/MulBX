@@ -21,6 +21,7 @@ sudo zypper install ranger -y
 sudo zypper install htop -y
 sudo zypper install dmenu -y
 sudo zypper install qt5ct -y
+sudo zypper install ufw -y
 sudo zypper install lxappearance -y
 sudo zypper install gnome-clocks -y
 sudo zypper install xfce4-power-manager -y
