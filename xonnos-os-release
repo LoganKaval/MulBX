@@ -1,9 +1,9 @@
-PRETTY_NAME="XonNOS GNU/Linux 3.7.9 (Secret Distro)"
+PRETTY_NAME="XonNOS GNU/Linux 3.8.1 (Underrated)"
 NAME="XonNOS GNU/Linux"
-VERSION_ID="3.7.9 (Secret Distro)"
-VERSION="3.7.9"
-VERSION_CODENAME=Secret Distro
-ID=xonnos
+VERSION_ID="3.8.1 (Underrated)"
+VERSION="3.8.1"
+VERSION_CODENAME=Underrated
+ID=XonNOS
 HOME_URL="https://archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"
 BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"

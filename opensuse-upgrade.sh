@@ -46,19 +46,25 @@ sleep 5
 
 if [ "$xcon" = "y" ];
 then
-        echo "Files Will Be Copied"
-        sudo cp xmobar.config /etc/MulBX/xmobar.config
-        cp xmonad.hs /home/$usr/.xmonad/xmonad.hs
-        sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
+        cp bashrc /home/$dir/.bashrc
+        sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
+        cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+        sudo xmonad --recompile && xmonad --restart
+        xmonad --recompile && xmonad --restart
+        sudo cp neofetch /usr/bin/neofetch
+        sudo cp opensuse-os-release /etc/os-release
+        sudo cp -r backgrounds /usr/share/backgrounds/MulBX
         sudo cp bashrc /etc/skel/.bashrc
+        sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+        sudo cp install-type /etc/MulBX/install-type
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
 fi
 # Running Package Script
-chmod +x packages.sh
-bash packages.sh
+chmod +x opensuse-packages.sh
+bash opensuse-packages.sh
 
 #
 echo "Almost Done!"
@@ -76,8 +82,8 @@ sleep 5
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x debian-ver-code.sh
- 	bash debian-ver-code.sh
+	chmod +x opensuse-ver-code.sh
+ 	bash opensuse-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi

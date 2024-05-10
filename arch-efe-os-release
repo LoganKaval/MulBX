@@ -1,9 +1,9 @@
-PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.7.8 (Mango)"
+PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.0 (Dağ)"
 NAME="Efeistan GNU/Linux [Arch Linux Base]"
-VERSION_ID="3.7.8"
-VERSION="3.7.8 (Mango)"
-VERSION_CODENAME=Mango
-ID=efeistan
+VERSION_ID="3.8.0"
+VERSION="3.8.0 (Dağ)"
+VERSION_CODENAME=Dağ
+ID=Efeistan
 HOME_URL="https://archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"
 BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"

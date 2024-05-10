@@ -1,9 +1,9 @@
-PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.7.7 (Mango)"
+PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.8.0 (Dağ)"
 NAME="MulBX GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.7.7"
-VERSION="3.7.7 (Mango)"
-VERSION_CODENAME=Mango
-ID=mulbx
+VERSION_ID="3.8.0"
+VERSION="3.8.0 (Dağ)"
+VERSION_CODENAME=Dağ
+ID=Mulbx
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
