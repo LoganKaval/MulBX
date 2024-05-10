@@ -301,6 +301,12 @@ else
 	echo "Ok! Continuing Install!"
 fi
 
+# UFW Setup
+
+chmod +x arch-ufw-setup.sh
+bash arch-ufw-setup.sh
+
+
 # Finishing Up
 
 xmonad --recompile

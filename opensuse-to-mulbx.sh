@@ -198,6 +198,11 @@ else
    echo "Continuing Install"
 fi
 
+# UFW Setup
+
+chmod +x opensuse-ufw-setup.sh
+bash opensuse-ufw-setup.sh
+
 # Finishing Up
 
 xmonad --recompile

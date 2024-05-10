@@ -317,6 +317,10 @@ else
 	echo "Ok! Continuing Install!"
 fi
 
+# UFW Setup
+
+chmod +x debian-ufw-setup.sh
+bash debian-ufw-setup.sh
 
 # Finishing Up
 
