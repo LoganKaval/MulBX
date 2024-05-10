@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-neofetch
+screenfetch
 sleep 1
 clear
 echo "The Fifth Efe Has Been Found"
