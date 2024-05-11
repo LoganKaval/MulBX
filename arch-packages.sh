@@ -21,6 +21,7 @@ sudo pacman -S vim -y
 sudo pacman -S screenfetch -y
 sudo pacman -S ranger -y
 sudo pacman -S btop -y
+sudo pacman -S lxappearance -y
 sudo pacman -S slock -y
 sudo pacman -S dmenu -y
 sudo pacman -S qt5ct -y
