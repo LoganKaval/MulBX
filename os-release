@@ -1,7 +1,7 @@
-PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.8.0 (Dağ)"
+PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.8.1 (Dağ)"
 NAME="MulBX GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.8.0"
-VERSION="3.8.0 (Dağ)"
+VERSION_ID="3.8.1"
+VERSION="3.8.1 (Dağ)"
 VERSION_CODENAME=Dağ
 ID=Mulbx
 HOME_URL="https://www.debian.org/"

@@ -1,7 +1,7 @@
-PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.0 (Dağ)"
+PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.1 (Dağ)"
 NAME="Efeistan GNU/Linux [Arch Linux Base]"
-VERSION_ID="3.8.0"
-VERSION="3.8.0 (Dağ)"
+VERSION_ID="3.8.1"
+VERSION="3.8.1 (Dağ)"
 VERSION_CODENAME=Dağ
 ID=Efeistan
 HOME_URL="https://archlinux.org/"
