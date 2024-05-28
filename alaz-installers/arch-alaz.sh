@@ -2808,6 +2808,10 @@ then
         sudo ufw allow 80
         sudo ufw allow 443
         #cp azarch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+
+
+
+        
         #sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
         
 
