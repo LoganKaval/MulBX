@@ -253,110 +253,110 @@ echo "'" >> /home/$dir/.bashrc
 
 #sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 
-echo "Config { " > /etc/MulBX/xmobar/xmobar.config
-echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
-echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
-echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-echo "                          " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- battery monitor"
-echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-echo " "
-echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
-echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
-echo "        ]"
-echo "   }" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "Config { " > /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                          " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- battery monitor"
+sudo echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " "
+sudo echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        ]"
+sudo echo "   }" >> /etc/MulBX/xmobar/xmobar.config
 
 #cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
@@ -1271,7 +1271,7 @@ sudo echo "    "mod-button3  Set the window to floating mode and resize by dragg
 
 #sudo cp install-type /etc/MulBX/install-type
 
-echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
+sudo echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
 
 
 # Extra Packages
@@ -1654,111 +1654,110 @@ echo "'" >> /home/$dir/.bashrc
 
 #sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 
-echo "Config { " > /etc/MulBX/xmobar/xmobar.config
-echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
-echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
-echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
-echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
-echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-echo "                          " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- battery monitor"
-echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
-echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-echo " "
-echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
-echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
-echo " " >> /etc/MulBX/xmobar/xmobar.config
-echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
-echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
-echo "        ]"
-echo "   }" >> /etc/MulBX/xmobar/xmobar.config
-
+sudo echo "Config { " > /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                          " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- battery monitor"
+sudo echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " "
+sudo echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
+sudo echo "        ]"
+sudo echo "   }" >> /etc/MulBX/xmobar/xmobar.config
 #cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
 
@@ -2672,7 +2671,7 @@ sudo echo "    "mod-button3  Set the window to floating mode and resize by dragg
 
 #sudo cp install-type /etc/MulBX/install-type
 
-echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
+sudo echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
 
 
 
