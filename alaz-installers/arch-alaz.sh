@@ -43,43 +43,53 @@ read dir
 
 sleep 10
 
+# Uplifting
+
+su
+su 
+su
+su
+su
+su
+su
+
 
 # To Install Packages in the Package List
-sudo pacman -Syu
-sudo pacman -Syy
-sudo pacman -S tty-clock -y
-sudo pacman -S chromium-browser -y
-sudo pacman -S thunar -y
-sudo pacman -S libreoffice -y
-sudo pacman -S cheese -y
-sudo pacman -S git -y
-sudo pacman -S wget -y
-sudo pacman -S xmonad -y
-sudo pacman -S xmonad-contrib -y
-sudo pacman -S xmobar -y
-sudo pacman -S xterm -y
-sudo pacman -S terminator -y
-sudo pacman -S featherpad -y
-sudo pacman -S nitrogen -y
-sudo pacman -S picom -y
-sudo pacman -S vim -y
-sudo pacman -S screenfetch -y
-sudo pacman -S ranger -y
-sudo pacman -S btop -y
-sudo pacman -S lxappearance -y
-sudo pacman -S slock -y
-sudo pacman -S dmenu -y
-sudo pacman -S qt5ct -y
-sudo pacman -S gnome-clocks -y
-sudo pacman -S xfce4-power-manager -y
-sudo pacman -S nano -y
-sudo pacman -S mc -y
-sudo pacman -S curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo pacman -S spectacle -y
-sudo pacman -S ufw -y
+ pacman -Syu
+ pacman -Syy
+ pacman -S tty-clock -y
+ pacman -S chromium-browser -y
+ pacman -S thunar -y
+ pacman -S libreoffice -y
+ pacman -S cheese -y
+ pacman -S git -y
+ pacman -S wget -y
+ pacman -S xmonad -y
+ pacman -S xmonad-contrib -y
+ pacman -S xmobar -y
+ pacman -S xterm -y
+ pacman -S terminator -y
+ pacman -S featherpad -y
+ pacman -S nitrogen -y
+ pacman -S picom -y
+ pacman -S vim -y
+ pacman -S screenfetch -y
+ pacman -S ranger -y
+ pacman -S btop -y
+ pacman -S lxappearance -y
+ pacman -S slock -y
+ pacman -S dmenu -y
+ pacman -S qt5ct -y
+ pacman -S gnome-clocks -y
+ pacman -S xfce4-power-manager -y
+ pacman -S nano -y
+ pacman -S mc -y
+ pacman -S curl -y
+ curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"| tee /etc/apt/sources.list.d/brave-browser-release.list
+ apt update
+ pacman -S spectacle -y
+ pacman -S ufw -y
 
 
 
@@ -87,11 +97,11 @@ sudo pacman -S ufw -y
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
-sudo mkdir /etc/skel/.xmonad
-sudo mkdir /usr/share/backgrounds
+ mkdir /etc/MulBX
+ mkdir /etc/MulBX/xmobar
+ mkdir /usr/share/backgrounds/MulBX
+ mkdir /etc/skel/.xmonad
+ mkdir /usr/share/backgrounds
 
 # Moving Files
 
@@ -187,7 +197,7 @@ echo "alias l='ls -CF'" >> /home/$dir/.bashrc
 echo "alias ..='cd ..'" >> /home/$dir/.bashrc
 echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
 echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /home/$dir/.bashrc
+echo "alias alaz='echo "ALAZ STARTED:" &&  pacman'" >> /home/$dir/.bashrc
 echo "# Alias definitions." >> /home/$dir/.bashrc
 echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
 echo "# ~/.bash_aliases, instead of adding them here directly." >> /home/$dir/.bashrc
@@ -251,112 +261,112 @@ echo " " >> /home/$dir/.bashrc
 echo "'" >> /home/$dir/.bashrc
 
 
-#sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
+# cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 
-sudo echo "Config { " > /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                          " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- battery monitor"
-sudo echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " "
-sudo echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        ]"
-sudo echo "   }" >> /etc/MulBX/xmobar/xmobar.config
+ echo "Config { " > /etc/MulBX/xmobar/xmobar.config
+ echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
+ echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                          " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- battery monitor"
+ echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+ echo " "
+ echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        ]"
+ echo "   }" >> /etc/MulBX/xmobar/xmobar.config
 
 #cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
@@ -729,549 +739,549 @@ echo "    "mod-button2  Raise the window to the top of the stack"," >> /home/$di
 echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /home/$dir/.xmonad/xmonad.hs
 
 
-sudo xmonad --recompile && xmonad --restart
+ xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 
 
-#sudo cp arch-os-release /etc/os-release
+# cp arch-os-release /etc/os-release
 
-sudo echo "PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.2 (Dağ)"" > /etc/os-release
-sudo echo "NAME="MulBX GNU/Linux [Arch Linux Base]"" >> /etc/os-release
-sudo echo "VERSION_ID="3.8.2"" >> /etc/os-release
-sudo echo "VERSION="3.8.2 (Dağ)"" >> /etc/os-release
-sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
-sudo echo "ID=Mulbx" >> /etc/os-release
-sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
-sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
-sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
-
-
-
-#sudo cp bashrc /etc/skel/.bashrc
+ echo "PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.2 (Dağ)"" > /etc/os-release
+ echo "NAME="MulBX GNU/Linux [Arch Linux Base]"" >> /etc/os-release
+ echo "VERSION_ID="3.8.2"" >> /etc/os-release
+ echo "VERSION="3.8.2 (Dağ)"" >> /etc/os-release
+ echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+ echo "ID=Mulbx" >> /etc/os-release
+ echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+ echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+ echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
 
-sudo echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
-sudo echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
-sudo echo "case $- in" >> /etc/skel/.bashrc
-sudo echo "    *i*) ;;" >> /etc/skel/.bashrc
-sudo echo "      *) return;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "shopt -s histappend" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "HISTSIZE=1000" >> /etc/skel/.bashrc
-sudo echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
-sudo echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
-sudo echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
-sudo echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
-sudo echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
-sudo echo "#shopt -s globstar" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
-sudo echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
-sudo echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
-sudo echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
-sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-sudo echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrc
-sudo echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
-sudo echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
-sudo echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
-sudo echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrcr
-sudo echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
-sudo echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
-sudo echo "	color_prompt=yes" >> /etc/skel/.bashrc
-sudo echo "    else" >> /etc/skel/.bashrc
-sudo echo "	color_prompt=" >> /etc/skel/.bashrc
-sudo echo "    fi" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
-sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
-sudo echo "else" >> /etc/skel/.bashrc
-sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
-sudo echo "fi"  >> /etc/skel/.bashrc
-sudo echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
-sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-sudo echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
-sudo echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
-sudo echo "    ;;" >> /etc/skel/.bashrce
-sudo echo "*)" >> /etc/skel/.bashrc
-sudo echo "    ;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
-sudo echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
-sudo echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
-sudo echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias vdir='vdir --color=auto'"
-sudo echo " " >> /home/$dir/.bashrc
-sudo echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrc
-sudo echo "# colored GCC warnings and errors"
-sudo echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# some more ls aliases" >> /etc/skel/.bashrc
-sudo echo "alias ll='ls -l'" >> /etc/skel/.bashrc
-sudo echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
-sudo echo "alias la='ls -A'" >> /etc/skel/.bashrc
-sudo echo "alias l='ls -CF'" >> /etc/skel/.bashrc
-sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
-sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
-sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
-sudo echo "# Alias definitions." >> /etc/skel/.bashrc
-sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
-sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
-sudo echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
-sudo echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
-sudo echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
-sudo echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
-sudo echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
-sudo echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
-sudo echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
-sudo echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
-sudo echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
-sudo echo "  fi" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skelir/.bashrc
-sudo echo "echo '"  >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "                 _" >> /etc/skel/.bashrc
-sudo echo "               /  /|" >> /etc/skel/.bashrc
-sudo echo "             /  / /|" >> /etc/skel/.bashrc
-sudo echo "           / | / / |" >> /etc/skel/.bashrc
-sudo echo "         /|  |/ /  |" >> /etc/skel/.bashrc
-sudo echo "       /  |  / /___|" >> /etc/skel/.bashrc
-sudo echo "      /   | / /    |" >> /etc/skel/.bashrc
-sudo echo "      |   |/ /_____|" >> /etc/skel/.bashrc
-sudo echo "      |   / /      |" >> /etc/skel/.bashrc
-sudo echo "      |  / /     __|" >> /etc/skel/.bashrc
-sudo echo "      | / /     /" >> /etc/skel/.bashrc
-sudo echo "       / /------" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       |_|" >> /etc/skel/.bashrc
-sudo echo "       \_\." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "'" >> /etc/skel/.bashrc
-sudo echo "clear" >> /etc/skel/.bashrc
-sudo echo "echo '" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "                 _" >> /etc/skel/.bashrc
-sudo echo "               /  /|" >> /etc/skel/.bashrc
-sudo echo "             /  / /|" >> /etc/skel/.bashrc
-sudo echo "           / | / / |" >> /etc/skel/.bashrc
-sudo echo "         /|  |/ /  |" >> /etc/skel/.bashrc
-sudo echo "       /  |  / /___|" >> /etc/skel/.bashrc
-sudo echo "      /   | / /    |" >> /etc/skel/.bashrc
-sudo echo "      |   |/ /_____|" >> /etc/skel/.bashrc
-sudo echo "      |   / /      |" >> /etc/skel/.bashrc
-sudo echo "      |  / /     __|" >> /etc/skel/.bashrc
-sudo echo "      | / /     /" >> /etc/skel/.bashrc
-sudo echo "       / /------" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       |_|" >> /etc/skel/.bashrc
-sudo echo "       \_\." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "'" >> /etc/skel/.bashrc
 
-#sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-
-sudo echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myNormalBorderColor  = "#097969"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusedBorderColor = "#50c878"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $"
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Brave Browser" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_v     ), spawn "brave-browser")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Chromium" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_d     ), spawn "featherpad")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /home//.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "   -- Lock screen" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_y     ), spawn "slock")    )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /home//.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--"  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     where" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--"  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  xmproc <- spawnPipe "xmobar /etc/MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    }" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "   ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /home/$dir/x.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-[1..9]   Move client to workspace N","
-sudo echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+# cp bashrc /etc/skel/.bashrc
 
 
-#sudo cp install-type /etc/MulBX/install-type
+ echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
+ echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
+ echo "case $- in" >> /etc/skel/.bashrc
+ echo "    *i*) ;;" >> /etc/skel/.bashrc
+ echo "      *) return;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "shopt -s histappend" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "HISTSIZE=1000" >> /etc/skel/.bashrc
+ echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
+ echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
+ echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
+ echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
+ echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
+ echo "#shopt -s globstar" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
+ echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
+ echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
+ echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
+ echo "case "$TERM" in" >> /etc/skel/.bashrc
+ echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrc
+ echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
+ echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
+ echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
+ echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrcr
+ echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
+ echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
+ echo "	color_prompt=yes" >> /etc/skel/.bashrc
+ echo "    else" >> /etc/skel/.bashrc
+ echo "	color_prompt=" >> /etc/skel/.bashrc
+ echo "    fi" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
+ echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
+ echo "else" >> /etc/skel/.bashrc
+ echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
+ echo "fi"  >> /etc/skel/.bashrc
+ echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
+ echo "case "$TERM" in" >> /etc/skel/.bashrc
+ echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
+ echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
+ echo "    ;;" >> /etc/skel/.bashrce
+ echo "*)" >> /etc/skel/.bashrc
+ echo "    ;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
+ echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
+ echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
+ echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias vdir='vdir --color=auto'"
+ echo " " >> /home/$dir/.bashrc
+ echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrc
+ echo "# colored GCC warnings and errors"
+ echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# some more ls aliases" >> /etc/skel/.bashrc
+ echo "alias ll='ls -l'" >> /etc/skel/.bashrc
+ echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
+ echo "alias la='ls -A'" >> /etc/skel/.bashrc
+ echo "alias l='ls -CF'" >> /etc/skel/.bashrc
+ echo "alias ..='cd ..'" >> /etc/skel/.bashrc
+ echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
+ echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
+ echo "alias alaz='echo "ALAZ STARTED:" &&  pacman'" >> /etc/skel/.bashrc
+ echo "# Alias definitions." >> /etc/skel/.bashrc
+ echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
+ echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
+ echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
+ echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
+ echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
+ echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
+ echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
+ echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
+ echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
+ echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
+ echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
+ echo "  fi" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skelir/.bashrc
+ echo "echo '"  >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "                 _" >> /etc/skel/.bashrc
+ echo "               /  /|" >> /etc/skel/.bashrc
+ echo "             /  / /|" >> /etc/skel/.bashrc
+ echo "           / | / / |" >> /etc/skel/.bashrc
+ echo "         /|  |/ /  |" >> /etc/skel/.bashrc
+ echo "       /  |  / /___|" >> /etc/skel/.bashrc
+ echo "      /   | / /    |" >> /etc/skel/.bashrc
+ echo "      |   |/ /_____|" >> /etc/skel/.bashrc
+ echo "      |   / /      |" >> /etc/skel/.bashrc
+ echo "      |  / /     __|" >> /etc/skel/.bashrc
+ echo "      | / /     /" >> /etc/skel/.bashrc
+ echo "       / /------" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       |_|" >> /etc/skel/.bashrc
+ echo "       \_\." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "'" >> /etc/skel/.bashrc
+ echo "clear" >> /etc/skel/.bashrc
+ echo "echo '" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "                 _" >> /etc/skel/.bashrc
+ echo "               /  /|" >> /etc/skel/.bashrc
+ echo "             /  / /|" >> /etc/skel/.bashrc
+ echo "           / | / / |" >> /etc/skel/.bashrc
+ echo "         /|  |/ /  |" >> /etc/skel/.bashrc
+ echo "       /  |  / /___|" >> /etc/skel/.bashrc
+ echo "      /   | / /    |" >> /etc/skel/.bashrc
+ echo "      |   |/ /_____|" >> /etc/skel/.bashrc
+ echo "      |   / /      |" >> /etc/skel/.bashrc
+ echo "      |  / /     __|" >> /etc/skel/.bashrc
+ echo "      | / /     /" >> /etc/skel/.bashrc
+ echo "       / /------" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       |_|" >> /etc/skel/.bashrc
+ echo "       \_\." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "'" >> /etc/skel/.bashrc
 
-sudo echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
+# cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+
+ echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myNormalBorderColor  = "#097969"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusedBorderColor = "#50c878"" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $"
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Brave Browser" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_v     ), spawn "brave-browser")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Chromium" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_d     ), spawn "featherpad")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /home//.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "   -- Lock screen" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_y     ), spawn "slock")    )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /home//.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--"  >> /etc/skel/.xmonad/xmonad.hs
+ echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
+ echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
+ echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     where" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
+ echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
+ echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--"  >> /etc/skel/.xmonad/xmonad.hs
+ echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  xmproc <- spawnPipe "xmobar /etc/MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    }" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
+ echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
+ echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "   ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /home/$dir/x.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-[1..9]   Move client to workspace N","
+ echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+
+
+# cp install-type /etc/MulBX/install-type
+
+ echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
 
 
 # Extra Packages
@@ -1281,13 +1291,13 @@ read extpak
 if [ "$extpak" = "y" ];
 then
 	echo "More Packages Will be Installed!"
-	sudo pacman -Syu
-    sudo pacman -Syy
-    sudo pacman -S freecad -y
-    sudo pacman -S prusa-slicer -y
-    sudo pacman -S gimp -y
-    sudo pacman -S kdenlive -y
-    sudo pacman -S libreoffice -y
+	 pacman -Syu
+     pacman -Syy
+     pacman -S freecad -y
+     pacman -S prusa-slicer -y
+     pacman -S gimp -y
+     pacman -S kdenlive -y
+     pacman -S libreoffice -y
 else
 	echo "No Extra Pacakges Will be Installed!"
 fi
@@ -1304,8 +1314,8 @@ then
     echo "Keep a Space Inbetween!"
     echo "Type Quit to Leave!"
     sleep 7
-    sudo pacman -Syu
-    sudo pacman -Syy
+     pacman -Syu
+     pacman -Syy
 
 
     echo "What Package Do You Want To Install?"
@@ -1318,7 +1328,7 @@ then
 	    echo "You Can List Them With One Space Inbetween Each Package!"
 	    read paknm
 
-	    sudo pacman -S $paknm -y
+	     pacman -S $paknm -y
 
     done
 
@@ -1351,8 +1361,8 @@ then
 	sleep 7
     if [ "$kde" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S plasma -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S plasma -y
 
 	else
 		echo "KDE Will Not Be Installed!"
@@ -1367,8 +1377,8 @@ then
 
 	if [ "$gnome" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S gnome -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S gnome -y
 
 	else
 		echo "GNOME Will Not be Installed!"
@@ -1382,8 +1392,8 @@ then
 
 	if [ "$xfce" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S xfce4 xfce4-goodies -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S xfce4 xfce4-goodies -y
 
 	else
 		echo "Xfce Will Not be Installed!"
@@ -1398,8 +1408,8 @@ then
 
 	if [ "$lxqt" = "y" ];
 	then 
-        sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S xorg lxqt -y
+         pacman -Syu &&  pacman -Syy
+		 pacman -S xorg lxqt -y
 
 	else
 		echo "LXQT Will Not be Installed!"
@@ -1414,8 +1424,8 @@ then
 
 	if [ "$cin" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S cinnamon -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S cinnamon -y
 
 	else
 		echo "Cinnamon Will Not be Installed!"
@@ -1429,8 +1439,8 @@ then
 
 	if [ "$MATE" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S mate -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S mate -y
 	else
 		echo "MATE Will Not be Installed!"
 
@@ -1443,8 +1453,8 @@ then
 
 	if [ "$bud" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S budgie -y
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S budgie -y
 	else
 		echo "Budgie Will Not be Installed!"
 	fi
@@ -1470,8 +1480,8 @@ then
 
 	if [ "$nix" = "y" ];
 	then
-		sudo pacman -Syu && sudo pacman -Syy
-		sudo pacman -S nix
+		 pacman -Syu &&  pacman -Syy
+		 pacman -S nix
 
 	else
 		echo "Nix Will Not be Installed!"
@@ -1488,11 +1498,11 @@ fi
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
-sudo mkdir /etc/skel/.xmonad
-sudo mkdir /usr/share/backgrounds
+ mkdir /etc/MulBX
+ mkdir /etc/MulBX/xmobar
+ mkdir /usr/share/backgrounds/MulBX
+ mkdir /etc/skel/.xmonad
+ mkdir /usr/share/backgrounds
 
 # Moving Files Again
 
@@ -1588,7 +1598,7 @@ echo "alias l='ls -CF'" >> /home/$dir/.bashrc
 echo "alias ..='cd ..'" >> /home/$dir/.bashrc
 echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
 echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /home/$dir/.bashrc
+echo "alias alaz='echo "ALAZ STARTED:" &&  pacman'" >> /home/$dir/.bashrc
 echo "# Alias definitions." >> /home/$dir/.bashrc
 echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
 echo "# ~/.bash_aliases, instead of adding them here directly." >> /home/$dir/.bashrc
@@ -1652,112 +1662,112 @@ echo " " >> /home/$dir/.bashrc
 echo "'" >> /home/$dir/.bashrc
 
 
-#sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
+# cp xmobar.config /etc/MulBX/xmobar/xmobar.config
 
-sudo echo "Config { " > /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                          " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- battery monitor"
-sudo echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " "
-sudo echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo " " >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
-sudo echo "        ]"
-sudo echo "   }" >> /etc/MulBX/xmobar/xmobar.config
+ echo "Config { " > /etc/MulBX/xmobar/xmobar.config
+ echo "   -- appearance" >> /etc/MulBX/xmobar/xmobar.config
+ echo "     font =         "Bitstream Vera Sans Mono Bold 9:pixelsize=30"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , bgColor =      "black"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , fgColor =      "#646464"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , position =     Top" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , border =       BottomB" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , borderColor =  "#097969"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- layout" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , sepChar =  "%"   -- delineator between plugin names and straight text" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , alignSep = "}{"  -- separator between left-right alignment" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- general behavior" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , lowerOnStart =     True    -- send to bottom of window stack on start" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , hideOnStart =      False   -- start with window unmapped (hidden)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , allDesktops =      True    -- show on all desktops" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , pickBroadest =     False   -- choose widest display (multi-monitor)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , persistent =       True    -- enable/disable hiding (True = disabled)" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "   -- plugins" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   Numbers can be automatically colored according to their value. xmobar" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   decides color based on a three-tier/two-cutoff system, controlled by" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   command options:" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --Low sets the low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --High sets the high cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --low sets the color below --Low cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --normal sets the color between --Low and --High cutoffs" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --     --High sets the color above --High cutoff" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   The --template option controls how the plugin is displayed. Text" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   color can be set by enclosing in <fc></fc> tags. For more details" >> /etc/MulBX/xmobar/xmobar.config
+ echo "   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins." >> /etc/MulBX/xmobar/xmobar.config
+ echo "   , commands = " >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- weather monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 36000" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- network activity monitor (dynamic interface resolution)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "1000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "5000"       -- units: B/s" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- cpu activity monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "50"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "85"         -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- cpu core temperature monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "70"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "80"        -- units: °C" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                          " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- memory usage monitor" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Memory         [ "--template" ,"Mem: <usedratio>%"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "20"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "90"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- battery monitor"
+ echo "        , Run Battery        [ "--template" , "Batt: <acstatus>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--Low"      , "25"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--High"     , "80"        -- units: %" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--low"      , "darkred"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--normal"   , "darkorange"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--high"     , "darkgreen"" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , "--" -- battery specific options" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- discharging status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-o"	, "<left>% (<timeleft>)"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- AC "on" status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-O"	, "<fc=#dAA520>Charging</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       -- charged status" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                                       , "-i"	, "<fc=#006000>Charged</fc>"" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ] 50" >> /etc/MulBX/xmobar/xmobar.config
+ echo " "
+ echo "        -- time and date indicator " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10" >> /etc/MulBX/xmobar/xmobar.config
+ echo " " >> /etc/MulBX/xmobar/xmobar.config
+ echo "        -- keyboard layout indicator" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             , ("us"         , "<fc=#8B0000>US</fc>")" >> /etc/MulBX/xmobar/xmobar.config
+ echo "                             ]" >> /etc/MulBX/xmobar/xmobar.config
+ echo "        ]"
+ echo "   }" >> /etc/MulBX/xmobar/xmobar.config
 #cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
 
@@ -2129,549 +2139,549 @@ echo "    "mod-button2  Raise the window to the top of the stack"," >> /home/$di
 echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /home/$dir/.xmonad/xmonad.hs
 
 
-sudo xmonad --recompile && xmonad --restart
+ xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 
 
-#sudo cp arch-os-release /etc/os-release
+# cp arch-os-release /etc/os-release
 
-sudo echo "PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.2 (Dağ)"" > /etc/os-release
-sudo echo "NAME="MulBX GNU/Linux [Arch Linux Base]"" >> /etc/os-release
-sudo echo "VERSION_ID="3.8.2"" >> /etc/os-release
-sudo echo "VERSION="3.8.2 (Dağ)"" >> /etc/os-release
-sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
-sudo echo "ID=Mulbx" >> /etc/os-release
-sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
-sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
-sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
-
-
-
-#sudo cp bashrc /etc/skel/.bashrc
+ echo "PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.2 (Dağ)"" > /etc/os-release
+ echo "NAME="MulBX GNU/Linux [Arch Linux Base]"" >> /etc/os-release
+ echo "VERSION_ID="3.8.2"" >> /etc/os-release
+ echo "VERSION="3.8.2 (Dağ)"" >> /etc/os-release
+ echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+ echo "ID=Mulbx" >> /etc/os-release
+ echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+ echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+ echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
 
-sudo echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
-sudo echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
-sudo echo "case $- in" >> /etc/skel/.bashrc
-sudo echo "    *i*) ;;" >> /etc/skel/.bashrc
-sudo echo "      *) return;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "shopt -s histappend" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "HISTSIZE=1000" >> /etc/skel/.bashrc
-sudo echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
-sudo echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
-sudo echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
-sudo echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
-sudo echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
-sudo echo "#shopt -s globstar" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
-sudo echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
-sudo echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
-sudo echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
-sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-sudo echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrc
-sudo echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
-sudo echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
-sudo echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
-sudo echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrcr
-sudo echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
-sudo echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
-sudo echo "	color_prompt=yes" >> /etc/skel/.bashrc
-sudo echo "    else" >> /etc/skel/.bashrc
-sudo echo "	color_prompt=" >> /etc/skel/.bashrc
-sudo echo "    fi" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
-sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
-sudo echo "else" >> /etc/skel/.bashrc
-sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
-sudo echo "fi"  >> /etc/skel/.bashrc
-sudo echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
-sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-sudo echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
-sudo echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
-sudo echo "    ;;" >> /etc/skel/.bashrce
-sudo echo "*)" >> /etc/skel/.bashrc
-sudo echo "    ;;" >> /etc/skel/.bashrc
-sudo echo "esac" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
-sudo echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
-sudo echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
-sudo echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias vdir='vdir --color=auto'"
-sudo echo " " >> /home/$dir/.bashrc
-sudo echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skel/.bashrc
-sudo echo "# colored GCC warnings and errors"
-sudo echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# some more ls aliases" >> /etc/skel/.bashrc
-sudo echo "alias ll='ls -l'" >> /etc/skel/.bashrc
-sudo echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
-sudo echo "alias la='ls -A'" >> /etc/skel/.bashrc
-sudo echo "alias l='ls -CF'" >> /etc/skel/.bashrc
-sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
-sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
-sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
-sudo echo "# Alias definitions." >> /etc/skel/.bashrc
-sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
-sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
-sudo echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
-sudo echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
-sudo echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
-sudo echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
-sudo echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
-sudo echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
-sudo echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
-sudo echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
-sudo echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
-sudo echo "  fi" >> /etc/skel/.bashrc
-sudo echo "fi" >> /etc/skel/.bashrc
-sudo echo " "  >> /etc/skelir/.bashrc
-sudo echo "echo '"  >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "                 _" >> /etc/skel/.bashrc
-sudo echo "               /  /|" >> /etc/skel/.bashrc
-sudo echo "             /  / /|" >> /etc/skel/.bashrc
-sudo echo "           / | / / |" >> /etc/skel/.bashrc
-sudo echo "         /|  |/ /  |" >> /etc/skel/.bashrc
-sudo echo "       /  |  / /___|" >> /etc/skel/.bashrc
-sudo echo "      /   | / /    |" >> /etc/skel/.bashrc
-sudo echo "      |   |/ /_____|" >> /etc/skel/.bashrc
-sudo echo "      |   / /      |" >> /etc/skel/.bashrc
-sudo echo "      |  / /     __|" >> /etc/skel/.bashrc
-sudo echo "      | / /     /" >> /etc/skel/.bashrc
-sudo echo "       / /------" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       |_|" >> /etc/skel/.bashrc
-sudo echo "       \_\." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "'" >> /etc/skel/.bashrc
-sudo echo "clear" >> /etc/skel/.bashrc
-sudo echo "echo '" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "                 _" >> /etc/skel/.bashrc
-sudo echo "               /  /|" >> /etc/skel/.bashrc
-sudo echo "             /  / /|" >> /etc/skel/.bashrc
-sudo echo "           / | / / |" >> /etc/skel/.bashrc
-sudo echo "         /|  |/ /  |" >> /etc/skel/.bashrc
-sudo echo "       /  |  / /___|" >> /etc/skel/.bashrc
-sudo echo "      /   | / /    |" >> /etc/skel/.bashrc
-sudo echo "      |   |/ /_____|" >> /etc/skel/.bashrc
-sudo echo "      |   / /      |" >> /etc/skel/.bashrc
-sudo echo "      |  / /     __|" >> /etc/skel/.bashrc
-sudo echo "      | / /     /" >> /etc/skel/.bashrc
-sudo echo "       / /------" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       | |" >> /etc/skel/.bashrc
-sudo echo "       |_|" >> /etc/skel/.bashrc
-sudo echo "       \_\." >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
-sudo echo "'" >> /etc/skel/.bashrc
 
-#sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-
-sudo echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myNormalBorderColor  = "#097969"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myFocusedBorderColor = "#50c878"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $"
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Brave Browser" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_v     ), spawn "brave-browser")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Chromium" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_d     ), spawn "featherpad")" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /home//.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "   -- Lock screen" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_y     ), spawn "slock")    )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /home//.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--"  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " "  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     where" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--"  >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  xmproc <- spawnPipe "xmobar /etc/MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    }" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "   ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /home/$dir/x.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-[1..9]   Move client to workspace N","
-sudo echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
-sudo echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+# cp bashrc /etc/skel/.bashrc
 
 
-#sudo cp install-type /etc/MulBX/install-type
+ echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
+ echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
+ echo "case $- in" >> /etc/skel/.bashrc
+ echo "    *i*) ;;" >> /etc/skel/.bashrc
+ echo "      *) return;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "shopt -s histappend" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "HISTSIZE=1000" >> /etc/skel/.bashrc
+ echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
+ echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
+ echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
+ echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
+ echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
+ echo "#shopt -s globstar" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
+ echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
+ echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
+ echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
+ echo "case "$TERM" in" >> /etc/skel/.bashrc
+ echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrc
+ echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
+ echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
+ echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
+ echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrcr
+ echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
+ echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
+ echo "	color_prompt=yes" >> /etc/skel/.bashrc
+ echo "    else" >> /etc/skel/.bashrc
+ echo "	color_prompt=" >> /etc/skel/.bashrc
+ echo "    fi" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
+ echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
+ echo "else" >> /etc/skel/.bashrc
+ echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
+ echo "fi"  >> /etc/skel/.bashrc
+ echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
+ echo "case "$TERM" in" >> /etc/skel/.bashrc
+ echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
+ echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
+ echo "    ;;" >> /etc/skel/.bashrce
+ echo "*)" >> /etc/skel/.bashrc
+ echo "    ;;" >> /etc/skel/.bashrc
+ echo "esac" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
+ echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
+ echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
+ echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias vdir='vdir --color=auto'"
+ echo " " >> /home/$dir/.bashrc
+ echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
+ echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skel/.bashrc
+ echo "# colored GCC warnings and errors"
+ echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# some more ls aliases" >> /etc/skel/.bashrc
+ echo "alias ll='ls -l'" >> /etc/skel/.bashrc
+ echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
+ echo "alias la='ls -A'" >> /etc/skel/.bashrc
+ echo "alias l='ls -CF'" >> /etc/skel/.bashrc
+ echo "alias ..='cd ..'" >> /etc/skel/.bashrc
+ echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
+ echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
+ echo "alias alaz='echo "ALAZ STARTED:" &&  pacman'" >> /etc/skel/.bashrc
+ echo "# Alias definitions." >> /etc/skel/.bashrc
+ echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
+ echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
+ echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
+ echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
+ echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
+ echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
+ echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
+ echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
+ echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
+ echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
+ echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
+ echo "  fi" >> /etc/skel/.bashrc
+ echo "fi" >> /etc/skel/.bashrc
+ echo " "  >> /etc/skelir/.bashrc
+ echo "echo '"  >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "                 _" >> /etc/skel/.bashrc
+ echo "               /  /|" >> /etc/skel/.bashrc
+ echo "             /  / /|" >> /etc/skel/.bashrc
+ echo "           / | / / |" >> /etc/skel/.bashrc
+ echo "         /|  |/ /  |" >> /etc/skel/.bashrc
+ echo "       /  |  / /___|" >> /etc/skel/.bashrc
+ echo "      /   | / /    |" >> /etc/skel/.bashrc
+ echo "      |   |/ /_____|" >> /etc/skel/.bashrc
+ echo "      |   / /      |" >> /etc/skel/.bashrc
+ echo "      |  / /     __|" >> /etc/skel/.bashrc
+ echo "      | / /     /" >> /etc/skel/.bashrc
+ echo "       / /------" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       |_|" >> /etc/skel/.bashrc
+ echo "       \_\." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "'" >> /etc/skel/.bashrc
+ echo "clear" >> /etc/skel/.bashrc
+ echo "echo '" >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "                 _" >> /etc/skel/.bashrc
+ echo "               /  /|" >> /etc/skel/.bashrc
+ echo "             /  / /|" >> /etc/skel/.bashrc
+ echo "           / | / / |" >> /etc/skel/.bashrc
+ echo "         /|  |/ /  |" >> /etc/skel/.bashrc
+ echo "       /  |  / /___|" >> /etc/skel/.bashrc
+ echo "      /   | / /    |" >> /etc/skel/.bashrc
+ echo "      |   |/ /_____|" >> /etc/skel/.bashrc
+ echo "      |   / /      |" >> /etc/skel/.bashrc
+ echo "      |  / /     __|" >> /etc/skel/.bashrc
+ echo "      | / /     /" >> /etc/skel/.bashrc
+ echo "       / /------" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       | |" >> /etc/skel/.bashrc
+ echo "       |_|" >> /etc/skel/.bashrc
+ echo "       \_\." >> /etc/skel/.bashrc
+ echo " " >> /etc/skel/.bashrc
+ echo "'" >> /etc/skel/.bashrc
 
-sudo echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
+# cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+
+ echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
+ echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myNormalBorderColor  = "#097969"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myFocusedBorderColor = "#50c878"" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $"
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Brave Browser" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_v     ), spawn "brave-browser")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Chromium" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_d     ), spawn "featherpad")" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /home//.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "   -- Lock screen" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_y     ), spawn "slock")    )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /home//.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--"  >> /etc/skel/.xmonad/xmonad.hs
+ echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
+ echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " "  >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
+ echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     where" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
+ echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
+ echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
+ echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--"  >> /etc/skel/.xmonad/xmonad.hs
+ echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  xmproc <- spawnPipe "xmobar /etc/MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
+ echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+ echo "--" >> /etc/skel/.xmonad/xmonad.hs
+ echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
+ echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
+ echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
+ echo "    }" >> /etc/skel/.xmonad/xmonad.hs
+ echo " " >> /etc/skel/.xmonad/xmonad.hs
+ echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
+ echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
+ echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "   ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /home/$dir/x.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-[1..9]   Move client to workspace N","
+ echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
+ echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+
+
+# cp install-type /etc/MulBX/install-type
+
+ echo "MulBX_Version_Code=none" > /etc/MulBX/install-type
 
 
 
@@ -2699,25 +2709,25 @@ then
         done
 
         echo "Done!"
-        sudo pacman -Syu
-        sudo pacman -Syy
-        sudo pacman -S ly
-        sudo systemctl enable ly
-        sudo systemctl disable gdm
-        sudo systemctl disable sddm
-        sudo systemctl disable lightdm
-        sudo pacman -S ufw
-        sudo ufw status
-        sudo ufw enable
-        sudo ufw limit 22
-        sudo ufw allow 80
-        sudo ufw allow 443
-        sudo pacman -S freecad
-        sudo pacman -S prusa-slicer
-        sudo pacman -S libreoffice
-        sudo pacman -S gimp
-        sudo pacman -S kdenlive
-        sudo echo "MulBX_Version_Code="v141.Mango"" > /etc/MulBX/install-type
+         pacman -Syu
+         pacman -Syy
+         pacman -S ly
+         systemctl enable ly
+         systemctl disable gdm
+         systemctl disable sddm
+         systemctl disable lightdm
+         pacman -S ufw
+         ufw status
+         ufw enable
+         ufw limit 22
+         ufw allow 80
+         ufw allow 443
+         pacman -S freecad
+         pacman -S prusa-slicer
+         pacman -S libreoffice
+         pacman -S gimp
+         pacman -S kdenlive
+         echo "MulBX_Version_Code="v141.Mango"" > /etc/MulBX/install-type
         exit
 
     else
@@ -2744,34 +2754,34 @@ then
 
 
 
-        sudo pacman -Syu
-        sudo pacman -Syy
-        sudo pacman -S ly
-        sudo systemctl enable ly
-        sudo systemctl disable gdm
-        sudo systemctl disable sddm
-        sudo systemctl disable lightdm
-        sudo pacman -S ufw
-        sudo ufw status
-        sudo ufw enable
-        sudo ufw deny 22
-        sudo ufw allow 80
-        sudo ufw allow 443
-        sudo pacman -S freecad
-        sudo pacman -S prusa-slicer
-        sudo pacman -S libreoffice
-        sudo pacman -S gimp
-        sudo pacman -S kdenlive 
-        sudo echo "MulBX_Version_Code="shhh_XonNOS"" > /etc/MulBX/install-type
-        sudo echo "PRETTY_NAME="XonNOS GNU/Linux 3.8.3 (Underrated)"" > /etc/os-release
-        sudo echo "NAME="XonNOS GNU/Linux"" >> /etc/os-release
-        sudo echo "VERSION_ID="3.8.3 (Underrated)"" >> /etc/os-release
-        sudo echo "VERSION="3.8.3"" >> /etc/os-release
-        sudo echo "VERSION_CODENAME=Underrated" >> /etc/os-release
-        sudo echo "ID=XonNOS" >> /etc/os-release
-        sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
-        sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
-        sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
+         pacman -Syu
+         pacman -Syy
+         pacman -S ly
+         systemctl enable ly
+         systemctl disable gdm
+         systemctl disable sddm
+         systemctl disable lightdm
+         pacman -S ufw
+         ufw status
+         ufw enable
+         ufw deny 22
+         ufw allow 80
+         ufw allow 443
+         pacman -S freecad
+         pacman -S prusa-slicer
+         pacman -S libreoffice
+         pacman -S gimp
+         pacman -S kdenlive 
+         echo "MulBX_Version_Code="shhh_XonNOS"" > /etc/MulBX/install-type
+         echo "PRETTY_NAME="XonNOS GNU/Linux 3.8.3 (Underrated)"" > /etc/os-release
+         echo "NAME="XonNOS GNU/Linux"" >> /etc/os-release
+         echo "VERSION_ID="3.8.3 (Underrated)"" >> /etc/os-release
+         echo "VERSION="3.8.3"" >> /etc/os-release
+         echo "VERSION_CODENAME=Underrated" >> /etc/os-release
+         echo "ID=XonNOS" >> /etc/os-release
+         echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+         echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+         echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
         exit
 
@@ -2793,19 +2803,19 @@ then
         done
 
         echo "Done!"
-        sudo pacman -Syu
-        sudo pacman -Syy
-        sudo pacman -S ly
-        sudo systemctl enable ly
-        sudo systemctl disable gdm
-        sudo systemctl disable sddm  
-        sudo systemctl disable lightdm
-        sudo pacman -S ufw
-        sudo ufw status
-        sudo ufw enable
-        sudo ufw deny 22
-        sudo ufw allow 80
-        sudo ufw allow 443
+         pacman -Syu
+         pacman -Syy
+         pacman -S ly
+         systemctl enable ly
+         systemctl disable gdm
+         systemctl disable sddm  
+         systemctl disable lightdm
+         pacman -S ufw
+         ufw status
+         ufw enable
+         ufw deny 22
+         ufw allow 80
+         ufw allow 443
         #cp azarch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
 
@@ -3180,394 +3190,394 @@ then
         echo "   "mod-button2  Raise the window to the top of the stack"," >> /home/$dir/.xmonad/xmonad.hs
         echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /home/$dir/.xmonad/xmonad.hs
         
-        #sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+        # cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
         
-        sudo echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
-        sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /home/$dir/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myNormalBorderColor  = "#6F8FAF"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myFocusedBorderColor = "#191970"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Launch Brave Browser" >> /home/$dir/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_v     ), spawn "brave")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Launch Chromium" >> /home/$dir/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_d     ), spawn "featherpad") " >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Shutdown" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_y     ), spawn "/etc/MulBX/scripts/shutdown.sh"   )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Reboot" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_y     ), spawn "/etc/MulBX/scripts/reboot.sh"     )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "   -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "   -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "                                      >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "   -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     where" >> /home/$dir/.xmonad/xmonad.hs
-        sudo echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        spawnOnce "ufw enable"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        spawnOnce "tlp &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "  xmproc <- spawnPipe "xmobar /etc//MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    }" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-[1..9]   Move client to workspace N"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "   "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
-        sudo echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
+         echo " " >> /etc/skel/.xmonad/xmonad.hs
+         echo " " >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
+         echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /home/$dir/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
+         echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myNormalBorderColor  = "#6F8FAF"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myFocusedBorderColor = "#191970"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Launch Brave Browser" >> /home/$dir/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_v     ), spawn "brave")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Launch Chromium" >> /home/$dir/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_d     ), spawn "featherpad") " >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Shutdown" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_y     ), spawn "/etc/MulBX/scripts/shutdown.sh"   )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Reboot" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_y     ), spawn "/etc/MulBX/scripts/reboot.sh"     )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+         echo "   -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+         echo "   -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
+         echo "                                      >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "   -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
+         echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
+         echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     where" >> /home/$dir/.xmonad/xmonad.hs
+         echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
+         echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
+         echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
+         echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        spawnOnce "ufw enable"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        spawnOnce "tlp &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
+         echo "  xmproc <- spawnPipe "xmobar /etc//MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
+         echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+         echo "--" >> /etc/skel/.xmonad/xmonad.hs
+         echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
+         echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
+         echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
+         echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
+         echo "    }" >> /etc/skel/.xmonad/xmonad.hs
+         echo "" >> /etc/skel/.xmonad/xmonad.hs
+         echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
+         echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
+         echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-[1..9]   Move client to workspace N"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "   "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
+         echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
          
 
-        #sudo cp azarch-install-type /etc/MulBX/install-type
-        sudo echo "MulBX_Version_Code="AZarch"" > /etc/MulBX/install-type
+        # cp azarch-install-type /etc/MulBX/install-type
+         echo "MulBX_Version_Code="AZarch"" > /etc/MulBX/install-type
         
         
-        #sudo cp azarch-os-release /etc/os-release
-        sudo echo "PRETTY_NAME="MulBX GNU/Linux [AZarch] 3.8.1 (Dağ)"" > /etc/os-release
-        sudo echo "NAME="MulBX GNU/Linux [AZarch]"" >> /etc/os-release
-        sudo echo "VERSION_ID="3.8.1"" >> /etc/os-release
-        sudo echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
-        sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
-        sudo echo "ID=Mulbx" >> /etc/os-release
-        sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
-        sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
-        sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
+        # cp azarch-os-release /etc/os-release
+         echo "PRETTY_NAME="MulBX GNU/Linux [AZarch] 3.8.1 (Dağ)"" > /etc/os-release
+         echo "NAME="MulBX GNU/Linux [AZarch]"" >> /etc/os-release
+         echo "VERSION_ID="3.8.1"" >> /etc/os-release
+         echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
+         echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+         echo "ID=Mulbx" >> /etc/os-release
+         echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+         echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+         echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
 
         exit
@@ -3615,11 +3625,11 @@ then
 
             # Installing Packages
 
-            sudo pacman -Syu
-            sudo pacman -Syy
-            sudo pacman -S ly
-            sudo pacman -S picom
-            sudo pacman -S terminator
+             pacman -Syu
+             pacman -Syy
+             pacman -S ly
+             pacman -S picom
+             pacman -S terminator
 
             # Copying New Directories
 
@@ -3720,7 +3730,7 @@ then
             echo "alias ..='cd ..'" >> /home/$dir/.bashrc
             echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
             echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-            echo "alias alaz='echo ALAZ STARTED: && sudo pacman" >> /home/$dir/.bashrc
+            echo "alias alaz='echo ALAZ STARTED: &&  pacman" >> /home/$dir/.bashrc
             echo "" >> /home/$dir/.bashrc
             echo "# Alias definitions." >> /home/$dir/.bashrc
             echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
@@ -3760,163 +3770,163 @@ then
             echo "echo "Hoş Geldiniz"" >> /home/$dir/.bashrc
 
 
-            #sudo cp arch-efe-bashrc /etc/skel/.bashrc
+            # cp arch-efe-bashrc /etc/skel/.bashrc
             
             
             
             
-            sudo echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
-            sudo echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
-            sudo echo "# If not running interactively, don't do anything" >> /etc/skel/.bashrc
-            sudo echo "case $- in" >> /etc/skel/.bashrc
-            sudo echo "    *i*) ;;" >> /etc/skel/.bashrc
-            sudo echo "      *) return;;" >> /etc/skel/.bashrc
-            sudo echo "esac" >> /etc/skel/.bashrc
-            sudo echo " " >> /etc/skel/.bashrc
-            sudo echo "# don't put duplicate lines or lines starting with space in the history." >> /etc/skel/.bashrc
-            sudo echo "# See bash(1) for more options" >> /etc/skel/.bashrc
-            sudo echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# append to the history file, don't overwrite it" >> /etc/skel/.bashrc
-            sudo echo "shopt -s histappend" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)" >> /etc/skel/.bashrc
-            sudo echo "HISTSIZE=1000" >> /etc/skel/.bashrc
-            sudo echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
-            sudo echo " " >> /etc/skel/.bashrc
-            sudo echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
-            sudo echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
-            sudo echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
-            sudo echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
-            sudo echo "#shopt -s globstar" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
-            sudo echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
-            sudo echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
-            sudo echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
-            sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-            sudo echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
-            sudo echo "esac" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
-            sudo echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
-            sudo echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
-            sudo echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
-            sudo echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
-            sudo echo "	# We have color support; assume it's compliant with Ecma-48" >> /etc/skel/.bashrc
-            sudo echo "	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such" >> /etc/skel/.bashrc
-            sudo echo "	# a case would tend to support setf rather than setaf.)" >> /etc/skel/.bashrc
-            sudo echo "	color_prompt=yes" >> /etc/skel/.bashrc
-            sudo echo "   else" >> /etc/skel/.bashrc
-            sudo echo "	color_prompt=" >> /etc/skel/.bashrc
-            sudo echo "    fi" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
-            sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
-            sudo echo "else" >> /etc/skel/.bashrc
-            sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
-            sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
-            sudo echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
-            sudo echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
-            sudo echo "    ;;" >> /etc/skel/.bashrc
-            sudo echo "*)" >> /etc/skel/.bashrc
-            sudo echo "   ;;" >> /etc/skel/.bashrc
-            sudo echo "esac" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
-            sudo echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
-            sudo echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
-            sudo echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "    #alias vdir='vdir --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# colored GCC warnings and errors" >> /etc/skel/.bashrc
-            sudo echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# some more ls aliases" >> /etc/skel/.bashrc
-            sudo echo "alias ll='ls -l'" >> /etc/skel/.bashrc
-            sudo echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
-            sudo echo "alias la='ls -A'" >> /etc/skel/.bashrc
-            sudo echo "#alias l='ls -CF'" >> /etc/skel/.bashrc
-            sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
-            sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
-            sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-            sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# Alias definitions." >> /etc/skel/.bashrc
-            sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
-            sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
-            sudo echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
-            sudo echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
-            sudo echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
-            sudo echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
-            sudo echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
-            sudo echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
-            sudo echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
-            sudo echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
-            sudo echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
-            sudo echo "  fi" >> /etc/skel/.bashrc
-            sudo echo "fi" >> /etc/skel/.bashrc
-            sudo echo "echo " " >> /etc/skel/.bashrc
-            sudo echo "       _____________        _____________        _____________" >> /etc/skel/.bashrc
-            sudo echo "       |   _________|       |   _________|       |   _________| " >> /etc/skel/.bashrc
-            sudo echo "       |   |_____           |   |_____           |   |_____" >> /etc/skel/.bashrc
-            sudo echo "       |    _____|          |    _____|          |    _____|" >> /etc/skel/.bashrc
-            sudo echo "       |   |________        |   |                |   |________" >> /etc/skel/.bashrc
-            sudo echo "       |____________|       |___|                |____________| " >> /etc/skel/.bashrc
-            sudo echo "       _______________________________________________________
-            sudo echo "       \                                                      /" >> /etc/skel/.bashrc
-            sudo echo "       /______________________________________________________\ " >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
-            sudo echo "echo "Merhaba Efe"" >> /etc/skel/.bashrc
-            sudo echo "echo "Hoş Geldiniz"" >> /etc/skel/.bashrc
+             echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
+             echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
+             echo "# If not running interactively, don't do anything" >> /etc/skel/.bashrc
+             echo "case $- in" >> /etc/skel/.bashrc
+             echo "    *i*) ;;" >> /etc/skel/.bashrc
+             echo "      *) return;;" >> /etc/skel/.bashrc
+             echo "esac" >> /etc/skel/.bashrc
+             echo " " >> /etc/skel/.bashrc
+             echo "# don't put duplicate lines or lines starting with space in the history." >> /etc/skel/.bashrc
+             echo "# See bash(1) for more options" >> /etc/skel/.bashrc
+             echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# append to the history file, don't overwrite it" >> /etc/skel/.bashrc
+             echo "shopt -s histappend" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)" >> /etc/skel/.bashrc
+             echo "HISTSIZE=1000" >> /etc/skel/.bashrc
+             echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
+             echo " " >> /etc/skel/.bashrc
+             echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
+             echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
+             echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
+             echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
+             echo "#shopt -s globstar" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
+             echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
+             echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
+             echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
+             echo "case "$TERM" in" >> /etc/skel/.bashrc
+             echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
+             echo "esac" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
+             echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
+             echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
+             echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
+             echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
+             echo "	# We have color support; assume it's compliant with Ecma-48" >> /etc/skel/.bashrc
+             echo "	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such" >> /etc/skel/.bashrc
+             echo "	# a case would tend to support setf rather than setaf.)" >> /etc/skel/.bashrc
+             echo "	color_prompt=yes" >> /etc/skel/.bashrc
+             echo "   else" >> /etc/skel/.bashrc
+             echo "	color_prompt=" >> /etc/skel/.bashrc
+             echo "    fi" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
+             echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
+             echo "else" >> /etc/skel/.bashrc
+             echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
+             echo "case "$TERM" in" >> /etc/skel/.bashrc
+             echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
+             echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
+             echo "    ;;" >> /etc/skel/.bashrc
+             echo "*)" >> /etc/skel/.bashrc
+             echo "   ;;" >> /etc/skel/.bashrc
+             echo "esac" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
+             echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
+             echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
+             echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
+             echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
+             echo "    #alias vdir='vdir --color=auto'" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
+             echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
+             echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# colored GCC warnings and errors" >> /etc/skel/.bashrc
+             echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# some more ls aliases" >> /etc/skel/.bashrc
+             echo "alias ll='ls -l'" >> /etc/skel/.bashrc
+             echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
+             echo "alias la='ls -A'" >> /etc/skel/.bashrc
+             echo "#alias l='ls -CF'" >> /etc/skel/.bashrc
+             echo "alias ..='cd ..'" >> /etc/skel/.bashrc
+             echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
+             echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
+             echo "alias alaz='echo "ALAZ STARTED:" &&  pacman'" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# Alias definitions." >> /etc/skel/.bashrc
+             echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
+             echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
+             echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
+             echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
+             echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
+             echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
+             echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
+             echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
+             echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
+             echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
+             echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
+             echo "  fi" >> /etc/skel/.bashrc
+             echo "fi" >> /etc/skel/.bashrc
+             echo "echo " " >> /etc/skel/.bashrc
+             echo "       _____________        _____________        _____________" >> /etc/skel/.bashrc
+             echo "       |   _________|       |   _________|       |   _________| " >> /etc/skel/.bashrc
+             echo "       |   |_____           |   |_____           |   |_____" >> /etc/skel/.bashrc
+             echo "       |    _____|          |    _____|          |    _____|" >> /etc/skel/.bashrc
+             echo "       |   |________        |   |                |   |________" >> /etc/skel/.bashrc
+             echo "       |____________|       |___|                |____________| " >> /etc/skel/.bashrc
+             echo "       _______________________________________________________
+             echo "       \                                                      /" >> /etc/skel/.bashrc
+             echo "       /______________________________________________________\ " >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "" >> /etc/skel/.bashrc
+             echo "echo "Merhaba Efe"" >> /etc/skel/.bashrc
+             echo "echo "Hoş Geldiniz"" >> /etc/skel/.bashrc
 
-            #sudo cp arch-efe-os-release /etc/os-release
+            # cp arch-efe-os-release /etc/os-release
 
-            sudo echo "PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.1 (Dağ)"" > /etc/os-release
-            sudo echo "NAME="Efeistan GNU/Linux [Arch Linux Base]"" >> /etc/os-release
-            sudo echo "VERSION_ID="3.8.1"" >> /etc/os-release
-            sudo echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
-            sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
-            sudo echo "ID=Efeistan" >> /etc/os-release
-            sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
-            sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
-            sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
+             echo "PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.1 (Dağ)"" > /etc/os-release
+             echo "NAME="Efeistan GNU/Linux [Arch Linux Base]"" >> /etc/os-release
+             echo "VERSION_ID="3.8.1"" >> /etc/os-release
+             echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
+             echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+             echo "ID=Efeistan" >> /etc/os-release
+             echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+             echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+             echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
-            #sudo cp arch-efe-install-type /etc/MulBX/install-type
+            # cp arch-efe-install-type /etc/MulBX/install-type
 
-            sudo echo "MulBX_Version_Code="EFE"" > /etc/MulBX/install-type
-            sudo echo " " >> /etc/MulBX/install-type
-            sudo echo "Note:" >> /etc/MulBX/install-type
-            sudo echo "This is a Secret Version of MulBX" >> /etc/MulBX/install-type
-            sudo echo "By Using This Version of MulBX You Agree to Keeping This Distro Secret" >> /etc/MulBX/install-type
+             echo "MulBX_Version_Code="EFE"" > /etc/MulBX/install-type
+             echo " " >> /etc/MulBX/install-type
+             echo "Note:" >> /etc/MulBX/install-type
+             echo "This is a Secret Version of MulBX" >> /etc/MulBX/install-type
+             echo "By Using This Version of MulBX You Agree to Keeping This Distro Secret" >> /etc/MulBX/install-type
 
         else
             echo "[        3E_7r_7r_3o_9r     ] Error: Access Code Does Not Qualify"
@@ -3938,18 +3948,18 @@ fi
 
 echo "Setting Up FireWall:"
 
-sudo ufw status
-sudo ufw enable
-sudo ufw allow 433
-sudo ufw allow 80
-sudo ufw limit 20
-sudo ufw allow 313
-sudo ufw allow 141
-sudo ufw enable 
+ ufw status
+ ufw enable
+ ufw allow 433
+ ufw allow 80
+ ufw limit 20
+ ufw allow 313
+ ufw allow 141
+ ufw enable 
 
 echo "UFW Almost Done:"
 
-sudo ufw status
+ ufw status
 
 
 # Finishing Up
@@ -3958,5 +3968,5 @@ xmonad --recompile
 echo "All Done!!!"
 echo "I Will Now Reboot!"
 sleep 10
-sudo reboot
+ reboot
 reboot
