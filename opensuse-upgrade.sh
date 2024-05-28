@@ -17,7 +17,7 @@ sleep 5
 
 if [ "$bashrc" = "y" ] ;
 then
-        cp bashrc /home/$usr/.bashrc
+        cp config-files/bashrc/bashrc /home/$usr/.bashrc
 
 else
         echo "Bashrc Will Not Be Copied!"
@@ -56,19 +56,17 @@ then
         sudo cp bashrc /etc/skel/.bashrc
         sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp install-type /etc/MulBX/install-type
-        sudo xmonad --recompile && xmonad --restart
-        xmonad --recompile && xmonad --restart
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
 fi
 # Running Package Script
-chmod +x opensuse-packages.sh
-bash opensuse-packages.sh
+chmod +x port/pak/opensuse-packages.sh
+bash port/pak/opensuse-packages.sh
 
 #
 echo "Almost Done!"
 
-sudo cp os-release /etc/os-release
+sudo cp config-files/os-release/os-release /etc/os-release
 
 
 # Version Code
@@ -81,8 +79,8 @@ sleep 5
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x opensuse-ver-code.sh
- 	bash opensuse-ver-code.sh
+	chmod +x port/ver/opensuse-ver-code.sh
+ 	bash port/ver/opensuse-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi

@@ -46,9 +46,10 @@ sudo pacman -S picom
 sudo pacman -S terminator
 
 # Copying New Directories
-
-cp arch-efe-bashrc /home/$efedir/.bashrc
-sudo cp arch-efe-bashrc /etc/skel/.bashrc
-sudo cp arch-efe-os-release /etc/os-release
-sudo cp arch-efe-install-type /etc/MulBX/install-type
+cd ..
+cd ..
+cp config-files/bashrc/arch-efe-bashrc /home/$efedir/.bashrc
+sudo cp config-files/bashrc/arch-efe-bashrc /etc/skel/.bashrc
+sudo cp config-files/os-release/arch-efe-os-release /etc/os-release
+sudo cp config-files/install-type/arch-efe-install-type /etc/MulBX/install-type
 

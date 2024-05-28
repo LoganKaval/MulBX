@@ -44,8 +44,8 @@ sleep 10
 
 
 # To Install Packages in the Package List
-chmod +x arch-packages.sh
-bash arch-packages.sh
+chmod +x port/pak/arch-packages.sh
+bash port/pak/arch-packages.sh
 
 
 # Making Directories
@@ -61,16 +61,16 @@ sudo mkdir /usr/share/backgrounds
 # Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp arch-os-release /etc/os-release
+sudo cp config-files/os-release/arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages?(y/n)"
@@ -79,8 +79,8 @@ read extpak
 if [ "$extpak" = "y" ];
 then
 	echo "More Packages Will be Installed!"
-	chmod +x arch-extra-packages.sh
-	bash arch-extra-packages.sh
+	chmod +x port/pak/arch-extra-packages.sh
+	bash port/pak/arch-extra-packages.sh
 else
 	echo "No Extra Pacakges Will be Installed!"
 fi
@@ -92,19 +92,14 @@ read cpak
 
 if [ "$cpak" = "y" ];
 then
-	chmod +x arch-custom-pak.sh
-	bash arch-custom-pak.sh
+	chmod +x port/pak/arch-custom-pak.sh
+	bash port/pak/arch-custom-pak.sh
 
 else
 	echo "Custom Packages Will Not be Installed!"
 
 fi
 
-# Allowing Scripts to Have Execute Privileges
-
-
-sudo chmod +x /etc/MulBX/scripts/shutdown.sh
-sudo chmod +x /etc/MulBX/scripts/reboot.sh
 
 echo "Do You Want to Install A Backup Desktop Environment?(y/n)"
 sleep 3
@@ -272,20 +267,19 @@ sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
 
-# Moving Files Again
+# Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp arch-os-release /etc/os-release
+sudo cp config-files/os-release/arch-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
-
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
 
 # Version Code
@@ -295,16 +289,16 @@ read codeans
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x arch-ver-code.sh
- 	bash arch-ver-code.sh
+	chmod +x port/ver/arch-ver-code.sh
+ 	bash port/ver/arch-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi
 
 # UFW Setup
 
-chmod +x arch-ufw-setup.sh
-bash arch-ufw-setup.sh
+chmod +x port/ufw/arch-ufw-setup.sh
+bash port/ufw/arch-ufw-setup.sh
 
 
 # Finishing Up

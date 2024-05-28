@@ -47,8 +47,8 @@ sleep 10
 
 
 # To Install Packages in the Package List
-chmod +x opensuse-packages.sh
-bash opensuse-packages.sh
+chmod +x port/pak/opensuse-packages.sh
+bash port/pak/opensuse-packages.sh
 
 # Making Directories
 
@@ -63,16 +63,16 @@ sudo mkdir /usr/share/backgrounds
 # Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+cp config-files/xmonad/opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp opensuse-os-release /etc/os-release
+sudo cp config-files/os-release/opensuse-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/xmonad/opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
 
 # Extra Desktop Environments
@@ -190,8 +190,8 @@ read codeans
 
 if [ "$codeans" = "y" ];
 then
-   chmod +x opensuse-ver-code.sh
-   bash opensuse-ver-code.sh
+   chmod +x port/ver/opensuse-ver-code.sh
+   bash port/ver/opensuse-ver-code.sh
 
 else 
    echo "No Version Code Used"
@@ -200,8 +200,8 @@ fi
 
 # UFW Setup
 
-chmod +x opensuse-ufw-setup.sh
-bash opensuse-ufw-setup.sh
+chmod +x port/ufw/opensuse-ufw-setup.sh
+bash port/ufw/opensuse-ufw-setup.sh
 
 # Finishing Up
 

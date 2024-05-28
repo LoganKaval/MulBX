@@ -1,14 +1,7 @@
 #!/bin/bash
 
-echo "What User Are You Logged Into?"
-echo "Reminder Root Will NOT Work!!!"
-read usrdir
-
-sleep 7
-
-
 rounds = 1
-until [ "$rounds" = 5 ]
+until [ "$rounds" = 19 ]
 do
 	echo "[     4.14A_12.0l_19.0a_7.0_n_3.13a_14.0u_9.0n_3.0a_10.0h  ] Not Version Code VCode--"
 	echo "Fixing Version Code"
@@ -18,6 +11,12 @@ do
 done
 
 echo "Done!"
+
+echo "Installing the Secret Distro of MulBX..."
+echo "Installing XonNOS..."
+
+
+
 sudo pacman -Syu
 sudo pacman -Syy
 sudo pacman -S ly
@@ -31,11 +30,14 @@ sudo ufw enable
 sudo ufw deny 22
 sudo ufw allow 80
 sudo ufw allow 443
-cp azarch-xmonad.hs /home/$usrdir/.xmonad/xmonad.hs
-sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp azarch-install-type /etc/MulBX/install-type
-sudo cp azarch-os-release /etc/os-release
-nitrogen --set-auto /usr/share/backgrounds/MulBX/minimal_mountians.png
-
-echo "[     1.41H_4.14u                ] Finished: 'azarch-ver.sh'  script--"
+sudo pacman -S freecad
+sudo pacman -S prusa-slicer
+sudo pacman -S libreoffice
+sudo pacman -S gimp
+sudo pacman -S kdenlive
+cd ..
+cd ..
+sudo cp config-files/install-type/xonnos-install-type /etc/MulBX/install-type
+sudo cp config-files/os-release/xonnos-os-release /etc/os-release
+echo "[     1.41H_4.14u                ] Finished: 'arch-xonnos-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
