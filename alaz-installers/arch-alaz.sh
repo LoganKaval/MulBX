@@ -3156,7 +3156,25 @@ then
             sudo echo "echo "Hoş Geldiniz"" >> /etc/skel/.bashrc
 
             #sudo cp arch-efe-os-release /etc/os-release
+
+            sudo echo "PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.8.1 (Dağ)"" > /etc/os-release
+            sudo echo "NAME="Efeistan GNU/Linux [Arch Linux Base]"" >> /etc/os-release
+            sudo echo "VERSION_ID="3.8.1"" >> /etc/os-release
+            sudo echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
+            sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+            sudo echo "ID=Efeistan" >> /etc/os-release
+            sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+            sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+            sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
+
             #sudo cp arch-efe-install-type /etc/MulBX/install-type
+
+            sudo echo "MulBX_Version_Code="EFE"" > /etc/MulBX/install-type
+            sudo echo " " >> /etc/MulBX/install-type
+            sudo echo "Note:" >> /etc/MulBX/install-type
+            sudo echo "This is a Secret Version of MulBX" >> /etc/MulBX/install-type
+            sudo echo "By Using This Version of MulBX You Agree to Keeping This Distro Secret" >> /etc/MulBX/install-type
+
         else
             echo "[        3E_7r_7r_3o_9r     ] Error: Access Code Does Not Qualify"
             echo "[        7R_3u_2i_9n        ] Error: Default Missing In: bash-backs.loader"
