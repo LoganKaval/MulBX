@@ -187,7 +187,7 @@ echo "alias l='ls -CF'" >> /home/$dir/.bashrc
 echo "alias ..='cd ..'" >> /home/$dir/.bashrc
 echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
 echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-echo " " >> /home/$dir/.bashrc
+echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /home/$dir/.bashrc
 echo "# Alias definitions." >> /home/$dir/.bashrc
 echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
 echo "# ~/.bash_aliases, instead of adding them here directly." >> /home/$dir/.bashrc
@@ -836,7 +836,7 @@ sudo echo "alias l='ls -CF'" >> /etc/skel/.bashrc
 sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
 sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
 sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
+sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
 sudo echo "# Alias definitions." >> /etc/skel/.bashrc
 sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
 sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
@@ -1588,7 +1588,7 @@ echo "alias l='ls -CF'" >> /home/$dir/.bashrc
 echo "alias ..='cd ..'" >> /home/$dir/.bashrc
 echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
 echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-echo " " >> /home/$dir/.bashrc
+echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /home/$dir/.bashrc
 echo "# Alias definitions." >> /home/$dir/.bashrc
 echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
 echo "# ~/.bash_aliases, instead of adding them here directly." >> /home/$dir/.bashrc
@@ -2237,7 +2237,7 @@ sudo echo "alias l='ls -CF'" >> /etc/skel/.bashrc
 sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
 sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
 sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-sudo echo " " >> /etc/skel/.bashrc
+sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
 sudo echo "# Alias definitions." >> /etc/skel/.bashrc
 sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
 sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
@@ -2810,10 +2810,750 @@ then
         #cp azarch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 
 
-
+        echo "----------------------------------------------------------------------------------------------------------------- Imports" > /home/$dir/.xmonad/xmonad.hs
+        echo " " >> /home/$dir/.xmonad/xmonad.hs
+        echo " " >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import Data.Monoid" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import System.Exit" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Util.SpawnOnce" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Hooks.ManageDocks" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Util.Run" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import qualified XMonad.StackSet as W" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import qualified Data.Map        as M" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Layout Modifers" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Layout.Spacing" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Layout Imports" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Layout.Grid" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Layout.Spiral" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Layout.ThreeColumns" >> /home/$dir/.xmonad/xmonad.hs
+        echo "import XMonad.Layout.MultiColumns" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- The preferred terminal program, which is used in a binding below and by" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- certain contrib modules." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myTerminal      = "terminator"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Whether focus follows the mouse pointer." >> /home/$dir/.xmonad/xmonad.hs
+        echo "myFocusFollowsMouse :: Bool" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myFocusFollowsMouse = True" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Whether clicking on a window to focus also passes the click to the window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myClickJustFocuses :: Bool" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myClickJustFocuses = False" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Width of the window border in pixels." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myBorderWidth   = 5" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- modMask lets you specify which modkey you want to use. The default" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- "windows key" is usually mod4Mask." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myModMask       = mod4Mask" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- The default number of workspaces (virtual screens) and their names." >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- By default we use numeric strings, but any string may be used as a" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- workspace name. The number of workspaces is determined by the length" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- of this list." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- A tagging example:" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Border colors for unfocused and focused windows, respectively." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myNormalBorderColor  = "#6F8FAF"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myFocusedBorderColor = "#191970"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Key bindings. Add, modify or remove key bindings here." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- launch a terminal" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- launch dmenu" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Launch Brave Browser" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_v     ), spawn "brave")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Launch Chromium" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- launch gmrun" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- close focused window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Launch Thunar" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Launch  FeatherPad" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_d     ), spawn "featherpad") " >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Rotate through the available layout algorithms" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_space ), sendMessage NextLayout)
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --  Reset the layouts on the current workspace to default" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Resize viewed windows to the correct size" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_n     ), refresh)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Move focus to the next window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Move focus to the next window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Move focus to the previous window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Move focus to the master window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Shutdown" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_y     ), spawn "/etc/MulBX/scripts/shutdown.sh"   )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Reboot" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_y     ), spawn "/etc/MulBX/scripts/reboot.sh"     )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Swap the focused window and the master window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Swap the focused window with the next window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Swap the focused window with the previous window" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Shrink the master area" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Expand the master area" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Push window back into tiling" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Increment the number of windows in the master area" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Deincrement the number of windows in the master area" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Toggle the status bar gap" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Quit xmonad" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Restart xmonad" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ++" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- mod-[1..9], Switch to workspace N" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- mod-shift-[1..9], Move client to workspace N" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    [((m .|. modm, k), windows $ f i)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ++" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --" >> /home/$dir/.xmonad/xmonad.hs
+        echo "   -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /home/$dir/.xmonad/xmonad.hs
+        echo "   -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    --" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Mouse bindings: default actions bound to mouse events" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /home/$dir/.xmonad/xmonad.hs
+        echo "                                      >> windows W.shiftMaster))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "   -- mod-button2, Raise the window to the top of the stack" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /home/$dir/.xmonad/xmonad.hs
+        echo "                                       >> windows W.shiftMaster))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Layouts:" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- You can specify and transform your layouts by modifying these values." >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- defaults, as xmonad preserves your old layout settings by default." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- The available layouts.  Note that each layout is separated by |||," >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- which denotes layout choice." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myLayout =" >> /home/$dir/.xmonad/xmonad.hs
+        echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     where" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- default tiling algorithm partitions the screen into two panes" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     tiled   = Tall nmaster delta ratio" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- The default number of windows in the master pane" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     nmaster = 1" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- Golden Ratio" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     golden  = 6/7" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- Spiral Number" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    num     = 15/19" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- Default proportion of screen occupied by master pane" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     ratio   = 1/2" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     -- Percent of screen to increment by when resizing panes" >> /home/$dir/.xmonad/xmonad.hs
+        echo "     delta   = 3/100" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Window rules:" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- a new window. You can use this to, for example, always float a" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- particular program, or have a client always appear on a particular" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- workspace." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- To find the property name associated with a program, use" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- > xprop | grep WM_CLASS" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- and click on the client you're interested in." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- 'className' and 'resource' are used below." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myManageHook = composeAll" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    [ className =? "MPlayer"        --> doFloat" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--    , className =? "Gimp"           --> doFloat" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , resource  =? "desktop_window" --> doIgnore" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Event handling" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Defines a custom handler function for X Events. The function should" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- return (All True) if the default handler is to be run afterwards. To" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myEventHook = mempty" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Status bars and logging" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Perform an arbitrary action on each internal state change or X event." >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "myLogHook = return ()" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Startup hook" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- per-workspace layout choices." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- By default, do nothing." >> /home/$dir/.xmonad/xmonad.hs
+        echo "myStartupHook = do" >> /home/$dir/.xmonad/xmonad.hs
+        echo "	spawnOnce "nitrogen --restore &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "	spawnOnce "picom &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        spawnOnce "ufw &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        spawnOnce "ufw enable"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        spawnOnce "tlp &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        spawnOnce "xfce4-power-manager &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--        spawnOnce "volumeicon &"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "------------------------------------------------------------------------" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Now run xmonad with all the defaults we set up." >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- Run xmonad with the settings you specify. No need to modify this." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "main = do" >> /home/$dir/.xmonad/xmonad.hs
+        echo "  xmproc <- spawnPipe "xmobar /etc//MulBX/xmobar/xmobar.config"" >> /home/$dir/.xmonad/xmonad.hs
+        echo "  xmonad $ docks defaults" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- A structure containing your configuration settings, overriding" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- fields in the default config. Any you don't override, will" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- No need to modify this." >> /home/$dir/.xmonad/xmonad.hs
+        echo "--" >> /home/$dir/.xmonad/xmonad.hs
+        echo "defaults = def {" >> /home/$dir/.xmonad/xmonad.hs
+        echo "      -- simple stuff" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        terminal           = myTerminal," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        clickJustFocuses   = myClickJustFocuses," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        borderWidth        = myBorderWidth," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        modMask            = myModMask," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        workspaces         = myWorkspaces," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        normalBorderColor  = myNormalBorderColor," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        focusedBorderColor = myFocusedBorderColor," >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "      -- key bindings" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        keys               = myKeys," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        mouseBindings      = myMouseBindings," >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "      -- hooks, layouts" >> /home/$dir/.xmonad/xmonad.hs
+        echo "        layoutHook         = myLayout," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        manageHook         = myManageHook," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        handleEventHook    = myEventHook," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        logHook            = myLogHook," >> /home/$dir/.xmonad/xmonad.hs
+        echo "        startupHook        = myStartupHook" >> /home/$dir/.xmonad/xmonad.hs
+        echo "    }" >> /home/$dir/.xmonad/xmonad.hs
+        echo "" >> /home/$dir/.xmonad/xmonad.hs
+        echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /home/$dir/.xmonad/xmonad.hs
+        echo "help :: String" >> /home/$dir/.xmonad/xmonad.hs
+        echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- launching and killing programs"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-Enter  Launch xterminal"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-p            Launch dmenu"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-p      Launch gmrun"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-c      Close/kill the focused window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Space        Rotate through the available layout algorithms"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- move focus up or down the window stack"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Tab        Move focus to the next window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-j          Move focus to the next window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-k          Move focus to the previous window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-m          Move focus to the master window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- modifying the window order"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Return   Swap the focused window and the master window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- resizing the master/slave ratio"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-h  Shrink the master area"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-l  Expand the master area"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- floating layer support"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- increase or decrease number of windows in the master area"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- quit, or restart"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-q  Quit xmonad"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-q        Restart xmonad"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-[1..9]   Switch to workSpace N"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- Workspaces & screens"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-[1..9]   Move client to workspace N"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    ""," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "   "mod-button2  Raise the window to the top of the stack"," >> /home/$dir/.xmonad/xmonad.hs
+        echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /home/$dir/.xmonad/xmonad.hs
         
         #sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
         
+        sudo echo "----------------------------------------------------------------------------------------------------------------- Imports" > /etc/skel/.xmonad/xmonad.hs
+        sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo " " >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import Data.Monoid" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import System.Exit" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Util.SpawnOnce" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Hooks.ManageDocks" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Util.Run" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import qualified XMonad.StackSet as W" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import qualified Data.Map        as M" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Layout Modifers" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Layout.Spacing" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Layout Imports" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Layout.Grid" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Layout.Spiral" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Layout.ThreeColumns" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "import XMonad.Layout.MultiColumns" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "----------------------------------------------------------------------------------------------------------------- Prefrences" >> /home/$dir/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- The preferred terminal program, which is used in a binding below and by" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- certain contrib modules." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myTerminal      = "terminator"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Whether focus follows the mouse pointer." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myFocusFollowsMouse :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myFocusFollowsMouse = True" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Whether clicking on a window to focus also passes the click to the window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myClickJustFocuses :: Bool" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myClickJustFocuses = False" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Width of the window border in pixels." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myBorderWidth   = 5" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- modMask lets you specify which modkey you want to use. The default" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- is mod1Mask ("left alt").  You may also consider using mod3Mask" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- ("right alt"), which does not conflict with emacs keybindings. The" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- "windows key" is usually mod4Mask." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myModMask       = mod4Mask" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- The default number of workspaces (virtual screens) and their names." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- By default we use numeric strings, but any string may be used as a" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- workspace name. The number of workspaces is determined by the length" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- of this list." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- A tagging example:" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Border colors for unfocused and focused windows, respectively." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myNormalBorderColor  = "#6F8FAF"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myFocusedBorderColor = "#191970"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Key bindings. Add, modify or remove key bindings here." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- launch a terminal" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_x     ), spawn $ XMonad.terminal conf)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- launch dmenu" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        echo "    , ((modm,               xK_p     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_c     ), spawn "dmenu_run")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Launch Brave Browser" >> /home/$dir/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_v     ), spawn "brave")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Launch Chromium" >> /home/$dir/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_v     ), spawn "chromium")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- launch gmrun" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- close focused window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_c     ), kill)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Launch Thunar" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_x     ), spawn "thunar")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Launch  FeatherPad" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_d     ), spawn "featherpad") " >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Rotate through the available layout algorithms" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_space ), sendMessage NextLayout)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --  Reset the layouts on the current workspace to default" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Resize viewed windows to the correct size" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_n     ), refresh)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_Tab   ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_z     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Move focus to the next window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_j     ), windows W.focusDown)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Move focus to the previous window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_k     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_z     ), windows W.focusUp  )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Move focus to the master window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_m     ), windows W.focusMaster  )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Shutdown" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_y     ), spawn "/etc/MulBX/scripts/shutdown.sh"   )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Reboot" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_y     ), spawn "/etc/MulBX/scripts/reboot.sh"     )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Swap the focused window and the master window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_Return), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_a     ), windows W.swapMaster)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Swap the focused window with the next window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Swap the focused window with the previous window" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Shrink the master area" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_h     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_p     ), sendMessage Shrink)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Expand the master area" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_l     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_p     ), sendMessage Expand)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Push window back into tiling" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm,               xK_t     ), withFocused $ windows . W.sink)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Increment the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Deincrement the number of windows in the master area" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Toggle the status bar gap" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Use this binding with avoidStruts from Hooks.ManageDocks." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- See also the statusBar function from Hooks.DynamicLog." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Quit xmonad" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Restart xmonad" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- Run xmessage with a summary of the default keybindings (useful for beginners)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- mod-[1..9], Switch to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- mod-shift-[1..9], Move client to workspace N" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    [((m .|. modm, k), windows $ f i)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ++" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "   -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "   -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    --" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Mouse bindings: default actions bound to mouse events" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- mod-button1, Set the window to floating mode and move by dragging" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "                                      >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "   -- mod-button2, Raise the window to the top of the stack" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- mod-button3, Set the window to floating mode and resize by dragging" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "                                       >> windows W.shiftMaster))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    -- you may also bind events to the mouse scroll wheel (button4 and button5)" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Layouts:" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- You can specify and transform your layouts by modifying these values." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- If you change layout bindings be sure to use 'mod-shift-space' after" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- restarting (with 'mod-q') to reset your layout state to the new" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- defaults, as xmonad preserves your old layout settings by default." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- The available layouts.  Note that each layout is separated by |||," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- which denotes layout choice." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myLayout =" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "  spacing 20 $  avoidStruts (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral golden ||| ThreeCol nmaster delta ratio ||| multiCol [1] 1 0.01 (-0.5))" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     where" >> /home/$dir/.xmonad/xmonad.hs
+        sudo echo "     -- default tiling algorithm partitions the screen into two panes" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     tiled   = Tall nmaster delta ratio" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     -- The default number of windows in the master pane" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     nmaster = 1" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     -- Golden Ratio" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     golden  = 6/7" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     -- Spiral Number" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    num     = 15/19" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     -- Default proportion of screen occupied by master pane" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     ratio   = 1/2" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     -- Percent of screen to increment by when resizing panes" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "     delta   = 3/100" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Window rules:" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Execute arbitrary actions and WindowSet manipulations when managing" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- a new window. You can use this to, for example, always float a" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- particular program, or have a client always appear on a particular" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- workspace." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- To find the property name associated with a program, use" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- > xprop | grep WM_CLASS" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- and click on the client you're interested in." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- To match on the WM_NAME, you can use 'title' in the same way that" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- 'className' and 'resource' are used below." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myManageHook = composeAll" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    [ className =? "MPlayer"        --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--    , className =? "Gimp"           --> doFloat" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , resource  =? "desktop_window" --> doIgnore" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    , resource  =? "kdesktop"       --> doIgnore ]" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Event handling" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- * EwmhDesktops users should change this to ewmhDesktopsEventHook" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Defines a custom handler function for X Events. The function should" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- return (All True) if the default handler is to be run afterwards. To" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- combine event hooks use mappend or mconcat from Data.Monoid." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myEventHook = mempty" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Status bars and logging" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Perform an arbitrary action on each internal state change or X event." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- See the 'XMonad.Hooks.DynamicLog' extension for examples." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myLogHook = return ()" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Startup hook" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Perform an arbitrary action each time xmonad starts or is restarted" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- per-workspace layout choices." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- By default, do nothing." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "myStartupHook = do" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "	spawnOnce "nitrogen --restore &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "	spawnOnce "picom &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        spawnOnce "ufw &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        spawnOnce "ufw enable"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        spawnOnce "tlp &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        spawnOnce "xfce4-power-manager &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--        spawnOnce "volumeicon &"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "------------------------------------------------------------------------" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Now run xmonad with all the defaults we set up." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- Run xmonad with the settings you specify. No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "main = do" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "  xmproc <- spawnPipe "xmobar /etc//MulBX/xmobar/xmobar.config"" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "  xmonad $ docks defaults" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- A structure containing your configuration settings, overriding" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- fields in the default config. Any you don't override, will" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- use the defaults defined in xmonad/XMonad/Config.hs" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- No need to modify this." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "--" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "defaults = def {" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "      -- simple stuff" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        terminal           = myTerminal," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        focusFollowsMouse  = myFocusFollowsMouse," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        clickJustFocuses   = myClickJustFocuses," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        borderWidth        = myBorderWidth," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        modMask            = myModMask," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        workspaces         = myWorkspaces," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        normalBorderColor  = myNormalBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        focusedBorderColor = myFocusedBorderColor," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "      -- key bindings" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        keys               = myKeys," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        mouseBindings      = myMouseBindings," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "      -- hooks, layouts" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        layoutHook         = myLayout," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        manageHook         = myManageHook," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        handleEventHook    = myEventHook," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        logHook            = myLogHook," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "        startupHook        = myStartupHook" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    }" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "-- | Finally, a copy of the default bindings in simple textual tabular format." >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "help :: String" >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "help = unlines ["The default modifier key is 'alt'. Default keybindings:"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- launching and killing programs"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-Enter  Launch xterminal"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-p            Launch dmenu"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-p      Launch gmrun"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-c      Close/kill the focused window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Space        Rotate through the available layout algorithms"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-Space  Reset the layouts on the current workSpace to default"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-n            Resize/refresh viewed windows to the correct size"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- move focus up or down the window stack"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Tab        Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-Tab  Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-j          Move focus to the next window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-k          Move focus to the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-m          Move focus to the master window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- modifying the window order"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Return   Swap the focused window and the master window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-j  Swap the focused window with the next window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-k  Swap the focused window with the previous window"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- resizing the master/slave ratio"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-h  Shrink the master area"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-l  Expand the master area"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- floating layer support"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-t  Push window back into tiling; unfloat and re-tile it"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- increase or decrease number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-comma  (mod-,)   Increment the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-period (mod-.)   Deincrement the number of windows in the master area"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- quit, or restart"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-q  Quit xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-q        Restart xmonad"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-[1..9]   Switch to workSpace N"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- Workspaces & screens"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-[1..9]   Move client to workspace N"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    ""," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "-- Mouse bindings: default actions bound to mouse events"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-button1  Set the window to floating mode and move by dragging"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "   "mod-button2  Raise the window to the top of the stack"," >> /etc/skel/.xmonad/xmonad.hs
+        sudo echo "    "mod-button3  Set the window to floating mode and resize by dragging"]" >> /etc/skel/.xmonad/xmonad.hs
+         
 
         #sudo cp azarch-install-type /etc/MulBX/install-type
         sudo echo "MulBX_Version_Code="AZarch"" > /etc/MulBX/install-type
@@ -2981,7 +3721,7 @@ then
             echo "alias ..='cd ..'" >> /home/$dir/.bashrc
             echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
             echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
-            echo "" >> /home/$dir/.bashrc
+            echo "alias alaz='echo ALAZ STARTED: && sudo pacman" >> /home/$dir/.bashrc
             echo "" >> /home/$dir/.bashrc
             echo "# Alias definitions." >> /home/$dir/.bashrc
             echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
@@ -3121,7 +3861,7 @@ then
             sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
             sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
             sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
-            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "alias alaz='echo "ALAZ STARTED:" && sudo pacman'" >> /etc/skel/.bashrc
             sudo echo "" >> /etc/skel/.bashrc
             sudo echo "# Alias definitions." >> /etc/skel/.bashrc
             sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc

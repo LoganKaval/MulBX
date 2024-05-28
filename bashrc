@@ -95,7 +95,7 @@ alias la='ls -A'
 alias ..='cd ..'
 alias tcl='tty-clock -cxbt'
 alias clearfetch='clear && screenfetch'
-
+alias alaz='echo "ALAZ STARTED:" && sudo pacman'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
