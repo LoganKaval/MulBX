@@ -2730,49 +2730,49 @@ then
     then
         rounds = 1
         until [ "$rounds" = 19 ]
-    do
-     	echo "[     4.14A_12.0l_19.0a_7.0_n_3.13a_14.0u_9.0n_3.0a_10.0h  ] Not Version Code VCode--"
-     	echo "Fixing Version Code"
-     	echo "One Moment..."
-    	sleep 0.3s
-	    (( rounds ++ ))
-    done
+        do
+     	    echo "[     4.14A_12.0l_19.0a_7.0_n_3.13a_14.0u_9.0n_3.0a_10.0h  ] Not Version Code VCode--"
+     	    echo "Fixing Version Code"
+     	    echo "One Moment..."
+    	    sleep 0.3s
+	        (( rounds ++ ))
+        done
 
-    echo "Done!"
+        echo "Done!"
 
-    echo "Installing the Secret Distro of MulBX..."
-    echo "Installing XonNOS..."
+        echo "Installing the Secret Distro of MulBX..."
+        echo "Installing XonNOS..."
 
 
 
-    sudo pacman -Syu
-    sudo pacman -Syy
-    sudo pacman -S ly
-    sudo systemctl enable ly
-    sudo systemctl disable gdm
-    sudo systemctl disable sddm
-    sudo systemctl disable lightdm
-    sudo pacman -S ufw
-    sudo ufw status
-    sudo ufw enable
-    sudo ufw deny 22
-    sudo ufw allow 80
-    sudo ufw allow 443
-    sudo pacman -S freecad
-    sudo pacman -S prusa-slicer
-    sudo pacman -S libreoffice
-    sudo pacman -S gimp
-    sudo pacman -S kdenlive
-    sudo echo "MulBX_Version_Code="shhh_XonNOS"" > /etc/MulBX/install-type
-    sudo echo "PRETTY_NAME="XonNOS GNU/Linux 3.8.2 (Underrated)"
-NAME="XonNOS GNU/Linux"
-VERSION_ID="3.8.2 (Underrated)"
-VERSION="3.8.2"
-VERSION_CODENAME=Underrated
-ID=XonNOS
-HOME_URL="https://archlinux.org/"
-SUPPORT_URL="https://bbs.archlinux.org/"
-BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+        sudo pacman -Syu
+        sudo pacman -Syy
+        sudo pacman -S ly
+        sudo systemctl enable ly
+        sudo systemctl disable gdm
+        sudo systemctl disable sddm
+        sudo systemctl disable lightdm
+        sudo pacman -S ufw
+        sudo ufw status
+        sudo ufw enable
+        sudo ufw deny 22
+        sudo ufw allow 80
+        sudo ufw allow 443
+        sudo pacman -S freecad
+        sudo pacman -S prusa-slicer
+        sudo pacman -S libreoffice
+        sudo pacman -S gimp
+        sudo pacman -S kdenlive 
+        sudo echo "MulBX_Version_Code="shhh_XonNOS"" > /etc/MulBX/install-type
+        sudo echo "PRETTY_NAME="XonNOS GNU/Linux 3.8.3 (Underrated)"" > /etc/os-release
+        sudo echo "NAME="XonNOS GNU/Linux"" >> /etc/os-release
+        sudo echo "VERSION_ID="3.8.3 (Underrated)"" >> /etc/os-release
+        sudo echo "VERSION="3.8.3"" >> /etc/os-release
+        sudo echo "VERSION_CODENAME=Underrated" >> /etc/os-release
+        sudo echo "ID=XonNOS" >> /etc/os-release
+        sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+        sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+        sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
 
         exit
 
@@ -2783,8 +2783,50 @@ BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
 
     if [ "$vcode" = "AZarch" ];
     then
-        chmod +x azarch-ver.sh
-        bash azarch-ver.sh
+        rounds = 1
+        until [ "$rounds" = 5 ]
+        do
+	        echo "[     4.14A_12.0l_19.0a_7.0_n_3.13a_14.0u_9.0n_3.0a_10.0h  ] Not Version Code VCode--"
+	        echo "Fixing Version Code"
+	        echo "One Moment..."
+	        sleep 0.3s
+	        (( rounds ++ ))
+        done
+
+        echo "Done!"
+        sudo pacman -Syu
+        sudo pacman -Syy
+        sudo pacman -S ly
+        sudo systemctl enable ly
+        sudo systemctl disable gdm
+        sudo systemctl disable sddm  
+        sudo systemctl disable lightdm
+        sudo pacman -S ufw
+        sudo ufw status
+        sudo ufw enable
+        sudo ufw deny 22
+        sudo ufw allow 80
+        sudo ufw allow 443
+        #cp azarch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+        #sudo cp azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+        
+
+        #sudo cp azarch-install-type /etc/MulBX/install-type
+        sudo echo "MulBX_Version_Code="AZarch"" > /etc/MulBX/install-type
+        
+        
+        #sudo cp azarch-os-release /etc/os-release
+        sudo echo "PRETTY_NAME="MulBX GNU/Linux [AZarch] 3.8.1 (Dağ)"" > /etc/os-release
+        sudo echo "NAME="MulBX GNU/Linux [AZarch]"" >> /etc/os-release
+        sudo echo "VERSION_ID="3.8.1"" >> /etc/os-release
+        sudo echo "VERSION="3.8.1 (Dağ)"" >> /etc/os-release
+        sudo echo "VERSION_CODENAME=Dağ" >> /etc/os-release
+        sudo echo "ID=Mulbx" >> /etc/os-release
+        sudo echo "HOME_URL="https://archlinux.org/"" >> /etc/os-release
+        sudo echo "SUPPORT_URL="https://bbs.archlinux.org/"" >> /etc/os-release
+        sudo echo "BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"" >> /etc/os-release
+
+
         exit
 
     else
@@ -2794,8 +2836,332 @@ BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
 
     if [ "$vcode" = "EFE" ];
     then
-        chmod +x arch-efe-ver.sh
-        bash arch-efe-ver.sh
+        echo "What is the Access Code?"
+        read acod
+
+        sleep 5
+
+        if [ "$acod" = "Efes'in Efe'si" ];
+        then 
+            # Validation
+
+            echo "Access Code: Vailed"
+            sleep .3
+            echo "Initiating Process"
+
+            echo " "
+            echo " "
+            sleep 3
+
+            # Welcome
+
+            echo " 
+                   _____________        _____________        _____________
+                  |   _________|       |   _________|       |   _________| 
+                  |   |_____           |   |_____           |   |_____
+                  |    _____|          |    _____|          |    _____|   
+                  |   |________        |   |                |   |________
+                  |____________|       |___|                |____________| 
+                   _______________________________________________________
+                  \                                                      /
+                  /______________________________________________________\ 
+
+
+            "
+
+
+            # Installing Packages
+
+            sudo pacman -Syu
+            sudo pacman -Syy
+            sudo pacman -S ly
+            sudo pacman -S picom
+            sudo pacman -S terminator
+
+            # Copying New Directories
+
+            #cp arch-efe-bashrc /home/$dir/.bashrc
+
+            echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /home/$dir/.bashrc
+            echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /home/$dir/.bashrc
+            echo "# If not running interactively, don't do anything" >> /home/$dir/.bashrc
+            echo "case $- in" >> /home/$dir/.bashrc
+            echo "    *i*) ;;" >> /home/$dir/.bashrc
+            echo "      *) return;;" >> /home/$dir/.bashrc
+            echo "esac" >> /home/$dir/.bashrc
+            echo " " >> /home/$dir/.bashrc
+            echo "# don't put duplicate lines or lines starting with space in the history." >> /home/$dir/.bashrc
+            echo "# See bash(1) for more options" >> /home/$dir/.bashrc
+            echo "HISTCONTROL=ignoreboth" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# append to the history file, don't overwrite it" >> /home/$dir/.bashrc
+            echo "shopt -s histappend" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)" >> /home/$dir/.bashrc
+            echo "HISTSIZE=1000" >> /home/$dir/.bashrc
+            echo "HISTFILESIZE=2000" >> /home/$dir/.bashrc
+            echo " " >> /home/$dir/.bashrc
+            echo "# check the window size after each command and, if necessary," >> /home/$dir/.bashrc
+            echo "# update the values of LINES and COLUMNS." >> /home/$dir/.bashrc
+            echo "shopt -s checkwinsize" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# If set, the pattern "**" used in a pathname expansion context will" >> /home/$dir/.bashrc
+            echo "# match all files and zero or more directories and subdirectories." >> /home/$dir/.bashrc
+            echo "#shopt -s globstar" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /home/$dir/.bashrc
+            echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /home/$dir/.bashrc
+            echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /home/$dir/.bashrc
+            echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /home/$dir/.bashrc
+            echo "case "$TERM" in" >> /home/$dir/.bashrc
+            echo "    xterm-color|*-256color) color_prompt=yes;;" >> /home/$dir/.bashrc
+            echo "esac" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /home/$dir/.bashrc
+            echo "# off by default to not distract the user: the focus in a terminal window" >> /home/$dir/.bashrc
+            echo "# should be on the output of commands, not on the prompt" >> /home/$dir/.bashrc
+            echo "#force_color_prompt=yes" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "if [ -n "$force_color_prompt" ]; then" >> /home/$dir/.bashrc
+            echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /home/$dir/.bashrc
+            echo "	# We have color support; assume it's compliant with Ecma-48" >> /home/$dir/.bashrc
+            echo "	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such" >> /home/$dir/.bashrc
+            echo "	# a case would tend to support setf rather than setaf.)" >> /home/$dir/.bashrc
+            echo "	color_prompt=yes" >> /home/$dir/.bashrc
+            echo "   else" >> /home/$dir/.bashrc
+            echo "	color_prompt=" >> /home/$dir/.bashrc
+            echo "    fi" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "if [ "$color_prompt" = yes ]; then" >> /home/$dir/.bashrc
+            echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /home/$dir/.bashrc
+            echo "else" >> /home/$dir/.bashrc
+            echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+            echo "unset color_prompt force_color_prompt" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# If this is an xterm set the title to user@host:dir" >> /home/$dir/.bashrc
+            echo "case "$TERM" in" >> /home/$dir/.bashrc
+            echo "xterm*|rxvt*)" >> /home/$dir/.bashrc
+            echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /home/$dir/.bashrc
+            echo "    ;;" >> /home/$dir/.bashrc
+            echo "*)" >> /home/$dir/.bashrc
+            echo "   ;;" >> /home/$dir/.bashrc
+            echo "esac" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# enable color support of ls and also add handy aliases" >> /home/$dir/.bashrc
+            echo "if [ -x /usr/bin/dircolors ]; then" >> /home/$dir/.bashrc
+            echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /home/$dir/.bashrc
+            echo "    alias ls='ls --color=auto'" >> /home/$dir/.bashrc
+            echo "    #alias dir='dir --color=auto'" >> /home/$dir/.bashrc
+            echo "    #alias vdir='vdir --color=auto'" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "    #alias grep='grep --color=auto'" >> /home/$dir/.bashrc
+            echo "    #alias fgrep='fgrep --color=auto'" >> /home/$dir/.bashrc
+            echo "    #alias egrep='egrep --color=auto'" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# colored GCC warnings and errors" >> /home/$dir/.bashrc
+            echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# some more ls aliases" >> /home/$dir/.bashrc
+            echo "alias ll='ls -l'" >> /home/$dir/.bashrc
+            echo "alias lla='ls -Al'" >> /home/$dir/.bashrc
+            echo "alias la='ls -A'" >> /home/$dir/.bashrc
+            echo "#alias l='ls -CF'" >> /home/$dir/.bashrc
+            echo "alias ..='cd ..'" >> /home/$dir/.bashrc
+            echo "alias tcl='tty-clock -cxbt'" >> /home/$dir/.bashrc
+            echo "alias clearfetch='clear && screenfetch'" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# Alias definitions." >> /home/$dir/.bashrc
+            echo "# You may want to put all your additions into a separate file like" >> /home/$dir/.bashrc
+            echo "# ~/.bash_aliases, instead of adding them here directly." >> /home/$dir/.bashrc
+            echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "if [ -f ~/.bash_aliases ]; then" >> /home/$dir/.bashrc
+            echo "    . ~/.bash_aliases" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "# enable programmable completion features (you don't need to enable" >> /home/$dir/.bashrc
+            echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /home/$dir/.bashrc
+            echo "# sources /etc/bash.bashrc)." >> /home/$dir/.bashrc
+            echo "if ! shopt -oq posix; then" >> /home/$dir/.bashrc
+            echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /home/$dir/.bashrc
+            echo "    . /usr/share/bash-completion/bash_completion" >> /home/$dir/.bashrc
+            echo "  elif [ -f /etc/bash_completion ]; then" >> /home/$dir/.bashrc
+            echo "    . /etc/bash_completion" >> /home/$dir/.bashrc
+            echo "  fi" >> /home/$dir/.bashrc
+            echo "fi" >> /home/$dir/.bashrc
+
+            echo "echo " " >> /home/$dir/.bashrc
+            echo "       _____________        _____________        _____________" >> /home/$dir/.bashrc
+            echo "       |   _________|       |   _________|       |   _________| " >> /home/$dir/.bashrc
+            echo "       |   |_____           |   |_____           |   |_____" >> /home/$dir/.bashrc
+            echo "       |    _____|          |    _____|          |    _____|" >> /home/$dir/.bashrc
+            echo "       |   |________        |   |                |   |________" >> /home/$dir/.bashrc
+            echo "       |____________|       |___|                |____________| " >> /home/$dir/.bashrc
+            echo "       _______________________________________________________
+            echo "       \                                                      /" >> /home/$dir/.bashrc
+            echo "       /______________________________________________________\ " >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "" >> /home/$dir/.bashrc
+            echo "echo "Merhaba Efe"" >> /home/$dir/.bashrc
+            echo "echo "Hoş Geldiniz"" >> /home/$dir/.bashrc
+
+
+            #sudo cp arch-efe-bashrc /etc/skel/.bashrc
+            
+            
+            
+            
+            sudo echo "# ~/.bashrc: executed by bash(1) for non-login shells." > /etc/skel/.bashrc
+            sudo echo "# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)" >> /etc/skel/.bashrc
+            sudo echo "# If not running interactively, don't do anything" >> /etc/skel/.bashrc
+            sudo echo "case $- in" >> /etc/skel/.bashrc
+            sudo echo "    *i*) ;;" >> /etc/skel/.bashrc
+            sudo echo "      *) return;;" >> /etc/skel/.bashrc
+            sudo echo "esac" >> /etc/skel/.bashrc
+            sudo echo " " >> /etc/skel/.bashrc
+            sudo echo "# don't put duplicate lines or lines starting with space in the history." >> /etc/skel/.bashrc
+            sudo echo "# See bash(1) for more options" >> /etc/skel/.bashrc
+            sudo echo "HISTCONTROL=ignoreboth" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# append to the history file, don't overwrite it" >> /etc/skel/.bashrc
+            sudo echo "shopt -s histappend" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)" >> /etc/skel/.bashrc
+            sudo echo "HISTSIZE=1000" >> /etc/skel/.bashrc
+            sudo echo "HISTFILESIZE=2000" >> /etc/skel/.bashrc
+            sudo echo " " >> /etc/skel/.bashrc
+            sudo echo "# check the window size after each command and, if necessary," >> /etc/skel/.bashrc
+            sudo echo "# update the values of LINES and COLUMNS." >> /etc/skel/.bashrc
+            sudo echo "shopt -s checkwinsize" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# If set, the pattern "**" used in a pathname expansion context will" >> /etc/skel/.bashrc
+            sudo echo "# match all files and zero or more directories and subdirectories." >> /etc/skel/.bashrc
+            sudo echo "#shopt -s globstar" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# make less more friendly for non-text input files, see lesspipe(1)" >> /etc/skel/.bashrc
+            sudo echo "#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# set variable identifying the chroot you work in (used in the prompt below)" >> /etc/skel/.bashrc
+            sudo echo "if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then" >> /etc/skel/.bashrc
+            sudo echo "    debian_chroot=$(cat /etc/debian_chroot)" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# set a fancy prompt (non-color, unless we know we "want" color)" >> /etc/skel/.bashrc
+            sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
+            sudo echo "    xterm-color|*-256color) color_prompt=yes;;" >> /etc/skel/.bashrc
+            sudo echo "esac" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# uncomment for a colored prompt, if the terminal has the capability; turned" >> /etc/skel/.bashrc
+            sudo echo "# off by default to not distract the user: the focus in a terminal window" >> /etc/skel/.bashrc
+            sudo echo "# should be on the output of commands, not on the prompt" >> /etc/skel/.bashrc
+            sudo echo "#force_color_prompt=yes" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "if [ -n "$force_color_prompt" ]; then" >> /etc/skel/.bashrc
+            sudo echo "    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then" >> /etc/skel/.bashrc
+            sudo echo "	# We have color support; assume it's compliant with Ecma-48" >> /etc/skel/.bashrc
+            sudo echo "	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such" >> /etc/skel/.bashrc
+            sudo echo "	# a case would tend to support setf rather than setaf.)" >> /etc/skel/.bashrc
+            sudo echo "	color_prompt=yes" >> /etc/skel/.bashrc
+            sudo echo "   else" >> /etc/skel/.bashrc
+            sudo echo "	color_prompt=" >> /etc/skel/.bashrc
+            sudo echo "    fi" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "if [ "$color_prompt" = yes ]; then" >> /etc/skel/.bashrc
+            sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /etc/skel/.bashrc
+            sudo echo "else" >> /etc/skel/.bashrc
+            sudo echo "    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "unset color_prompt force_color_prompt" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# If this is an xterm set the title to user@host:dir" >> /etc/skel/.bashrc
+            sudo echo "case "$TERM" in" >> /etc/skel/.bashrc
+            sudo echo "xterm*|rxvt*)" >> /etc/skel/.bashrc
+            sudo echo "    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"" >> /etc/skel/.bashrc
+            sudo echo "    ;;" >> /etc/skel/.bashrc
+            sudo echo "*)" >> /etc/skel/.bashrc
+            sudo echo "   ;;" >> /etc/skel/.bashrc
+            sudo echo "esac" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# enable color support of ls and also add handy aliases" >> /etc/skel/.bashrc
+            sudo echo "if [ -x /usr/bin/dircolors ]; then" >> /etc/skel/.bashrc
+            sudo echo "    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"" >> /etc/skel/.bashrc
+            sudo echo "    alias ls='ls --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "    #alias dir='dir --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "    #alias vdir='vdir --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "    #alias grep='grep --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "    #alias fgrep='fgrep --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "    #alias egrep='egrep --color=auto'" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# colored GCC warnings and errors" >> /etc/skel/.bashrc
+            sudo echo "#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# some more ls aliases" >> /etc/skel/.bashrc
+            sudo echo "alias ll='ls -l'" >> /etc/skel/.bashrc
+            sudo echo "alias lla='ls -Al'" >> /etc/skel/.bashrc
+            sudo echo "alias la='ls -A'" >> /etc/skel/.bashrc
+            sudo echo "#alias l='ls -CF'" >> /etc/skel/.bashrc
+            sudo echo "alias ..='cd ..'" >> /etc/skel/.bashrc
+            sudo echo "alias tcl='tty-clock -cxbt'" >> /etc/skel/.bashrc
+            sudo echo "alias clearfetch='clear && screenfetch'" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# Alias definitions." >> /etc/skel/.bashrc
+            sudo echo "# You may want to put all your additions into a separate file like" >> /etc/skel/.bashrc
+            sudo echo "# ~/.bash_aliases, instead of adding them here directly." >> /etc/skel/.bashrc
+            sudo echo "# See /usr/share/doc/bash-doc/examples in the bash-doc package." >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "if [ -f ~/.bash_aliases ]; then" >> /etc/skel/.bashrc
+            sudo echo "    . ~/.bash_aliases" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "# enable programmable completion features (you don't need to enable" >> /etc/skel/.bashrc
+            sudo echo "# this, if it's already enabled in /etc/bash.bashrc and /etc/profile" >> /etc/skel/.bashrc
+            sudo echo "# sources /etc/bash.bashrc)." >> /etc/skel/.bashrc
+            sudo echo "if ! shopt -oq posix; then" >> /etc/skel/.bashrc
+            sudo echo "  if [ -f /usr/share/bash-completion/bash_completion ]; then" >> /etc/skel/.bashrc
+            sudo echo "    . /usr/share/bash-completion/bash_completion" >> /etc/skel/.bashrc
+            sudo echo "  elif [ -f /etc/bash_completion ]; then" >> /etc/skel/.bashrc
+            sudo echo "    . /etc/bash_completion" >> /etc/skel/.bashrc
+            sudo echo "  fi" >> /etc/skel/.bashrc
+            sudo echo "fi" >> /etc/skel/.bashrc
+            sudo echo "echo " " >> /etc/skel/.bashrc
+            sudo echo "       _____________        _____________        _____________" >> /etc/skel/.bashrc
+            sudo echo "       |   _________|       |   _________|       |   _________| " >> /etc/skel/.bashrc
+            sudo echo "       |   |_____           |   |_____           |   |_____" >> /etc/skel/.bashrc
+            sudo echo "       |    _____|          |    _____|          |    _____|" >> /etc/skel/.bashrc
+            sudo echo "       |   |________        |   |                |   |________" >> /etc/skel/.bashrc
+            sudo echo "       |____________|       |___|                |____________| " >> /etc/skel/.bashrc
+            sudo echo "       _______________________________________________________
+            sudo echo "       \                                                      /" >> /etc/skel/.bashrc
+            sudo echo "       /______________________________________________________\ " >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "" >> /etc/skel/.bashrc
+            sudo echo "echo "Merhaba Efe"" >> /etc/skel/.bashrc
+            sudo echo "echo "Hoş Geldiniz"" >> /etc/skel/.bashrc
+
+            #sudo cp arch-efe-os-release /etc/os-release
+            #sudo cp arch-efe-install-type /etc/MulBX/install-type
+        else
+            echo "[        3E_7r_7r_3o_9r     ] Error: Access Code Does Not Qualify"
+            echo "[        7R_3u_2i_9n        ] Error: Default Missing In: bash-backs.loader"
+        fi
+
         exit
 
     else
