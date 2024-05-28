@@ -63,7 +63,7 @@ sudo mkdir /usr/share/backgrounds
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
 sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+sudo cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp config-files/os-release/arch-os-release /etc/os-release
@@ -102,7 +102,6 @@ fi
 
 
 echo "Do You Want to Install A Backup Desktop Environment?(y/n)"
-sleep 3
 echo "The Options are:"
 echo "KDE"
 echo "GNOME"
@@ -272,7 +271,7 @@ sudo mkdir /usr/share/backgrounds
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
 sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
+sudo cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
 sudo cp config-files/os-release/arch-os-release /etc/os-release

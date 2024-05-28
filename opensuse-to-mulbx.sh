@@ -79,7 +79,6 @@ sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
 
 echo "Do You Want to Install A Backup Desktop Environment?(y/n)"
-sleep 3
 echo "The Options are:"
 echo "KDE"
 echo "GNOME"

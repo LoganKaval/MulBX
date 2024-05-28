@@ -6,8 +6,8 @@ read vcode
 
 if [ "$vcode" = "shhh_XonNOS" ];
 then
-     chmod +x debian-xonnos-ver.sh
-     bash debian-xonnos-ver.sh
+     chmod +x port/ver/debian-xonnos-ver.sh
+     bash port/ver/debian-xonnos-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'debian-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'debian-xonnos-ver.sh' script--"
      exit
