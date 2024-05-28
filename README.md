@@ -68,3 +68,19 @@ This File is Also NOT Portable!!!
 The Directory Must Contain All Needed File to Work Properly.
 If You Are Going to Move the File to a USB You Must Move the ENTIRE MulBX Directory (The ".git" Directory is not Needed!)
 
+
+# HandBook:
+1) No Code Formed by Any Large Language is Permitted!
+   Such Models Are, But Not Limited to, GitHub/Microsoft's Copilot, OpenAI's ChatGPT, or Facebook/Meta's Code Llama.
+   We do Not Want to Deal With Code With a Unknown License.
+
+2) You Must Only Summit Code to the Testing Branch of This Repository.
+   This Allows the Project to be More Stable. 
+   We Want this Project to be Decently Stable.
+
+3) Vulgar is not Tolerated.
+   No Cussing/Cursing in the Wiki Pages, README Files, or Code, but This Rule Is Not Limited to These Resources.
+
+4) No Corupt Code is Allowed! 
+   No Code That is Ment to Do Harm or Steal Data is Allowed. 
+   Such as, But Not Limited To, Malware, Spyware, Ransomware, Worms, Trojans, Adware, Rootkits, Backdoors, Logic Bombs, Filesless Malware, or Crypto-Malware.
