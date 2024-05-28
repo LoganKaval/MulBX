@@ -6,8 +6,8 @@ read vcode
 
 if [ "$vcode" = "TFE" ];
 then
-     chmod +x opensuse-tfe-ver.sh
-     bash opensuse-tfe-ver.sh
+     chmod +x port/ver/opensuse-tfe-ver.sh
+     bash port/ver/opensuse-tfe-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'opensuse-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'opensuse-tfe-ver.sh' script--"
      exit

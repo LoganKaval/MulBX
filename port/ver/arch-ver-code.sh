@@ -5,8 +5,8 @@ read vcode
 
 if [ "$vcode" = "v141.Mango" ];
 then
-     chmod +x arch-mango-ver.sh
-     bash arch-mango-ver.sh
+     chmod +x port/ver/arch-mango-ver.sh
+     bash port/ver/arch-mango-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'arch-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'arch-mango-ver.sh' script--"
      exit
@@ -18,8 +18,8 @@ fi
 
 if [ "$vcode" = "shhh_XonNOS" ];
 then
-     chmod +x arch-xonnos-ver.sh
-     bash arch-xonnos-ver.sh
+     chmod +x port/ver/arch-xonnos-ver.sh
+     bash port/ver/arch-xonnos-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'arch-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'arch-xonnos-ver.sh' script--"
      exit
@@ -31,8 +31,8 @@ fi
 
 if [ "$vcode" = "AZarch" ];
 then
-     chmod +x azarch-ver.sh
-     bash azarch-ver.sh
+     chmod +x port/ver/azarch-ver.sh
+     bash port/ver/azarch-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'arch-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'azarch-ver.sh' script--"
      exit
@@ -44,8 +44,8 @@ fi
 
 if [ "$vcode" = "EFE" ];
 then
-     chmod +x arch-efe-ver.sh
-     bash arch-efe-ver.sh
+     chmod +x port/ver/arch-efe-ver.sh
+     bash port/verarch-efe-ver.sh
      echo "[     1.41H_4.14u                ] Finished: 'arch-ver-code.sh'  script--"
      echo "[     9.19M_1.9a_1.5n_1.0g_7.0o] Starting: 'arch-efe-ver.sh' script--"
      exit
