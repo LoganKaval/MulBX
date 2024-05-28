@@ -46,8 +46,8 @@ sleep 10
 
 
 # To Install Packages in the Package List
-chmod +x packages.sh
-bash packages.sh
+chmod +x port/pak/packages.sh
+bash port/pak/packages.sh
 
 # Making Directories
 
@@ -62,16 +62,16 @@ sudo mkdir /usr/share/backgrounds
 # Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+cp config-files/xmonad/xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp os-release /etc/os-release
+sudo cp config-files/os-release/os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/xmonad/xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
 
 # Extra Packages
@@ -82,8 +82,8 @@ sleep 7
 if [ "extpak" = "y" ];
 then
 	echo "More Packages Will be Installed!"
-	chmod +x debian-extra-packages.sh
-	bash debian-extra-packages.sh
+	chmod +x port/pak/debian-extra-packages.sh
+	bash port/pak/debian-extra-packages.sh
 else
 	echo "No Extra Pacakges Will be Installed!"
 fi
@@ -92,8 +92,8 @@ sleep 5
 
 if [ "$cpak" = "y" ];
 then
-	chmod +x debian-custom-pak.sh
-	bash debian-custom-pak.sh
+	chmod +x port/pak/debian-custom-pak.sh
+	bash port/pak/debian-custom-pak.sh
 
 else
 	echo "Custom Packages Will Not be Installed!"
@@ -285,19 +285,20 @@ sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
 
-# Moving Files Again
+# Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
-cp xmonad.hs /home/$dir/.xmonad/xmonad.hs
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+cp config-files/xmonad/xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
-sudo cp os-release /etc/os-release
+sudo cp config-files/os-release/os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/xmonad/xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+
 
 
 
@@ -311,16 +312,16 @@ sleep 5
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x debian-ver-code.sh
- 	bash debian-ver-code.sh
+	chmod +x port/ver/debian-ver-code.sh
+ 	bash port/ver/debian-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi
 
 # UFW Setup
 
-chmod +x debian-ufw-setup.sh
-bash debian-ufw-setup.sh
+chmod +x port/ufw/debian-ufw-setup.sh
+bash port/ufw/debian-ufw-setup.sh
 
 # Finishing Up
 
@@ -330,5 +331,4 @@ echo "I Will Now Reboot!"
 sleep 10
 sudo reboot
 reboot
-
 

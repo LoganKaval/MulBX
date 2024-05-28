@@ -17,7 +17,7 @@ sleep 5
 
 if [ "$bashrc" = "y" ] ;
 then
-        cp bashrc /home/$usr/.bashrc
+        cp config-files/bashrc/bashrc /home/$usr/.bashrc
 
 else
         echo "Bashrc Will Not Be Copied!"
@@ -32,7 +32,7 @@ sleep 5
 if [ "$bak" = "y" ];
 then 
         echo "Backgrounds Will be Copied!"
-        sudo cp -r backgrounds /usr/share/backgrounds/XonNOS
+        sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 
 else
         echo "Files Will Not Be Copied!"
@@ -47,23 +47,23 @@ sleep 5
 if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
-        sudo cp xmobar.config /etc/MulBX/xmobar.config
-        cp arch-xmonad.hs /home/$usr/.xmonad/xmonad.hs
-	sudo cp arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-	sudo cp bashrc /etc/skel/.bashrc
+        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar.config
+        cp config-files/xmonad/arch-xmonad.hs /home/$usr/.xmonad/xmonad.hs
+	sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+	sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
 fi
 # Running Package Script
-chmod +x packages.sh
-bash packages.sh
+chmod +x port/pak/packages.sh
+bash port/pak/packages.sh
 
 #
 echo "Almost Done!"
 
-sudo cp arch-os-release /etc/os-release
+sudo cp config-files/os-release/arch-os-release /etc/os-release
 
 
 # Version Code
@@ -73,8 +73,8 @@ read codeans
 
 if [ "$codeans" = "y" ]; 
 then
-	chmod +x arch-ver-code.sh
- 	bash arch-ver-code.sh
+	chmod +x port/ver/arch-ver-code.sh
+ 	bash port/ver/arch-ver-code.sh
 else
 	echo "Ok! Continuing Install!"
 fi

@@ -19,10 +19,12 @@ done
 
 echo "Resolved"
 
-cp tfe-bashrc /home/$usrdir/.bashrc
-sudo cp tfe-bashrc /etc/skel/.bashrc
-sudo cp opensuse-os-release
-sudo cp opensuse-tfe-install-type /etc/MulBX/install-type
+cd ..
+cd ..
+cp config-files/bashrc/tfe-bashrc /home/$usrdir/.bashrc
+sudo cp config-files/bashrc/tfe-bashrc /etc/skel/.bashrc
+sudo cp config-files/os-release/opensuse-os-release /etc/os-release
+sudo cp config-files/install-type/opensuse-tfe-install-type /etc/MulBX/install-type
 sudo zypper refresh
 sudo zypper update
 sudo zypper install gdm

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rounds = 1
-until [ "$rounds" = 19 ]
+until [ "$rounds" = 5 ]
 do
 	echo "[     4.14A_12.0l_19.0a_7.0_n_3.13a_14.0u_9.0n_3.0a_10.0h  ] Not Version Code VCode--"
 	echo "Fixing Version Code"
@@ -11,12 +11,6 @@ do
 done
 
 echo "Done!"
-
-echo "Installing the Secret Distro of MulBX..."
-echo "Installing XonNOS..."
-
-
-
 sudo pacman -Syu
 sudo pacman -Syy
 sudo pacman -S ly
@@ -27,7 +21,7 @@ sudo systemctl disable lightdm
 sudo pacman -S ufw
 sudo ufw status
 sudo ufw enable
-sudo ufw deny 22
+sudo ufw limit 22
 sudo ufw allow 80
 sudo ufw allow 443
 sudo pacman -S freecad
@@ -35,7 +29,8 @@ sudo pacman -S prusa-slicer
 sudo pacman -S libreoffice
 sudo pacman -S gimp
 sudo pacman -S kdenlive
-sudo cp xonnos-install-type /etc/MulBX/install-type
-sudo cp xonnos-os-release /etc/os-release
-echo "[     1.41H_4.14u                ] Finished: 'arch-xonnos-ver.sh'  script--"
+cd ..
+cd ..
+sudo cp config-files/install-type/mango-install-type /etc/MulBX/install-type
+echo "[     1.41H_4.14u                ] Finished: 'arch-mango-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
