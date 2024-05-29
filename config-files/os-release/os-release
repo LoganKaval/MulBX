@@ -1,8 +1,8 @@
-PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.8.2 (Dağ)"
+PRETTY_NAME="MulBX GNU/Linux [Debian GNU/Linux Base] 3.9.0 (Demirci))"
 NAME="MulBX GNU/Linux [Debian GNU/Linux Base]"
-VERSION_ID="3.8.2"
-VERSION="3.8.2 (Dağ)"
-VERSION_CODENAME=Dağ
+VERSION_ID="3.9.0"
+VERSION="3.9.0 (Demirci)"
+VERSION_CODENAME=Demirci
 ID=Mulbx
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
