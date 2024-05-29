@@ -25,6 +25,9 @@ cp config-files/bashrc/tfe-bashrc /home/$usrdir/.bashrc
 sudo cp config-files/bashrc/tfe-bashrc /etc/skel/.bashrc
 sudo cp config-files/os-release/opensuse-os-release /etc/os-release
 sudo cp config-files/install-type/opensuse-tfe-install-type /etc/MulBX/install-type
+cp config-files/bashrc/tfe-bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
+sudo cp config-files/install-type/opensuse-tfe-install-type /etc/MulBX/bac-files/install-type
 sudo zypper refresh
 sudo zypper update
 sudo zypper install gdm

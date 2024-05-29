@@ -67,7 +67,7 @@ bash port/pak/opensuse-packages.sh
 echo "Almost Done!"
 
 sudo cp config-files/os-release/os-release /etc/os-release
-
+sudo cp config-files/os-release/os-release /etc/MulBX/bac-files/os-release
 
 # Version Code
 

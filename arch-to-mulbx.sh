@@ -57,12 +57,13 @@ sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
+sudo mkdir /etc/MulBX/bac-files
 
 # Moving Files
 
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
-sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
 sudo cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
@@ -71,6 +72,12 @@ sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+
+sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar.config
+sudo cp config-files/xmonad/arch-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+
 
 # Extra Packages
 echo "Would You Like to Install Office and Media Packages?(y/n)"
@@ -265,12 +272,12 @@ sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
+sudo mkdir /etc/MulBX/bac-files
 
 # Moving Files
 
-
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
-sudo cp config-files//xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
 sudo cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
@@ -280,6 +287,10 @@ sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
+sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar.config
+sudo cp config-files/xmonad/arch-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
 
 # Version Code
 

@@ -34,5 +34,7 @@ cd ..
 cd ..
 sudo cp config-files/install-type/xonnos-install-type /etc/MulBX/install-type
 sudo cp config-files/os-release/xonnos-os-release /etc/os-release
+sudo cp config-files/install-type/xonnos-install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/os-release/xonnos-os-release /etc/MulBX/bac-files/os-release
 echo "[     1.41H_4.14u                ] Finished: 'debian-xonnos-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'debian-to-mulbx.sh' script--"

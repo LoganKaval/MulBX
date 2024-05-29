@@ -53,3 +53,7 @@ sudo cp config-files/bashrc/arch-efe-bashrc /etc/skel/.bashrc
 sudo cp config-files/os-release/arch-efe-os-release /etc/os-release
 sudo cp config-files/install-type/arch-efe-install-type /etc/MulBX/install-type
 
+
+cp config-files/bashrc/arch-efe-bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/os-release/arch-efe-os-release /etc/MulBX/bac-files/os-release
+sudo cp config-files/install-type/arch-efe-install-type /etc/MulBX//bac-files/install-type

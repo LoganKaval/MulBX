@@ -39,5 +39,8 @@ sudo cp config-files/install-type/azarch-install-type /etc/MulBX/install-type
 sudo cp config-files/os-release/azarch-os-release /etc/os-release
 nitrogen --set-auto /usr/share/backgrounds/MulBX/minimal_mountians.png
 
+cp config-files/xmonad/azarch-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+sudo cp config-files/install-type/azarch-install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/os-release/azarch-os-release /etc/MulBX/bac-files/os-release
 echo "[     1.41H_4.14u                ] Finished: 'azarch-ver.sh'  script--"
 echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"

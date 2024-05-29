@@ -47,6 +47,7 @@ sleep 5
 if [ "$xcon" = "y" ];
 then
         
+        
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
         sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
         cp config-files/xmonad/xmonad.hs /home/$dir/.xmonad/xmonad.hs
@@ -57,6 +58,13 @@ then
         sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
         sudo cp config-files/xmonad/xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+        cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar.config
+        cp config-files/xmonad/xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+        sudo cp config-files/os-release/os-release /etc/MulBX/bac-files/os-release
+        sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+
+
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
 fi
@@ -68,7 +76,7 @@ bash port/pak/packages.sh
 echo "Almost Done!"
 
 sudo cp config-files/os-release/os-release /etc/os-release
-
+sudo cp config-files/os-release/os-release /etc/MulBX/bac-files/os-release
 # Version Code
 
 
