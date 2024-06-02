@@ -16,7 +16,6 @@ sudo pacman -S fuzzel
 sudo pacman -S swaybg
 sudo pacman -S terminator -y
 sudo pacman -S featherpad -y
-sudo pacman -S nitrogen -y
 sudo pacman -S vim -y
 sudo pacman -S screenfetch -y
 sudo pacman -S ranger -y
