@@ -47,7 +47,7 @@ sleep 5
 if [ "$xcon" = "y" ];
 then
         cp bashrc /home/$dir/.bashrc
-        sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
+        sudo cp xmobar.config /etc/MulBX/waybar/config
         cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart

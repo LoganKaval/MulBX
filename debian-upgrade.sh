@@ -49,7 +49,7 @@ then
         
         
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
-        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+        sudo cp config-files/waybar/config /etc/MulBX/waybar/config
         cp config-files/xmonad/xmonad.hs /home/$dir/.xmonad/xmonad.hs
         sudo xmonad --recompile && xmonad --restart
         xmonad --recompile && xmonad --restart
@@ -59,7 +59,7 @@ then
         sudo cp config-files/xmonad/xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp config-files/install-type/install-type /etc/MulBX/install-type
         cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar.config
+        sudo cp config-files/waybar/config /etc/MulBX/bac-files/xmobar.config
         cp config-files/xmonad/xmonad.hs /etc/MulBX/bac-files/xmonad.hs
         sudo cp config-files/os-release/os-release /etc/MulBX/bac-files/os-release
         sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type

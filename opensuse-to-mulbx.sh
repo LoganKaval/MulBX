@@ -65,7 +65,7 @@ sudo mkdir /etc/MulBX/bac-files
 
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
-sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
+sudo cp config-files/waybar/config /etc/MulBX/waybar/config
 cp config-files/xmonad/opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart
@@ -75,7 +75,7 @@ sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/xmonad/opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
 sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar/xmobar.config
+sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
 cp config-files/xmonad/opensuse-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
 sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
 sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
@@ -178,7 +178,7 @@ sudo mkdir /etc/MulBX/bac-files
 
 
 cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/xmobar/xmobar.config
+sudo cp xmobar.config /etc/MulBX/waybar/config
 cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
 sudo xmonad --recompile && xmonad --restart
 xmonad --recompile && xmonad --restart

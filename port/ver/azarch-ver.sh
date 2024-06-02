@@ -33,13 +33,10 @@ sudo ufw allow 80
 sudo ufw allow 443
 cd ..
 cd ..
-cp config-files/xmonad/azarch-xmonad.hs /home/$usrdir/.xmonad/xmonad.hs
-sudo cp config-files/xmonad/azarch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+
 sudo cp config-files/install-type/azarch-install-type /etc/MulBX/install-type
 sudo cp config-files/os-release/azarch-os-release /etc/os-release
 nitrogen --set-auto /usr/share/backgrounds/MulBX/minimal_mountians.png
-
-cp config-files/xmonad/azarch-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
 sudo cp config-files/install-type/azarch-install-type /etc/MulBX/bac-files/install-type
 sudo cp config-files/os-release/azarch-os-release /etc/MulBX/bac-files/os-release
 echo "[     1.41H_4.14u                ] Finished: 'azarch-ver.sh'  script--"

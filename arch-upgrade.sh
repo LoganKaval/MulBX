@@ -48,19 +48,20 @@ if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
-        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/xmobar/xmobar.config
-        sudo cp config-files/xmonad/arch-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-        sudo xmonad --recompile && xmonad --restart
-        xmonad --recompile && xmonad --restart
+        sudo cp config-files/waybar/config /home/$dir/.config/waybar/config
+        sudo cp config-files/waybar/style.css /home/$dir/.config/waybar/style.css
+        sudo cp config-files/river/init /home/$dir/.config/river/init
         sudo cp config-files/os-release/arch-os-release /etc/os-release
         sudo cp -r backgrounds /usr/share/backgrounds/MulBX
         sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
-        sudo cp config-files/xmonad/arch-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+        sudo cp config-files/waybar/config /etc/skel/.config/waybar/config/
+        sudo cp config-files/waybar/style.css /etc/skel/.config/waybar/style.css
         sudo cp config-files/install-type/install-type /etc/MulBX/install-type
 
         sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-        sudo cp config-files/xmobar/xmobar.config /etc/MulBX/bac-files/xmobar.config
-        sudo cp config-files/xmonad/arch-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+        sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
+        sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
+        sudo cp config-files/river/init /etc/MulBX/bac-files/river/init
         sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
 
 else
