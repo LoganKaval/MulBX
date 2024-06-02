@@ -167,9 +167,6 @@ riverctl border-color-unfocused 0x586e75
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
-# Autostart
-waybar
-xfce4-power-manager
 
 riverctl rule-add -app-id 'float*' -title 'foo' float
 
@@ -180,3 +177,7 @@ riverctl rule-add -app-id "bar" csd
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 rivertile -view-padding 10 -outer-padding 10 &
+
+# Autostart
+waybar
+xfce4-power-manager
