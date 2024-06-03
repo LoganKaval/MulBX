@@ -24,6 +24,8 @@ The Directory "/etc/MulBX/bac-files" is Where the Configuration Files Are Kept i
 Some Files That Might be Backed Up is the BashRC, River, and Waybar Configuration Files. 
 For the Second Improvement, as we Hinted, we Have Switched to Wayland! 
 We Are Now Using River for the Window Manager and Waybar for the Panel.
+The New Alias "alaz" is a Quicker to Type Version of Pacman. 
+This Obviously Only Works Properly on Arch and Arch Based Distributions.
 
 
 # Installing on Debian GNU/Linux
