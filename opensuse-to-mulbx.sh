@@ -53,30 +53,32 @@ bash port/pak/opensuse-packages.sh
 # Making Directories
 
 mkdir /home/$dir/.config
-mkdir /home/$dir/.xmonad
+mkdir /home/$dir/.config/river
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
 sudo mkdir /etc/MulBX/bac-files
+sudo mkdir /etc/MulBX/bac-files/river
+sudo mkdir /etc/MulBX/bac-files/waybar
 
 # Moving Files
 
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
 sudo cp config-files/waybar/config /etc/MulBX/waybar/config
-cp config-files/xmonad/opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo xmonad --recompile && xmonad --restart
-xmonad --recompile && xmonad --restart
+sudo cp config-files/waybar/style.css /etc/MulBX/waybar/style.css
+cp config-files/river/opensuse-init /home/$dir/.config/river/init
 sudo cp config-files/os-release/opensuse-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
-sudo cp config-files/xmonad/opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
+sudo cp config-files/river/opensuse-init /etc/skel/.config/river/init
 sudo cp config-files/install-type/install-type /etc/MulBX/install-type
-cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
 sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-cp config-files/xmonad/opensuse-xmonad.hs /etc/MulBX/bac-files/xmonad.hs
+sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
+sudo cp config-files/river/opensuse-init /etc/MulBX/bac-files/river/init
 sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
 sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
 
@@ -166,27 +168,34 @@ fi
 # Making Directories Again
 
 mkdir /home/$dir/.config
-mkdir /home/$dir/.xmonad
+mkdir /home/$dir/.config/river
 sudo mkdir /etc/MulBX
 sudo mkdir /etc/MulBX/xmobar
 sudo mkdir /usr/share/backgrounds/MulBX
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
 sudo mkdir /etc/MulBX/bac-files
+sudo mkdir /etc/MulBX/bac-files/river
+sudo mkdir /etc/MulBX/bac-files/waybar
 
-# Moving Files Again
+# Moving Files
 
 
-cp bashrc /home/$dir/.bashrc
-sudo cp xmobar.config /etc/MulBX/waybar/config
-cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-sudo xmonad --recompile && xmonad --restart
-xmonad --recompile && xmonad --restart
-sudo cp opensuse-os-release /etc/os-release
+cp config-files/bashrc/bashrc /home/$dir/.bashrc
+sudo cp config-files/waybar/config /etc/MulBX/waybar/config
+sudo cp config-files/waybar/style.css /etc/MulBX/waybar/style.css
+cp config-files/river/opensuse-init /home/$dir/.config/river/init
+sudo cp config-files/os-release/opensuse-os-release /etc/os-release
 sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-sudo cp bashrc /etc/skel/.bashrc
-sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-sudo cp install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+sudo cp config-files/river/opensuse-init /etc/skel/.config/river/init
+sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
+sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
+sudo cp config-files/river/opensuse-init /etc/MulBX/bac-files/river/init
+sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
+sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
 
 # Version Code
 

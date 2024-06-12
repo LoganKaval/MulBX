@@ -46,16 +46,22 @@ sleep 5
 
 if [ "$xcon" = "y" ];
 then
-        cp bashrc /home/$dir/.bashrc
-        sudo cp xmobar.config /etc/MulBX/waybar/config
-        cp opensuse-xmonad.hs /home/$dir/.xmonad/xmonad.hs
-        sudo xmonad --recompile && xmonad --restart
-        xmonad --recompile && xmonad --restart
-        sudo cp opensuse-os-release /etc/os-release
+        cp config-files/bashrc/bashrc /home/$dir/.bashrc
+        sudo cp config-files/waybar/config /etc/MulBX/waybar/config
+        sudo cp config-files/waybar/style.css /etc/MulBX/waybar/style.css
+        cp config-files/river/opensuse-init /home/$dir/.config/river/init
+        sudo cp config-files/os-release/opensuse-os-release /etc/os-release
         sudo cp -r backgrounds /usr/share/backgrounds/MulBX
-        sudo cp bashrc /etc/skel/.bashrc
-        sudo cp opensuse-xmonad.hs /etc/skel/.xmonad/xmonad.hs
-        sudo cp install-type /etc/MulBX/install-type
+        sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
+        sudo cp config-files/river/opensuse-init /etc/skel/.config/river/init
+        sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+        sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
+        sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
+        sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
+        sudo cp config-files/river/opensuse-init /etc/MulBX/bac-files/river/init
+        sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
+        sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
 fi
