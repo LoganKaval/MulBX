@@ -65,7 +65,7 @@ The Installer Has Delays that are Kinda Short if Your Not Watching for Them!!!
 
 # WARNING:
    This is For Debian and Debian Based Linux Distrobutions!
-This Script Will NOT Work Properly on OpenSUSE, NixOS, Gentoo, Fedora, etc.
+This Script Will NOT Work Properly on NixOS, Gentoo, Fedora, etc.
 A Few Oddly Formated Debian GNU/Linux Distrobutions Might Also Experiance Problems. 
 There is Experimental Support for Arch Linux!
 Run the "arch-to-jaiyk.sh" script in Arch Linux or a Arch Based Distro.
