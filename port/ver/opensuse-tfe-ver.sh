@@ -24,10 +24,10 @@ cd ..
 cp config-files/bashrc/tfe-bashrc /home/$usrdir/.bashrc
 sudo cp config-files/bashrc/tfe-bashrc /etc/skel/.bashrc
 sudo cp config-files/os-release/opensuse-os-release /etc/os-release
-sudo cp config-files/install-type/opensuse-tfe-install-type /etc/MulBX/install-type
-cp config-files/bashrc/tfe-bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
-sudo cp config-files/install-type/opensuse-tfe-install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/install-type/opensuse-tfe-install-type /etc/Jaiyk/install-type
+cp config-files/bashrc/tfe-bashrc /etc/Jaiyk/bac-files/bashrc
+sudo cp config-files/os-release/opensuse-os-release /etc/Jaiyk-bac-files/os-release
+sudo cp config-files/install-type/opensuse-tfe-install-type /etc/Jaiyk/bac-files/install-type
 sudo zypper refresh
 sudo zypper update
 sudo zypper install gdm
@@ -38,4 +38,4 @@ sudo zypper install curl git wget
 sudo zypper remove firefox
 sudo zypper autoremove
 echo "[     1.41H_4.14u                ] Finished: 'opensuse-tfe-ver.sh'  script--"
-echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'opensuse-to-mulbx.sh' script--"
+echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'opensuse-to-jaiyk.sh' script--"

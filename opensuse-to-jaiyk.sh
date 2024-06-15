@@ -21,18 +21,18 @@ echo "
 rounds 1
 until [ "$rounds" = 5 ]
 do
-	echo "Prepairing MulBX Installer..."
+	echo "Prepairing Jaiyk Installer..."
 	echo "Just One Moment Please!"
 	sleep 0.3s
 	(( rounds ++ ))
 done
 
 # Warnings and Beginning
-echo "This Will Turn Debian GNU/Linux to MulBX GNU/Linux!"
+echo "This Will Turn Debian GNU/Linux to Jaiyk GNU/Linux!"
 echo "If Your Not on Debian or a Debian Based Distro Please Do Not This"
 echo "This Might Lead to Data if Done So!!!"
 sleep 2
-echo "Also Make Sure You Are in a User's ~/MulBX Directory"
+echo "Also Make Sure You Are in a User's ~/Jaiyk Directory"
 echo "You have 10 Seconds After This Message to Exit!"
 sleep 7
 
@@ -54,33 +54,33 @@ bash port/pak/opensuse-packages.sh
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.config/river
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
+sudo mkdir /etc/Jaiyk
+sudo mkdir /etc/Jaiyk/xmobar
+sudo mkdir /usr/share/backgrounds/Jaiyk
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
-sudo mkdir /etc/MulBX/bac-files
-sudo mkdir /etc/MulBX/bac-files/river
-sudo mkdir /etc/MulBX/bac-files/waybar
+sudo mkdir /etc/Jaiyk/bac-files
+sudo mkdir /etc/Jaiyk/bac-files/river
+sudo mkdir /etc/Jaiyk/bac-files/waybar
 
 # Moving Files
 
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
-sudo cp config-files/waybar/config /etc/MulBX/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/waybar/style.css
+sudo cp config-files/waybar/config /etc/Jaiyk/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/waybar/style.css
 cp config-files/river/opensuse-init /home/$dir/.config/river/init
 sudo cp config-files/os-release/opensuse-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/river/opensuse-init /etc/skel/.config/river/init
-sudo cp config-files/install-type/install-type /etc/MulBX/install-type
-sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
-sudo cp config-files/river/opensuse-init /etc/MulBX/bac-files/river/init
-sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
-sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
+sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
+sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
+sudo cp config-files/river/opensuse-init /etc/Jaiyk/bac-files/river/init
+sudo cp config-files/os-release/opensuse-os-release /etc/Jaiyk-bac-files/os-release
+sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 
 # Extra Desktop Environments
@@ -169,33 +169,33 @@ fi
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.config/river
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
+sudo mkdir /etc/Jaiyk
+sudo mkdir /etc/Jaiyk/xmobar
+sudo mkdir /usr/share/backgrounds/Jaiyk
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
-sudo mkdir /etc/MulBX/bac-files
-sudo mkdir /etc/MulBX/bac-files/river
-sudo mkdir /etc/MulBX/bac-files/waybar
+sudo mkdir /etc/Jaiyk/bac-files
+sudo mkdir /etc/Jaiyk/bac-files/river
+sudo mkdir /etc/Jaiyk/bac-files/waybar
 
 # Moving Files
 
 
 cp config-files/bashrc/bashrc /home/$dir/.bashrc
-sudo cp config-files/waybar/config /etc/MulBX/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/waybar/style.css
+sudo cp config-files/waybar/config /etc/Jaiyk/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/waybar/style.css
 cp config-files/river/opensuse-init /home/$dir/.config/river/init
 sudo cp config-files/os-release/opensuse-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/river/opensuse-init /etc/skel/.config/river/init
-sudo cp config-files/install-type/install-type /etc/MulBX/install-type
-sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
-sudo cp config-files/river/opensuse-init /etc/MulBX/bac-files/river/init
-sudo cp config-files/os-release/opensuse-os-release /etc/MulBX-bac-files/os-release
-sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
+sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
+sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
+sudo cp config-files/river/opensuse-init /etc/Jaiyk/bac-files/river/init
+sudo cp config-files/os-release/opensuse-os-release /etc/Jaiyk-bac-files/os-release
+sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 # Version Code
 

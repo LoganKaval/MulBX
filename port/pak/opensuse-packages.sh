@@ -36,4 +36,4 @@ sudo zypper install spectacle -y
 sudo zypper install ghc-xmonad-contrib-devel -y
 
 echo "[     1.41H_4.14u                ] Finished: 'opensuse-packages.sh'  script--"
-echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'opensuse-to-mulbx.sh' script--"
+echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'opensuse-to-jaiyk.sh' script--"

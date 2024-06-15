@@ -20,7 +20,7 @@ echo "
 rounds 1
 until [ "$rounds" = 5 ]
 do
-	echo "Prepairing MulBX Installer..."
+	echo "Prepairing Jaiyk Installer..."
 	echo "Just One Moment Please!"
 	sleep 0.3s
 	(( rounds ++ ))
@@ -28,7 +28,7 @@ done
 
 
 # Warnings and Beginning
-echo "This Will Turn Arch Linux Into MulBX!"
+echo "This Will Turn Arch Linux Into Jaiyk!"
 echo "Exit the Script If your not on Arch or if Your Not in a User Directory!"
 echo "You Have Five Seconds to do so"
 sleep 7
@@ -52,14 +52,14 @@ bash port/pak/arch-packages.sh
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
+sudo mkdir /etc/Jaiyk
+sudo mkdir /etc/Jaiyk/xmobar
+sudo mkdir /usr/share/backgrounds/Jaiyk
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
-sudo mkdir /etc/MulBX/bac-files
-sudo mkdir /etc/MulBX/bac-files/waybar
-sudo mkdir /etc/MulBX/bac-files/river
+sudo mkdir /etc/Jaiyk/bac-files
+sudo mkdir /etc/Jaiyk/bac-files/waybar
+sudo mkdir /etc/Jaiyk/bac-files/river
 # Moving Files
 
 
@@ -68,17 +68,17 @@ sudo cp config-files/waybar/config /home/$dir/.config/waybar/config
 sudo cp config-files/waybar/style.css /home/$dir/.config/waybar/style.css
 sudo cp config-files/river/init /home/$dir/.config/river/init
 sudo cp config-files/os-release/arch-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/waybar/config /etc/skel/.config/waybar/config/
 sudo cp config-files/waybar/style.css /etc/skel/.config/waybar/style.css
-sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
 
-sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
-sudo cp config-files/river/init /etc/MulBX/bac-files/river/init
-sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
+sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
+sudo cp config-files/river/init /etc/Jaiyk/bac-files/river/init
+sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 
 # Extra Packages
@@ -269,14 +269,14 @@ fi
 
 mkdir /home/$dir/.config
 mkdir /home/$dir/.xmonad
-sudo mkdir /etc/MulBX
-sudo mkdir /etc/MulBX/xmobar
-sudo mkdir /usr/share/backgrounds/MulBX
+sudo mkdir /etc/Jaiyk
+sudo mkdir /etc/Jaiyk/xmobar
+sudo mkdir /usr/share/backgrounds/Jaiyk
 sudo mkdir /etc/skel/.xmonad
 sudo mkdir /usr/share/backgrounds
-sudo mkdir /etc/MulBX/bac-files
-sudo mkdir /etc/MulBX/bac-files/waybar
-sudo mkdir /etc/MulBX/bac-files/river
+sudo mkdir /etc/Jaiyk/bac-files
+sudo mkdir /etc/Jaiyk/bac-files/waybar
+sudo mkdir /etc/Jaiyk/bac-files/river
 # Moving Files
 
 
@@ -285,17 +285,17 @@ sudo cp config-files/waybar/config /home/$dir/.config/waybar/config
 sudo cp config-files/waybar/style.css /home/$dir/.config/waybar/style.css
 sudo cp config-files/river/init /home/$dir/.config/river/init
 sudo cp config-files/os-release/arch-os-release /etc/os-release
-sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
 sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
 sudo cp config-files/waybar/config /etc/skel/.config/waybar/config/
 sudo cp config-files/waybar/style.css /etc/skel/.config/waybar/style.css
-sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
 
-sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
-sudo cp config-files/river/init /etc/MulBX/bac-files/river/init
-sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
+sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
+sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
+sudo cp config-files/river/init /etc/Jaiyk/bac-files/river/init
+sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 # Installing YAY/AUR
 
@@ -308,7 +308,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ..
-cd MulBX
+cd Jaiyk
 
 yay -Syu
 yay -S brave

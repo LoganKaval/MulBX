@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Warinings 
-echo "This Will Update You to the New MulBX Release!"
+echo "This Will Update You to the New Jaiyk Release!"
 echo "Leave Now if Needed!"
 sleep 5
 
@@ -32,7 +32,7 @@ sleep 5
 if [ "$bak" = "y" ];
 then 
         echo "Backgrounds Will be Copied!"
-        sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+        sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
 
 else
         echo "Files Will Not Be Copied!"
@@ -52,17 +52,17 @@ then
         sudo cp config-files/waybar/style.css /home/$dir/.config/waybar/style.css
         sudo cp config-files/river/init /home/$dir/.config/river/init
         sudo cp config-files/os-release/arch-os-release /etc/os-release
-        sudo cp -r backgrounds /usr/share/backgrounds/MulBX
+        sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
         sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
         sudo cp config-files/waybar/config /etc/skel/.config/waybar/config/
         sudo cp config-files/waybar/style.css /etc/skel/.config/waybar/style.css
-        sudo cp config-files/install-type/install-type /etc/MulBX/install-type
+        sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
 
-        sudo cp config-files/bashrc/bashrc /etc/MulBX/bac-files/bashrc
-        sudo cp config-files/waybar/config /etc/MulBX/bac-files/waybar/config
-        sudo cp config-files/waybar/style.css /etc/MulBX/bac-files/waybar/style.css
-        sudo cp config-files/river/init /etc/MulBX/bac-files/river/init
-        sudo cp config-files/install-type/install-type /etc/MulBX/bac-files/install-type
+        sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
+        sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
+        sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
+        sudo cp config-files/river/init /etc/Jaiyk/bac-files/river/init
+        sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
@@ -75,7 +75,7 @@ bash port/pak/packages.sh
 echo "Almost Done!"
 
 sudo cp config-files/os-release/arch-os-release /etc/os-release
-sudo cp config-files/os-release/arch-os-release /etc/MulBX/bac-files/os-release
+sudo cp config-files/os-release/arch-os-release /etc/Jaiyk/bac-files/os-release
 
 # Version Code
 

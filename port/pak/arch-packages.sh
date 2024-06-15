@@ -34,4 +34,4 @@ sudo pacman -S spectacle -y
 sudo pacman -S ufw -y
 
 echo "[     1.41H_4.14u                ] Finished: 'arch-packages.sh'  script--"
-echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-mulbx.sh' script--"
+echo "[     3.13A_1.41l_4.14l_1.9a_7.0h] Continuing: 'arch-to-jaiyk.sh' script--"
