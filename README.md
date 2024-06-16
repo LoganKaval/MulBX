@@ -85,9 +85,9 @@ If You Are Going to Move the File to a USB You Must Move the ENTIRE Jaiyk Direct
    This Allows the Project to be More Stable. 
    We Want this Project to be Decently Stable.
 
-3) Vulgar is not Tolerated.
+4) Vulgar is not Tolerated.
    No Cussing/Cursing in the Wiki Pages, README Files, or Code, but This Rule Is Not Limited to These Resources.
 
-4) No Corupt Code is Allowed! 
+5) No Corupt Code is Allowed! 
    No Code That is Ment to Do Harm or Steal Data is Allowed. 
    Such as, But Not Limited To, Malware, Spyware, Ransomware, Worms, Trojans, Adware, Rootkits, Backdoors, Logic Bombs, Filesless Malware, or Crypto-Malware.
