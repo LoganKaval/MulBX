@@ -84,3 +84,7 @@ If You Are Going to Move the File to a USB You Must Move the ENTIRE MulBX Direct
 4) No Corupt Code is Allowed! 
    No Code That is Ment to Do Harm or Steal Data is Allowed. 
    Such as, But Not Limited To, Malware, Spyware, Ransomware, Worms, Trojans, Adware, Rootkits, Backdoors, Logic Bombs, Filesless Malware, or Crypto-Malware.
+
+5) No Blank Commits
+   A Blank Commit is When You Make a Commit as a Joke.
+   This Includes Wiping All the Code, Addeding Blank Files That Have No Purpose, Adding Random Blank Spaces in the Code When There's No Reason, Etc.
