@@ -3,7 +3,7 @@
 This is a Script to Turn Debian GNU/Linux into Jaiyk.
 When Running the Script You Have to be in a User Account that is NOT root!
 The Name Means Multi-Based XMonad Distrobution.
-The Distro is Pronounced Mul-Bi-Ex.
+The Distro is Pronounced Jay-ik.
 Jaiyk Does NOT Include Snap Packages or the Snap Package Manager.
 The Package Manager Nala CAN be Installed in the Installer!!! (For Debian)
 The Nix Package Manager CAN be Installed in the Installer too. (For Arch and Debian)
