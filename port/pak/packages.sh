@@ -11,20 +11,20 @@ sudo apt install libreoffice -y
 sudo apt install cheese -y
 sudo apt install git -y
 sudo apt install wget -y
-sudo apt install river -y
-sudo apt install waybar -y
-sudo apt install brave -y
-sudo apt install brave-browser -y
-sudo apt install foot -y
-sudo apt install fuzzel
-sudo apt install swaybg -y
+sudo apt install xmonad -y
+sudo apt install xmobar -y
+sudo apt install xterm -y
+sudo apt install terminator -y
 sudo apt install featherpad -y
 sudo apt install nitrogen -y
+sudo apt install slock -y
+sudo apt install compton -y
 sudo apt install vim -y
 sudo apt install screenfetch -y
 sudo apt install ufw -y
 sudo apt install ranger -y
 sudo apt install btop -y
+sudo apt install dmenu -y
 sudo apt install qt5ct -y
 sudo apt install gnome-clocks -y
 sudo apt install xfce4-power-manager -y
