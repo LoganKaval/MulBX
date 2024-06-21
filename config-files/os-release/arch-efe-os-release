@@ -1,8 +1,8 @@
-PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.9.0 (Demirci)"
+PRETTY_NAME="Efeistan GNU/Linux [Arch Linux Base] 3.9.0 (Nehir)"
 NAME="Efeistan GNU/Linux [Arch Linux Base]"
 VERSION_ID="3.9.0"
-VERSION="3.9.0 (Demirci)"
-VERSION_CODENAME=Demirci
+VERSION="3.9.0 (Nehir)"
+VERSION_CODENAME=Nehir
 ID=Efeistan
 HOME_URL="https://archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"

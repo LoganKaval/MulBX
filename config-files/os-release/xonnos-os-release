@@ -1,8 +1,8 @@
-PRETTY_NAME="XonNOS GNU/Linux 3.9.0 (Demirci)"
+PRETTY_NAME="XonNOS GNU/Linux 3.9.0 (Nehir)"
 NAME="XonNOS GNU/Linux"
-VERSION_ID="3.9.0 (Demirci)"
+VERSION_ID="3.9.0 (Nehir)"
 VERSION="3.9.0"
-VERSION_CODENAME=Demirci
+VERSION_CODENAME=Nehir
 ID=XonNOS
 HOME_URL="https://archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"

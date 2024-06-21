@@ -1,8 +1,8 @@
-PRETTY_NAME="Jaiyk GNU/Linux [AZarch] 3.9.0 (Demirci)"
+PRETTY_NAME="Jaiyk GNU/Linux [AZarch] 3.9.0 (Nehir)"
 NAME="Jaiyk GNU/Linux [AZarch]"
 VERSION_ID="3.9.0"
-VERSION="3.9.0 (Demirci)"
-VERSION_CODENAME=Demirci
+VERSION="3.9.0 (Nehir)"
+VERSION_CODENAME=Nehir
 ID=Jaiyk
 HOME_URL="https://archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"

@@ -17,7 +17,7 @@ MX Linux Also Works is Very Simular to Linux Mint and Ubuntu.
 
 # What's New?
 
-   In Jaiyk 3.9.0-3.9.9 Code Named Demirci, a Few Key Improvements Have Been Made.
+   In Jaiyk 3.9.0-3.9.9 Code Named Nehir, a Few Key Improvements Have Been Made.
 The First Improvement is Backups of the Configuration Files. 
 The Directory "/etc/Jaiyk/bac-files" is Where the Configuration Files Are Kept in.
 Some Files That Might be Backed Up is the BashRC, River, and Waybar Configuration Files. 
