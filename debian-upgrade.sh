@@ -49,20 +49,18 @@ then
         
         
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
-        sudo cp config-files/waybar/config /etc/Jaiyk/waybar/config
-        sudo cp config-files/waybar/style.css /etc/Jaiyk/waybar/style.css
-        cp config-files/river/debian-init /home/$dir/.config/river/init
+        sudo cp config-files/xmobar/xmobar.config /etc/Jaiyk/xmobar/xmobar.config
+        cp config-files/xmonad/xmonad.hs /home/$dir/.xmonad/xmonad.hs
+        sudo xmonad --recompile && xmonad --restart
+        xmonad --recompile && xmonad --restart
         sudo cp config-files/os-release/os-release /etc/os-release
         sudo cp -r backgrounds /usr/share/backgrounds/Jaiyk
         sudo cp config-files/bashrc/bashrc /etc/skel/.bashrc
-        sudo cp config-files/river/debian-init /etc/skel/.config/river/init
+        sudo cp config-files/xmonad/xmonad.hs /etc/skel/.xmonad/xmonad.hs
         sudo cp config-files/install-type/install-type /etc/Jaiyk/install-type
+        sudo cp config-files/xmonad/xmonad.sh /etc/Jaiyk//bac-files/xmonad.sh
+        sudo cp config-files/xmobar/xmobar.config /etc/Jaiyk/bac-files/xmobar.config
         sudo cp config-files/bashrc/bashrc /etc/Jaiyk/bac-files/bashrc
-        sudo cp config-files/waybar/config /etc/Jaiyk/bac-files/waybar/config
-        sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
-        sudo cp config-files/river/debian-init /etc/Jaiyk/bac-files/river/init
-        sudo cp config-files/os-release/os-release /etc/Jaiyk/bac-files/os-release
-        sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
 else
         echo "These Files Will Not Be Upgraded to the Newest Version!"
