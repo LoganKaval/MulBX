@@ -1,7 +1,7 @@
-PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.2 (Dağ)"
+PRETTY_NAME="MulBX GNU/Linux [Arch Linux Base] 3.8.5 (Dağ)"
 NAME="MulBX GNU/Linux [Arch Linux Base]"
-VERSION_ID="3.8.2"
-VERSION="3.8.2 (Dağ)"
+VERSION_ID="3.8.5"
+VERSION="3.8.5 (Dağ)"
 VERSION_CODENAME=Dağ
 ID=Mulbx
 HOME_URL="https://archlinux.org/"
