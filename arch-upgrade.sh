@@ -47,6 +47,14 @@ sleep 5
 if [ "$xcon" = "y" ];
 then
         echo "Files Will Be Copied"
+        sudo mkdir /etc/Jaiyk/bac-files/old
+        sudo mkdir /etc/Jaiyk/bac-files/old/waybar
+        sudo mkdir /etc/Jaiyk/bac-files/old/river
+        sudo cp /home/$dir/.bashrc /etc/Jaiyk/bac-files/old/bashrc
+        sudo cp /home/$dir/.config/waybar/config /etc/Jaiyk/bac-files/old/waybar/config
+        sudo cp /home/$dir/.config/waybar/style.css /etc/Jaiyk/bac-files/old/waybar/style.css
+        sudo cp /home/$dir/.config/river/init /etc/Jaiyk/bac-files/old/river/init  
+        
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
         sudo cp config-files/waybar/config /home/$dir/.config/waybar/config
         sudo cp config-files/waybar/style.css /home/$dir/.config/waybar/style.css

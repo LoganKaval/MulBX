@@ -46,7 +46,12 @@ sleep 5
 
 if [ "$xcon" = "y" ];
 then
-        
+        sudo mkdir /etc/Jaiyk/bac-files/old
+        sudo mkdir /etc/Jaiyk/bac-files/old/xmonad
+        sudo mkdir /etc/Jaiyk/bac-files/old/xmobar
+        sudo cp /home/$dir/.bashrc /etc/Jaiyk/bac-files/old/bashrc
+        sudo cp /etc/Jaiyk/xmobar/xmobar.config /etc/Jaiyk/bac-file/old/xmobar/xmobar.config
+        sudo cp /home/$dir/.xmonad/xmonad.hs /etc/Jaiyk/bac-files/old/xmonad/xmonad.hs
         
         cp config-files/bashrc/bashrc /home/$dir/.bashrc
         sudo cp config-files/xmobar/xmobar.config /etc/Jaiyk/xmobar/xmobar.config
