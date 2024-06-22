@@ -18,9 +18,11 @@ MX Linux Also Works is Very Simular to Linux Mint and Ubuntu.
 # What's New?
 
    In Jaiyk 3.9.0-3.9.9 Code Named Nehir, a Few Key Improvements Have Been Made.
-The First Improvement is Backups of the Configuration Files. 
-The Directory "/etc/Jaiyk/bac-files" is Where the Configuration Files Are Kept in.
+The First Improvement is Backups of the Old Configuration Files. 
+The Directory "/etc/Jaiyk/bac-files/old" is Where the Configuration Files Are Kept in.
 Some Files That Might be Backed Up is the BashRC, River, and Waybar Configuration Files. 
+The New Configurations are Also Backed Up!
+The "/etc/Jaiyk/bac-files" Directory is Where Those Files Are Stored.
 For the Second Improvement, as we Hinted, we Have Switched to Wayland! 
 We Are Now Using River for the Window Manager and Waybar for the Panel.
 The New Alias "alaz" is a Quicker to Type Version of Pacman. 
