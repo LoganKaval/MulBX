@@ -1,7 +1,7 @@
-PRETTY_NAME="MulBX GNU/Linux [openSUSE Base] 3.8.5 (Dağ)"
+PRETTY_NAME="MulBX GNU/Linux [openSUSE Base] 3.8.6 (Dağ)"
 NAME="MulBX GNU/Linux [openSUSE Base]"
-VERSION_ID="3.8.5"
-VERSION="3.8.5 (Dağ)"
+VERSION_ID="3.8.6"
+VERSION="3.8.6 (Dağ)"
 VERSION_CODENAME=Dağ
 ID=Mulbx
 BUG_REPORT_URL="https://bugzilla.opensuse.org"
