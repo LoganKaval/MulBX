@@ -295,21 +295,6 @@ sudo cp config-files/waybar/style.css /etc/Jaiyk/bac-files/waybar/style.css
 sudo cp config-files/river/init /etc/Jaiyk/bac-files/river/init
 sudo cp config-files/install-type/install-type /etc/Jaiyk/bac-files/install-type
 
-# Installing YAY/AUR
-
-sudo pacman -Syu
-sudo pacman -S git -y
-sudo pacman -S base-devel -y
-
-cd .. 
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-cd Jaiyk
-
-yay -Syu
-yay -S brave
 
 
 
@@ -330,6 +315,23 @@ fi
 
 chmod +x port/ufw/arch-ufw-setup.sh
 bash port/ufw/arch-ufw-setup.sh
+
+# Installing YAY/AUR
+
+sudo pacman -Syu
+sudo pacman -S git -y
+sudo pacman -S base-devel -y
+
+cd .. 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+cd Jaiyk
+
+yay -Syu
+yay -S brave
+
 
 
 # Finishing Up
