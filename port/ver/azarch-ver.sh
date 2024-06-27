@@ -25,6 +25,7 @@ sudo systemctl enable ly
 sudo systemctl disable gdm
 sudo systemctl disable sddm
 sudo systemctl disable lightdm
+sudo systemctl enable ly
 sudo pacman -S ufw
 sudo ufw status
 sudo ufw enable
