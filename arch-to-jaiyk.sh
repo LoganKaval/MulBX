@@ -132,6 +132,7 @@ then
 	then
 		sudo pacman -Syu && sudo pacman -Syy
 		sudo pacman -S plasma -y
+		sudo pacman -S packagekit-qt6 -y
 
 	else
 		echo "KDE Will Not Be Installed!"
